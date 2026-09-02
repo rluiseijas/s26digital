@@ -1,0 +1,13 @@
+.git
+.git/**
+.wrangler
+.wrangler/**
+.gitignore
+.assetsignore
+wrangler.toml
+package.json
+package-lock.json
+INSTRUCCIONES.txt
+README.md
+deployment.txt
+*.log
