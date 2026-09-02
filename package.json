@@ -1,0 +1,23 @@
+{
+  "name": "s26digital-landing",
+  "version": "1.0.0",
+  "description": "Landing page de S26Digital - Socio Tecnológico B2B para Soluciones Digitales e Infraestructura Enterprise",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx wrangler pages dev .",
+    "deploy": "npx wrangler pages deploy .",
+    "build": "echo 'Static build ready for Cloudflare Pages'"
+  },
+  "keywords": [
+    "s26digital",
+    "b2b",
+    "cloud",
+    "cloudflare-pages",
+    "wrangler",
+    "saas",
+    "dark-mode"
+  ],
+  "author": "S26Digital",
+  "license": "MIT"
+}

@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S26Digital | Socio Tecnológico B2B • Software, Cloud & IA</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="S26Digital es tu socio tecnológico estratégico B2B. Desarrollamos software a medida, automatizamos operaciones, estructuramos datos e implementamos infraestructura cloud enterprise." />
+  <meta name="keywords" content="S26Digital, desarrollo de software, consultoria IT B2B, infraestructura cloud, automatizacion de procesos, ciencia de datos, ecommerce SaaS, React, Python, Docker" />
+  <meta name="theme-color" content="#0F172A" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="S26Digital | Socio Tecnológico B2B" />
+  <meta property="og:description" content="Transformamos la complejidad tecnológica en el motor de crecimiento de tu empresa." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2306B6D4'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'midnight': '#0F172A',
+            'cyan-electric': '#06B6D4',
+            'chalk-white': '#F8FAFC',
+            'slate-card': '#1E293B',
+            'slate-border': '#334155',
+            'slate-muted': '#94A3B8'
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-[#0F172A] text-[#F8FAFC] antialiased selection:bg-cyan-500/30 selection:text-white relative">
+
+  <!-- =========================================================================
+       TOP NOTIFICATION BAR (Enterprise Uptime & Status)
+       ========================================================================= -->
+  <div class="bg-[#1E293B]/70 border-b border-slate-800 text-xs py-1.5 px-4 text-center text-slate-300 flex items-center justify-center space-x-2">
+    <span class="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse-dot"></span>
+    <span class="font-mono text-cyan-400 font-semibold">S26 Core Cloud:</span>
+    <span>Sistemas y clústeres 100% operativos • SLA Enterprise 99.99%</span>
+  </div>
+
+  <!-- =========================================================================
+       NAVIGATION BAR (Fixed Glassmorphism)
+       ========================================================================= -->
+  <header id="main-navbar" class="sticky top-0 z-40 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all duration-300">
+            <i data-lucide="layers" class="w-6 h-6 text-slate-950 stroke-[2.5]"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-extrabold tracking-tight text-[#F8FAFC] font-sans">
+              S26<span class="text-[#06B6D4] glow-text-cyan">Digital</span>
+            </span>
+            <span class="text-[10px] uppercase tracking-widest text-slate-400 font-mono -mt-1">
+              Socio Tecnológico
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="#diferenciadores" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200">
+            Diferenciadores
+          </a>
+          <a href="#soluciones" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200">
+            Soluciones
+          </a>
+          <a href="#stack" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200">
+            Stack
+          </a>
+          <a href="#proceso" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200">
+            Metodología
+          </a>
+          <a href="#contacto" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200">
+            Contacto
+          </a>
+        </nav>
+
+        <!-- CTA Header Button -->
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="#contacto" class="btn-cyan px-5 py-2.5 rounded-lg text-xs tracking-wider uppercase flex items-center space-x-2 font-bold transition-all">
+            <span>Agendar Consultoría</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Trigger -->
+        <div class="flex md:hidden">
+          <button id="mobile-menu-btn" type="button" aria-expanded="false" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-[#1E293B] focus:outline-none" aria-label="Menú principal">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0F172A]/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3 backdrop-blur-xl">
+      <a href="#diferenciadores" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Diferenciadores</a>
+      <a href="#soluciones" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Soluciones</a>
+      <a href="#stack" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Stack Tecnológico</a>
+      <a href="#proceso" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Nuestro Proceso</a>
+      <a href="#contacto" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Contacto</a>
+      <div class="pt-2">
+        <a href="#contacto" class="mobile-nav-link btn-cyan w-full text-center block py-3 rounded-lg text-xs font-bold uppercase tracking-wider">
+          Agendar Consultoría Estratégica
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       SECCIÓN 1: HERO (Cabecera Principal)
+       ========================================================================= -->
+  <section id="hero" class="relative min-h-[92vh] flex items-center justify-center overflow-hidden pt-12 pb-20 bg-cyber-grid">
+    <!-- Interactive Background Canvas (Subtle Cyan Mesh) -->
+    <canvas id="hero-canvas" class="absolute inset-0 pointer-events-auto opacity-70 z-0"></canvas>
+    
+    <!-- Top & Ambient Radial Glows -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-cyan-500/10 blur-[130px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-10 left-10 w-96 h-96 bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+          
+          <!-- Pill Badge: Soluciones llave en mano -->
+          <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#1E293B]/90 border border-cyan-500/30 text-cyan-400 text-xs font-mono tracking-wide shadow-sm shadow-cyan-500/10 backdrop-blur-md">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span>Soluciones llave en mano • Infraestructura ágil en la nube • Despliegue rápido</span>
+          </div>
+
+          <!-- Master Headline -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#F8FAFC] leading-[1.12]">
+            Transformamos la <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400 glow-text-cyan">complejidad tecnológica</span> en el motor de crecimiento de tu empresa.
+          </h1>
+
+          <!-- Master Subtitle -->
+          <p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl leading-relaxed">
+            Desarrollamos software a medida, automatizamos operaciones, estructuramos datos y escalamos tus ventas con infraestructura de nivel enterprise. <strong class="text-white font-semibold">Tu socio tecnológico de principio a fin.</strong>
+          </p>
+
+          <!-- CTAs & Trust Badges -->
+          <div class="pt-3 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <!-- Main CTA Button -->
+            <a href="#contacto" class="btn-cyan w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold tracking-wide uppercase flex items-center justify-center space-x-3 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/50">
+              <i data-lucide="calendar" class="w-5 h-5 text-slate-950"></i>
+              <span>Agendar Consultoría Estratégica</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 text-slate-950"></i>
+            </a>
+
+            <!-- Secondary Action -->
+            <a href="#soluciones" class="btn-outline-dark w-full sm:w-auto px-7 py-4 rounded-xl text-sm font-medium flex items-center justify-center space-x-2">
+              <i data-lucide="cpu" class="w-4 h-4 text-cyan-400"></i>
+              <span>Explorar Soluciones</span>
+            </a>
+          </div>
+
+          <!-- Metric Highlights under Hero -->
+          <div class="pt-6 border-t border-slate-800/80 grid grid-cols-3 gap-4 max-w-xl mx-auto lg:mx-0">
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] font-mono">&lt; 3 Semanas</div>
+              <div class="text-xs text-slate-400 mt-0.5">Time-to-Market (MVP)</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">99.99%</div>
+              <div class="text-xs text-slate-400 mt-0.5">Uptime Cloud SLA</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] font-mono">100%</div>
+              <div class="text-xs text-slate-400 mt-0.5">Arquitectura Llave en Mano</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual: Interactive Enterprise Cloud Console Mockup -->
+        <div class="lg:col-span-5 relative">
+          <!-- Ambient Glow behind Mockup -->
+          <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 to-blue-600/30 rounded-2xl blur-xl opacity-75"></div>
+
+          <div class="relative bg-[#1E293B] border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden glass-panel">
+            
+            <!-- Window Titlebar -->
+            <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+              <div class="flex items-center space-x-2">
+                <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                <span class="text-xs font-mono text-slate-400 ml-2">s26-cloud-control-plane</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-950 text-cyan-300 border border-cyan-800">
+                  LIVE PROD
+                </span>
+              </div>
+            </div>
+
+            <!-- Dashboard Mini Header -->
+            <div class="p-5 space-y-4">
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-[#0F172A] p-3 rounded-xl border border-slate-800">
+                  <div class="flex items-center justify-between text-slate-400 text-xs mb-1">
+                    <span>Cloud Latency</span>
+                    <i data-lucide="zap" class="w-3.5 h-3.5 text-cyan-400"></i>
+                  </div>
+                  <div class="text-xl font-bold font-mono text-white">12.4 ms</div>
+                  <div class="text-[10px] text-emerald-400 mt-0.5">● Global Edge CDN</div>
+                </div>
+                <div class="bg-[#0F172A] p-3 rounded-xl border border-slate-800">
+                  <div class="flex items-center justify-between text-slate-400 text-xs mb-1">
+                    <span>Auto-Scaling</span>
+                    <i data-lucide="server" class="w-3.5 h-3.5 text-cyan-400"></i>
+                  </div>
+                  <div class="text-xl font-bold font-mono text-cyan-400">8 Clústeres</div>
+                  <div class="text-[10px] text-slate-400 mt-0.5">Docker / K8s Ready</div>
+                </div>
+              </div>
+
+              <!-- Live Stream Terminal -->
+              <div class="bg-[#0F172A] p-3.5 rounded-xl border border-slate-800">
+                <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800/80 text-[11px] text-slate-400 font-mono">
+                  <span class="flex items-center space-x-1.5">
+                    <i data-lucide="terminal" class="w-3.5 h-3.5 text-cyan-400"></i>
+                    <span>infra-events.log</span>
+                  </span>
+                  <span class="text-cyan-400 text-[10px]">Real-time stream</span>
+                </div>
+                <div id="terminal-logs" class="space-y-1.5 h-36 overflow-y-auto pr-1 text-xs">
+                  <!-- Live lines populated by JS -->
+                </div>
+              </div>
+
+              <!-- Quick Status Footer -->
+              <div class="flex items-center justify-between pt-1 text-xs text-slate-400">
+                <span class="flex items-center space-x-1.5">
+                  <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+                  <span>Zero-Trust Enterprise Security</span>
+                </span>
+                <span class="font-mono text-cyan-400">TLS 1.3 Active</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Floating Badges -->
+          <div class="hidden sm:flex absolute -bottom-6 -left-6 bg-[#1E293B] border border-cyan-500/40 p-3.5 rounded-xl shadow-xl items-center space-x-3 backdrop-blur-md">
+            <div class="w-9 h-9 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
+              <i data-lucide="rocket" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-white">Despliegue Rápido</div>
+              <div class="text-[11px] text-slate-400">CI/CD Pipeline Automatizado</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN 2: DIFERENCIADOR (Tarjetas Visuales)
+       ========================================================================= -->
+  <section id="diferenciadores" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          <span>Por qué elegir a S26Digital</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
+          Más que líneas de código, entregamos valor estratégico.
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg">
+          No somos simples ejecutores de tareas: operamos como tu departamento de ingeniería de élite, alineando cada desarrollo con los objetivos comerciales de tu empresa.
+        </p>
+      </div>
+
+      <!-- 3 Differentiation Cards (Strictly #1E293B container backgrounds) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Tarjeta 1: Soluciones Llave en Mano -->
+        <div class="enterprise-card rounded-2xl p-8 flex flex-col justify-between group">
+          <div class="space-y-6">
+            <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-500 group-hover:text-slate-950 transition-all duration-300">
+              <i data-lucide="key" class="w-7 h-7"></i>
+            </div>
+            
+            <div class="space-y-2">
+              <span class="text-xs font-mono uppercase tracking-widest text-cyan-400">01 • Ecosistema Integral</span>
+              <h3 class="text-2xl font-bold text-[#F8FAFC]">Soluciones Llave en Mano</h3>
+            </div>
+            
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Nos encargamos de todo el ecosistema (hosting, bases de datos, seguridad). Tú te concentras en hacer crecer tu negocio mientras nosotros administramos la arquitectura tecnológica completa.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-300 pt-2 border-t border-slate-700/60">
+              <li class="flex items-center space-x-2">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Configuración de Servidores & Cloud</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Copias de seguridad automáticas y cifrado</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Mantenimiento y actualizaciones sin caídas</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <span class="text-xs font-mono text-cyan-400 flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
+              <span>Cero fricción de infraestructura</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: Agilidad y Prototipado -->
+        <div class="enterprise-card rounded-2xl p-8 flex flex-col justify-between group">
+          <div class="space-y-6">
+            <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-500 group-hover:text-slate-950 transition-all duration-300">
+              <i data-lucide="zap" class="w-7 h-7"></i>
+            </div>
+            
+            <div class="space-y-2">
+              <span class="text-xs font-mono uppercase tracking-widest text-cyan-400">02 • Velocidad de Ejecución</span>
+              <h3 class="text-2xl font-bold text-[#F8FAFC]">Agilidad y Prototipado</h3>
+            </div>
+            
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Construimos en iteraciones rápidas para resultados en semanas. Implementamos metodologías ágiles enfocadas en Producto Mínimo Viable (MVP) para validar rápido en el mercado real.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-300 pt-2 border-t border-slate-700/60">
+              <li class="flex items-center space-x-2">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Sprints de entrega cada 14 días</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Prototipos interactivos antes del código</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Adaptabilidad inmediata al feedback</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <span class="text-xs font-mono text-cyan-400 flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
+              <span>Validación y retorno acelerado</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3: Acompañamiento Continuo -->
+        <div class="enterprise-card rounded-2xl p-8 flex flex-col justify-between group">
+          <div class="space-y-6">
+            <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-500 group-hover:text-slate-950 transition-all duration-300">
+              <i data-lucide="trending-up" class="w-7 h-7"></i>
+            </div>
+            
+            <div class="space-y-2">
+              <span class="text-xs font-mono uppercase tracking-widest text-cyan-400">03 • Escalabilidad Sostenida</span>
+              <h3 class="text-2xl font-bold text-[#F8FAFC]">Acompañamiento Continuo</h3>
+            </div>
+            
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Escalamos tu infraestructura junto al crecimiento de tu negocio. No te entregamos un software y desaparecemos: somos tu aliado técnico de largo plazo para auditorías, optimización y nuevas fases.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-300 pt-2 border-t border-slate-700/60">
+              <li class="flex items-center space-x-2">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Monitoreo 24/7 de rendimiento y salud</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Escalamiento vertical y horizontal bajo demanda</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Consultoría estratégica periódica de roadmap</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <span class="text-xs font-mono text-cyan-400 flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
+              <span>Alianza B2B de largo plazo</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN 3: PORTAFOLIO DE SOLUCIONES (Cuadrícula 4 Columnas)
+       ========================================================================= -->
+  <section id="soluciones" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i data-lucide="grid" class="w-3.5 h-3.5"></i>
+          <span>Capacidades de Alto Impacto</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
+          Portafolio de Soluciones
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg">
+          Ecosistemas digitales diseñados para resolver desafíos operacionales complejos e impulsar el crecimiento comercial sostenido.
+        </p>
+      </div>
+
+      <!-- 4 Columns Solution Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- PILAR 1: Desarrollo Web y Apps -->
+        <div class="solution-card enterprise-card rounded-2xl p-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <!-- Icon & Tag -->
+            <div class="flex items-center justify-between">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                <i data-lucide="code-2" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[10px] font-mono uppercase px-2 py-1 rounded bg-[#0F172A] text-slate-300 border border-slate-700">
+                Pilar 01
+              </span>
+            </div>
+
+            <h3 class="text-xl font-bold text-[#F8FAFC]">
+              Desarrollo Web y Apps
+            </h3>
+
+            <p class="text-cyan-400/90 text-xs font-mono">
+              Ecosistemas digitales y plataformas de alto rendimiento.
+            </p>
+
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Diseño y arquitectura de software moderna para plataformas web escalables, portales B2B interactivos y aplicaciones web progresivas (PWA) con tiempos de carga ultrarrápidos.
+            </p>
+
+            <!-- Visual Mockup snippet -->
+            <div class="bg-[#0F172A] p-3 rounded-lg border border-slate-800 space-y-2">
+              <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <span>Next-Gen Stack</span>
+                <span class="text-emerald-400">99.8 PageSpeed</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-cyan-400 rounded-full w-11/12"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800/80">
+            <button type="button" data-service-val="web" class="select-service-btn w-full py-2.5 px-3 rounded-lg bg-[#0F172A] hover:bg-cyan-500/20 text-cyan-400 border border-slate-700 hover:border-cyan-400 text-xs font-semibold flex items-center justify-center space-x-1.5 transition-all">
+              <span>Cotizar Solución Web</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- PILAR 2: Datos y Estadística -->
+        <div class="solution-card enterprise-card rounded-2xl p-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[10px] font-mono uppercase px-2 py-1 rounded bg-[#0F172A] text-slate-300 border border-slate-700">
+                Pilar 02
+              </span>
+            </div>
+
+            <h3 class="text-xl font-bold text-[#F8FAFC]">
+              Datos y Estadística
+            </h3>
+
+            <p class="text-cyan-400/90 text-xs font-mono">
+              Migración, estructuración y reportes precisos para decisiones gerenciales.
+            </p>
+
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Consolidación de bases de datos relacionales y documentales, canalizaciones ETL automatizadas y dashboards ejecutivos en tiempo real para visibilidad analítica total.
+            </p>
+
+            <!-- Visual Mockup snippet -->
+            <div class="bg-[#0F172A] p-3 rounded-lg border border-slate-800 space-y-2">
+              <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <span>SQL / ETL Pipeline</span>
+                <span class="text-cyan-400">Zero Data Loss</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-teal-400 rounded-full w-full"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800/80">
+            <button type="button" data-service-val="datos" class="select-service-btn w-full py-2.5 px-3 rounded-lg bg-[#0F172A] hover:bg-cyan-500/20 text-cyan-400 border border-slate-700 hover:border-cyan-400 text-xs font-semibold flex items-center justify-center space-x-1.5 transition-all">
+              <span>Cotizar Analítica de Datos</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- PILAR 3: Automatización Operativa -->
+        <div class="solution-card enterprise-card rounded-2xl p-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                <i data-lucide="git-merge" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[10px] font-mono uppercase px-2 py-1 rounded bg-[#0F172A] text-slate-300 border border-slate-700">
+                Pilar 03
+              </span>
+            </div>
+
+            <h3 class="text-xl font-bold text-[#F8FAFC]">
+              Automatización Operativa
+            </h3>
+
+            <p class="text-cyan-400/90 text-xs font-mono">
+              Flujos de trabajo para eliminar tareas manuales y sincronizar sistemas.
+            </p>
+
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Integración profunda entre ERP, CRM, inventarios y herramientas de comunicación para erradicar el trabajo repetitivo y reducir drásticamente el error humano.
+            </p>
+
+            <!-- Visual Mockup snippet -->
+            <div class="bg-[#0F172A] p-3 rounded-lg border border-slate-800 space-y-2">
+              <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <span>Ahorro Operativo</span>
+                <span class="text-cyan-400">-70% Tiempo Manual</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-cyan-400 rounded-full w-4/5"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800/80">
+            <button type="button" data-service-val="automatizacion" class="select-service-btn w-full py-2.5 px-3 rounded-lg bg-[#0F172A] hover:bg-cyan-500/20 text-cyan-400 border border-slate-700 hover:border-cyan-400 text-xs font-semibold flex items-center justify-center space-x-1.5 transition-all">
+              <span>Cotizar Automatización</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- PILAR 4: Comercio Electrónico y Retail SaaS -->
+        <div class="solution-card enterprise-card rounded-2xl p-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[10px] font-mono uppercase px-2 py-1 rounded bg-[#0F172A] text-slate-300 border border-slate-700">
+                Pilar 04
+              </span>
+            </div>
+
+            <h3 class="text-xl font-bold text-[#F8FAFC]">
+              Comercio Electrónico & SaaS
+            </h3>
+
+            <p class="text-cyan-400/90 text-xs font-mono">
+              Tiendas virtuales, gestión de catálogos, automatización de cotizaciones, pasarelas de pago y chatbots 24/7.
+            </p>
+
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Infraestructura de ventas omnicanal lista para alto volumen de transacciones con pasarelas de pago seguras y asistentes con inteligencia artificial integrados.
+            </p>
+
+            <!-- Visual Mockup snippet -->
+            <div class="bg-[#0F172A] p-3 rounded-lg border border-slate-800 space-y-2">
+              <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <span>Checkout & Chatbot</span>
+                <span class="text-emerald-400">24/7 Transaccional</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-emerald-400 rounded-full w-full"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800/80">
+            <button type="button" data-service-val="ecommerce" class="select-service-btn w-full py-2.5 px-3 rounded-lg bg-[#0F172A] hover:bg-cyan-500/20 text-cyan-400 border border-slate-700 hover:border-cyan-400 text-xs font-semibold flex items-center justify-center space-x-1.5 transition-all">
+              <span>Cotizar E-commerce B2B</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN 4: INFRAESTRUCTURA Y STACK TECNOLÓGICO (Cinta / Grid de Logos)
+       ========================================================================= -->
+  <section id="stack" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i data-lucide="terminal-square" class="w-3.5 h-3.5"></i>
+          <span>Modern Enterprise Stack</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#F8FAFC] tracking-tight">
+          Potenciados por tecnología de vanguardia.
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base">
+          Utilizamos tecnologías robustas, estandarizadas y de alto rendimiento que aseguran interoperabilidad, seguridad y escalabilidad continua.
+        </p>
+      </div>
+
+      <!-- Minimalist SVG Tech Logos Grid (React, Vue.js, Tailwind CSS, Python, Node.js, PostgreSQL, SQLite, Docker) -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+        
+        <!-- React -->
+        <div class="tech-logo-card rounded-xl p-5 flex flex-col items-center justify-center space-y-3 group cursor-pointer text-center">
+          <svg class="w-10 h-10 text-[#F8FAFC] transition-colors duration-200" viewBox="0 0 115.3 100" fill="currentColor">
+            <path d="M57.6,40.1c-5.5,0-9.9,4.4-9.9,9.9s4.4,9.9,9.9,9.9s9.9-4.4,9.9-9.9S63.1,40.1,57.6,40.1z M109.8,37.8 c-1.6-4.9-5-9.6-9.7-13.4c-7.9-6.4-19-9.7-31.5-9.5c-3.1-4.8-6.7-9.4-10.7-13.6C51.6-0.3,45.4-0.4,41.2,1.2 c-4.2,1.6-7.3,5.1-8.8,9.8c-2.4,7.4-0.9,17.4,4.2,27.7c-7.9,3.6-15.5,8-22.3,13.2C6.1,58.3,1.3,65.3,0.3,71.5 c-0.8,4.7,0.7,9.3,4.2,12.7c3.5,3.4,8.5,5.1,13.9,4.9c9.3-0.3,20.3-4.4,31.2-11.5c4.7,4.3,9.7,8.2,15,11.5 c7.5,4.7,14.8,7.3,21,7.3c4.5,0,8.3-1.4,11-4.2c3.5-3.5,4.7-8.9,3.3-14.8c-1.9-8.1-7.8-17.7-16.4-26.6 C88.2,46.7,99.5,42.7,109.8,37.8z M57.6,4.6c2.5,2.9,4.8,6.2,7,9.7c-4.6,0.3-9.3,0.9-14,1.8C49.9,10.7,53.8,6.7,57.6,4.6z M12.9,82.8c-3.2-0.2-5.7-1.6-6.8-3.7c-0.8-1.5-0.7-3.6,0.3-6c1-2.4,3.2-5.4,6.4-8.8c3.2-3.4,7.4-7.2,12.5-11.1 c-1.1,4.5-1.7,9-1.9,13.4C18.6,73.5,14.9,79.5,12.9,82.8z M73.7,89.5c-3.2,0-7.3-1.6-12.1-4.7c-3.4-2.2-6.8-4.8-10-7.7 c3.5-2.7,6.9-5.7,10-9c4.2,3.8,8.2,7.4,11.8,10.6C75.2,85.6,74.8,89.5,73.7,89.5z M98.4,46.7c-3.9,2.8-8.6,5.7-13.9,8.5 c-2.2-4.1-4.9-8.2-7.9-12.2c3.9-2.3,7.6-4.9,11-7.7C92.4,38.8,96.3,42.6,98.4,46.7z"/>
+          </svg>
+          <span class="text-xs font-mono font-medium text-[#F8FAFC]">React</span>
+        </div>
+
+        <!-- Vue.js -->
+        <div class="tech-logo-card rounded-xl p-5 flex flex-col items-center justify-center space-y-3 group cursor-pointer text-center">
+          <svg class="w-10 h-10 text-[#F8FAFC] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M2 3h3.5L12 14.5 18.5 3H22L12 21 2 3zm4.5 0h3L12 7.5 14.5 3h3L12 12.5 6.5 3z"/>
+          </svg>
+          <span class="text-xs font-mono font-medium text-[#F8FAFC]">Vue.js</span>
+        </div>
+
+        <!-- Tailwind CSS -->
+        <div class="tech-logo-card rounded-xl p-5 flex flex-col items-center justify-center space-y-3 group cursor-pointer text-center">
+          <svg class="w-10 h-10 text-[#F8FAFC] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/>
+          </svg>
+          <span class="text-xs font-mono font-medium text-[#F8FAFC]">Tailwind CSS</span>
+        </div>
+
+        <!-- Python -->
+        <div class="tech-logo-card rounded-xl p-5 flex flex-col items-center justify-center space-y-3 group cursor-pointer text-center">
+          <svg class="w-10 h-10 text-[#F8FAFC] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M11.914 0C5.82 0 6.2 2.652 6.2 2.652l.006 2.744h5.81v.824H3.882s-3.882.441-3.882 6.282 3.39 6.098 3.39 6.098h2.025v-2.85s-.11-3.39 3.33-3.39h5.714s3.22-.052 3.22-3.167V3.167S18.17 0 11.914 0zm-1.685 1.706a1.03 1.03 0 1 1 0 2.06 1.03 1.03 0 0 1 0-2.06zm1.857 22.294c6.094 0 5.714-2.652 5.714-2.652l-.006-2.744h-5.81v-.824h8.134s3.882-.441 3.882-6.282-3.39-6.098-3.39-6.098h-2.025v2.85s.11 3.39-3.33 3.39H12.67s-3.22.052-3.22 3.167v6.015s-.494 3.168 5.764 3.168zm1.685-1.706a1.03 1.03 0 1 1 0-2.06 1.03 1.03 0 0 1 0 2.06z"/>
+          </svg>
+          <span class="text-xs font-mono font-medium text-[#F8FAFC]">Python</span>
+        </div>
+
+        <!-- Node.js -->
+        <div class="tech-logo-card rounded-xl p-5 flex flex-col items-center justify-center space-y-3 group cursor-pointer text-center">
+          <svg class="w-10 h-10 text-[#F8FAFC] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l9.5 5.5v11L12 24l-9.5-5.5v-11L12 2zm0 2.3L4.5 8.6v6.8L12 19.7l7.5-4.3V8.6L12 4.3z"/>
+          </svg>
+          <span class="text-xs font-mono font-medium text-[#F8FAFC]">Node.js</span>
+        </div>
+
+        <!-- PostgreSQL -->
+        <div class="tech-logo-card rounded-xl p-5 flex flex-col items-center justify-center space-y-3 group cursor-pointer text-center">
+          <svg class="w-10 h-10 text-[#F8FAFC] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+          </svg>
+          <span class="text-xs font-mono font-medium text-[#F8FAFC]">PostgreSQL</span>
+        </div>
+
+        <!-- SQLite -->
+        <div class="tech-logo-card rounded-xl p-5 flex flex-col items-center justify-center space-y-3 group cursor-pointer text-center">
+          <svg class="w-10 h-10 text-[#F8FAFC] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4zm6 14c0 .5-2.24 2-6 2s-6-1.5-6-2v-2.23c1.61 1.05 3.72 1.63 6 1.63s4.39-.58 6-1.63V17zm0-4.5c0 .5-2.24 2-6 2s-6-1.5-6-2v-2.23c1.61 1.05 3.72 1.63 6 1.63s4.39-.58 6-1.63V12.5zM12 5c3.76 0 6 1.5 6 2s-2.24 2-6 2-6-1.5-6-2 2.24-2 6-2z"/>
+          </svg>
+          <span class="text-xs font-mono font-medium text-[#F8FAFC]">SQLite</span>
+        </div>
+
+        <!-- Docker -->
+        <div class="tech-logo-card rounded-xl p-5 flex flex-col items-center justify-center space-y-3 group cursor-pointer text-center">
+          <svg class="w-10 h-10 text-[#F8FAFC] transition-colors duration-200" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.186.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.186.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.186.186.186m5.893 2.714h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186H8.1a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H5.136a.186.186 0 00-.186.185v1.888c0 .102.084.185.186.185m-2.928 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H2.208a.186.186 0 00-.186.185v1.888c0 .102.084.185.186.185m21.655 1.767c-.247-.197-1.125-.86-2.905-.86-1.503 0-2.602.433-3.327.973-.393-.16-.94-.325-1.637-.325h-15.65c-.267 0-.486.216-.486.485 0 1.25.32 3.518 1.494 5.378 1.134 1.794 3.033 3.036 5.86 3.036 5.766 0 10.353-3.626 12.016-8.22 1.408.315 3.056.248 4.298-.445.312-.175.467-.533.337-.872z"/>
+          </svg>
+          <span class="text-xs font-mono font-medium text-[#F8FAFC]">Docker</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN 5: NUESTRO PROCESO (Timeline / Pasos Horizontales)
+       ========================================================================= -->
+  <section id="proceso" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i data-lucide="git-commit" class="w-3.5 h-3.5"></i>
+          <span>Metodología S26 Agile</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
+          Nuestro Proceso
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg">
+          Flujo de trabajo estructurado y transparente para garantizar predictibilidad, calidad de código y entrega a tiempo.
+        </p>
+      </div>
+
+      <!-- Horizontal Steps (4 Steps) -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+        
+        <!-- STEP 1: Diagnóstico gratuito -->
+        <div class="step-connector enterprise-card rounded-2xl p-6 relative z-10 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-full bg-cyan-500/20 border-2 border-cyan-400 flex items-center justify-center text-cyan-400 font-mono font-bold text-lg">
+              01
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-[#F8FAFC]">Diagnóstico gratuito</h3>
+              <p class="text-xs font-mono text-cyan-400 mt-0.5">Auditoría y Alcance</p>
+            </div>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Evaluamos tu infraestructura actual, identificamos cuellos de botella y definimos la hoja de ruta óptima sin compromiso ni costo inicial.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-[11px] text-slate-400 flex items-center space-x-1.5">
+            <i data-lucide="clock" class="w-3.5 h-3.5 text-cyan-400"></i>
+            <span>Duración: 48 - 72 hrs</span>
+          </div>
+        </div>
+
+        <!-- STEP 2: Diseño de arquitectura -->
+        <div class="step-connector enterprise-card rounded-2xl p-6 relative z-10 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-full bg-cyan-500/20 border-2 border-cyan-400 flex items-center justify-center text-cyan-400 font-mono font-bold text-lg">
+              02
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-[#F8FAFC]">Diseño de arquitectura</h3>
+              <p class="text-xs font-mono text-cyan-400 mt-0.5">Blueprints & UX/UI</p>
+            </div>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Modelamos bases de datos, diagramas de microservicios en la nube, protocolos de seguridad y prototipos visuales de alta fidelidad.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-[11px] text-slate-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400"></i>
+            <span>Aprobación de Blueprint</span>
+          </div>
+        </div>
+
+        <!-- STEP 3: Desarrollo ágil (MVP) -->
+        <div class="step-connector enterprise-card rounded-2xl p-6 relative z-10 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-full bg-cyan-500/20 border-2 border-cyan-400 flex items-center justify-center text-cyan-400 font-mono font-bold text-lg">
+              03
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-[#F8FAFC]">Desarrollo ágil (MVP)</h3>
+              <p class="text-xs font-mono text-cyan-400 mt-0.5">Sprints Iterativos</p>
+            </div>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Construcción en iteraciones de 2 semanas con entregables funcionales continuos, pruebas unitarias automatizadas y control de calidad.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-[11px] text-slate-400 flex items-center space-x-1.5">
+            <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-cyan-400"></i>
+            <span>Demos cada 14 días</span>
+          </div>
+        </div>
+
+        <!-- STEP 4: Despliegue y soporte continuo -->
+        <div class="enterprise-card rounded-2xl p-6 relative z-10 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-full bg-cyan-500/20 border-2 border-cyan-400 flex items-center justify-center text-cyan-400 font-mono font-bold text-lg">
+              04
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-[#F8FAFC]">Despliegue y soporte continuo</h3>
+              <p class="text-xs font-mono text-cyan-400 mt-0.5">Producción 24/7</p>
+            </div>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Lanzamiento a producción con pipelines CI/CD de cero tiempo de inactividad, monitoreo continuo y acompañamiento para escalar.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-[11px] text-slate-400 flex items-center space-x-1.5">
+            <i data-lucide="shield" class="w-3.5 h-3.5 text-emerald-400"></i>
+            <span>Soporte Enterprise Activo</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECCIÓN 6: FOOTER Y CAPTACIÓN (Formulario de Diagnóstico Tecnológico)
+       ========================================================================= -->
+  <footer id="contacto" class="pt-20 pb-12 bg-[#0F172A] relative border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Lead Capture Card (Dark Mode Container #1E293B) -->
+      <div class="bg-[#1E293B] border border-slate-700/80 rounded-3xl p-8 sm:p-12 lg:p-16 mb-20 shadow-2xl relative overflow-hidden">
+        
+        <!-- Subtle Glow inside Card -->
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+          
+          <!-- Left Column: Copy & Value Proposition -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#0F172A] border border-cyan-500/40 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+              <span>Cupos de Consultoría Disponibles</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight leading-tight">
+              ¿Listo para modernizar y escalar tu operación?
+            </h2>
+
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Completa el formulario para solicitar tu sesión de diagnóstico tecnológico sin costo. Analizaremos tu arquitectura y te presentaremos un plan de acción estratégico en menos de 24 horas.
+            </p>
+
+            <!-- Guarantee Badges -->
+            <div class="space-y-3 pt-2">
+              <div class="flex items-center space-x-3 text-xs text-slate-300">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Diagnóstico 100% confidencial (NDA incluido)</span>
+              </div>
+              <div class="flex items-center space-x-3 text-xs text-slate-300">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Respuesta garantizada por un Arquitecto Senior</span>
+              </div>
+              <div class="flex items-center space-x-3 text-xs text-slate-300">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Sin compromisos de contratación posterior</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Form -->
+          <div class="lg:col-span-7 bg-[#0F172A] p-6 sm:p-8 rounded-2xl border border-slate-700/80 shadow-xl">
+            
+            <!-- Success Alert (Hidden by default) -->
+            <div id="form-success-alert" class="hidden mb-6 p-4 rounded-xl bg-cyan-950/80 border border-cyan-500/50 text-cyan-200 text-sm flex items-start space-x-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="block font-bold text-white">¡Diagnóstico Solicitado con Éxito!</strong>
+                <span>Hemos recibido tu solicitud. Nuestro equipo de arquitectura tecnológica se contactará contigo a la brevedad.</span>
+              </div>
+            </div>
+
+            <form id="main-contact-form" class="space-y-5">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <!-- Field: Nombre -->
+                <div class="space-y-1.5">
+                  <label for="form-name" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                    Nombre Completo <span class="text-cyan-400">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="form-name" 
+                    name="nombre" 
+                    required 
+                    placeholder="Ej. Carlos Mendoza" 
+                    class="custom-input w-full px-4 py-3 rounded-xl text-sm"
+                  />
+                </div>
+
+                <!-- Field: Empresa -->
+                <div class="space-y-1.5">
+                  <label for="form-company" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                    Empresa <span class="text-cyan-400">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="form-company" 
+                    name="empresa" 
+                    required 
+                    placeholder="Ej. Logística Global S.A." 
+                    class="custom-input w-full px-4 py-3 rounded-xl text-sm"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <!-- Field: Correo -->
+                <div class="space-y-1.5">
+                  <label for="form-email" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                    Correo Corporativo <span class="text-cyan-400">*</span>
+                  </label>
+                  <input 
+                    type="email" 
+                    id="form-email" 
+                    name="correo" 
+                    required 
+                    placeholder="carlos@empresa.com" 
+                    class="custom-input w-full px-4 py-3 rounded-xl text-sm"
+                  />
+                </div>
+
+                <!-- Field: Selector de Servicio (Web, Datos, Automatización, E-commerce) -->
+                <div class="space-y-1.5">
+                  <label for="form-service" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                    Selector de Servicio <span class="text-cyan-400">*</span>
+                  </label>
+                  <select 
+                    id="form-service" 
+                    name="servicio" 
+                    required 
+                    class="custom-input w-full px-4 py-3 rounded-xl text-sm cursor-pointer"
+                  >
+                    <option value="" disabled selected>Selecciona una solución...</option>
+                    <option value="web">Desarrollo Web y Apps</option>
+                    <option value="datos">Datos y Estadística</option>
+                    <option value="automatizacion">Automatización Operativa</option>
+                    <option value="ecommerce">Comercio Electrónico y Retail SaaS</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Field: Mensaje / Detalles -->
+              <div class="space-y-1.5">
+                <label for="form-notes" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                  Breve descripción del reto o proyecto (Opcional)
+                </label>
+                <textarea 
+                  id="form-notes" 
+                  name="mensaje" 
+                  rows="3" 
+                  placeholder="Cuéntanos brevemente qué buscas optimizar, escalar o construir..."
+                  class="custom-input w-full px-4 py-3 rounded-xl text-sm resize-none"
+                ></textarea>
+              </div>
+
+              <!-- Botón Final: [Solicitar Diagnóstico Tecnológico] (Color #06B6D4) -->
+              <div>
+                <button 
+                  type="submit" 
+                  class="btn-cyan w-full py-4 px-6 rounded-xl text-sm font-bold tracking-wider uppercase flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/50 cursor-pointer"
+                >
+                  <i data-lucide="send" class="w-4 h-4 text-slate-950"></i>
+                  <span>Solicitar Diagnóstico Tecnológico</span>
+                </button>
+              </div>
+
+              <div class="text-center text-[11px] text-slate-500 font-mono">
+                🔒 Tus datos están protegidos bajo protocolos de privacidad y cifrado.
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Footer Navigation & Copyright Links -->
+      <div class="border-t border-slate-800/80 pt-10 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-400">
+        <div class="flex items-center space-x-3">
+          <div class="w-7 h-7 rounded-lg bg-cyan-500 flex items-center justify-center">
+            <i data-lucide="layers" class="w-4 h-4 text-slate-950 stroke-[2.5]"></i>
+          </div>
+          <span class="font-bold text-white tracking-wide">S26Digital</span>
+          <span>— Consultora B2B & Socio Tecnológico Enterprise.</span>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="#hero" class="hover:text-cyan-400 transition-colors">Inicio</a>
+          <a href="#soluciones" class="hover:text-cyan-400 transition-colors">Servicios</a>
+          <a href="#proceso" class="hover:text-cyan-400 transition-colors">Metodología</a>
+          <a href="#contacto" class="hover:text-cyan-400 transition-colors">Contacto</a>
+          <span class="text-slate-600">|</span>
+          <span>© 2026 S26Digital. Todos los derechos reservados.</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODAL: AGENDAR CONSULTORÍA ESTRATÉGICA
+       ========================================================================= -->
+  <div id="consultation-modal" class="fixed inset-0 z-50 hidden items-center justify-center modal-overlay p-4">
+    <div class="bg-[#1E293B] border border-cyan-500/40 rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
+      
+      <!-- Close Button -->
+      <button type="button" class="close-modal-btn absolute top-5 right-5 text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="space-y-4 mb-6">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#0F172A] border border-cyan-500/30 text-cyan-400 text-xs font-mono">
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+          <span>Sesión de 30 Minutos con Arquitecto Lead</span>
+        </div>
+        <h3 class="text-2xl font-bold text-white">Agendar Consultoría Estratégica</h3>
+        <p class="text-slate-300 text-xs">
+          Selecciona tus datos de contacto para coordinar la llamada de diagnóstico directamente en tu calendario.
+        </p>
+      </div>
+
+      <form id="modal-consultation-form" class="space-y-4">
+        <div class="space-y-1">
+          <label class="block text-xs font-mono text-slate-300">Nombre Completo</label>
+          <input type="text" required placeholder="Tu nombre" class="custom-input w-full px-3.5 py-2.5 rounded-lg text-sm" />
+        </div>
+
+        <div class="space-y-1">
+          <label class="block text-xs font-mono text-slate-300">Correo Corporativo</label>
+          <input type="email" required placeholder="correo@empresa.com" class="custom-input w-full px-3.5 py-2.5 rounded-lg text-sm" />
+        </div>
+
+        <div class="space-y-1">
+          <label class="block text-xs font-mono text-slate-300">Área de Interés</label>
+          <select required class="custom-input w-full px-3.5 py-2.5 rounded-lg text-sm">
+            <option value="web">Desarrollo Web y Apps</option>
+            <option value="datos">Datos y Estadística</option>
+            <option value="automatizacion">Automatización Operativa</option>
+            <option value="ecommerce">Comercio Electrónico & SaaS</option>
+          </select>
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="btn-cyan w-full py-3 rounded-lg text-xs font-bold uppercase tracking-wider">
+            Confirmar Reserva de Consultoría
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Master JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

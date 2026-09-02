@@ -1,0 +1,84 @@
+Instrucciones Maestras para el Desarrollo de S26Digital (Landing Page)
+Contexto del Proyecto:
+Actúa como un desarrollador web y diseñador UX/UI de nivel Senior. Tu objetivo es diseñar y estructurar la landing page para S26Digital, una consultora B2B que actúa como "Socio Tecnológico". El enfoque es vender soluciones estratégicas, infraestructura en la nube, agilidad operativa y ecosistemas digitales robustos.
+
+1. Identidad Visual y Diseño (UI/UX):
+Debes implementar estrictamente un diseño "Dark Mode" (Cloud Enterprise), utilizando esta paleta de colores:
+
+Fondo Principal: #0F172A (Azul medianoche profundo, para toda la página).
+
+Acento (Botones, CTAs e Íconos): #06B6D4 (Cian eléctrico, para llamar la atención).
+
+Texto Principal (Títulos y Párrafos): #F8FAFC (Blanco tiza suave).
+
+Bordes y Tarjetas (Contenedores): #1E293B (Gris pizarra oscuro, para diferenciar secciones o tarjetas sobre el fondo principal).
+
+Tipografía: Fuentes Sans-Serif limpias, modernas y geométricas (como Inter, Roboto o Montserrat).
+
+2. Búsqueda de Imágenes Referenciales y Recursos Visuales:
+Utiliza imágenes (placeholders temporales) que encajen con el ambiente oscuro y tecnológico de la web. Busca con estas características (ej. en Unsplash, Pexels o vía generación de IA):
+
+Hero Section: Entornos oscuros con destellos cian/azules, código, abstracciones de redes neuronales, o paneles de control en monitores (Keywords: dark tech abstract, blue cyber network, software developer dark mode).
+
+Pilares de Servicio: Capturas limpias (mockups) de dashboards analíticos, interfaces de tiendas online o líneas de código en editores modernos (Keywords: dark UI dashboard, ecommerce mockup dark, code screen).
+
+Infraestructura: Íconos en formato SVG monocolor (#F8FAFC o #06B6D4) para representar el stack tecnológico.
+
+3. Estructura de Contenido (Copywriting por Secciones):
+
+SECCIÓN 1: Hero (Cabecera)
+
+Título: Transformamos la complejidad tecnológica en el motor de crecimiento de tu empresa.
+
+Subtítulo: Desarrollamos software a medida, automatizamos operaciones, estructuramos datos y escalamos tus ventas con infraestructura de nivel enterprise. Tu socio tecnológico de principio a fin.
+
+Etiqueta: Soluciones llave en mano • Infraestructura ágil en la nube • Despliegue rápido.
+
+Botón CTA: [Agendar Consultoría Estratégica] (Este botón debe usar el color de acento #06B6D4).
+
+SECCIÓN 2: Diferenciador (Tarjetas visuales)
+
+Título: Más que líneas de código, entregamos valor estratégico.
+
+Tarjeta 1: Soluciones Llave en Mano. Nos encargamos de todo el ecosistema (hosting, bases de datos, seguridad).
+
+Tarjeta 2: Agilidad y Prototipado. Construimos en iteraciones rápidas para resultados en semanas.
+
+Tarjeta 3: Acompañamiento Continuo. Escalamos tu infraestructura junto al crecimiento de tu negocio.
+(Nota de diseño: Estas tarjetas deben tener fondo #1E293B).
+
+SECCIÓN 3: Portafolio de Soluciones (Diseño en Cuadrícula / 4 Columnas)
+
+Pilar 1: Desarrollo Web y Apps. Ecosistemas digitales y plataformas de alto rendimiento.
+
+Pilar 2: Datos y Estadística. Migración, estructuración y reportes precisos para decisiones gerenciales.
+
+Pilar 3: Automatización Operativa. Flujos de trabajo para eliminar tareas manuales y sincronizar sistemas.
+
+Pilar 4: Comercio Electrónico y Retail SaaS. Tiendas virtuales, gestión de catálogos, automatización de cotizaciones, pasarelas de pago y chatbots 24/7.
+
+SECCIÓN 4: Infraestructura y Stack Tecnológico (Cinta de Logos)
+
+Título: Potenciados por tecnología de vanguardia.
+
+Instrucción visual: Colocar logos minimalistas (en color blanco suave o gris claro) de: React, Vue.js, Tailwind CSS, Python, Node.js, PostgreSQL, SQLite y Docker.
+
+SECCIÓN 5: Nuestro Proceso (Timeline/Pasos horizontales)
+
+Diagnóstico gratuito.
+
+Diseño de arquitectura.
+
+Desarrollo ágil (MVP).
+
+Despliegue y soporte continuo.
+
+SECCIÓN 6: Footer y Captación
+
+Título: ¿Listo para modernizar y escalar tu operación?
+
+Formulario: Nombre, Empresa, Correo, Selector de Servicio (Web, Datos, Automatización, E-commerce).
+
+Botón Final: [Solicitar Diagnóstico Tecnológico] (Color #06B6D4).
+
+Instrucción Final para el Agente: Construye el esqueleto HTML/CSS, el componente de React o la configuración en el framework elegido aplicando estrictamente estos códigos de color HEX y directrices. Garantiza que el diseño sea 100% responsivo y mantenga el contraste de legibilidad.
