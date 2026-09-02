@@ -33,10 +33,10 @@ La interfaz sigue estrictamente la directriz **"Dark Mode (Cloud Enterprise)"**:
    - `Agilidad y Prototipado`
    - `Acompañamiento Continuo`
 4. **SECCIÓN 3: Portafolio de Soluciones (4 Columnas)**:
-   - *Pilar 1*: Desarrollo Web y Apps
-   - *Pilar 2*: Datos y Estadística
-   - *Pilar 3*: Automatización Operativa
-   - *Pilar 4*: Comercio Electrónico y Retail SaaS
+   - Desarrollo Web y Apps
+   - Datos y Estadística
+   - Automatización
+   - Comercio Electrónico
 5. **SECCIÓN 4: Infraestructura y Stack Tecnológico (Cinta de Logos)**:
    - Logos vectoriales SVG minimalistas monocolor (`#F8FAFC` con hover `#06B6D4`) de:
      - `React`, `Vue.js`, `Tailwind CSS`, `Python`, `Node.js`, `PostgreSQL`, `SQLite`, `Docker`.
