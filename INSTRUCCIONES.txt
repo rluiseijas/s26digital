@@ -49,13 +49,13 @@ Tarjeta 3: Acompañamiento Continuo. Escalamos tu infraestructura junto al creci
 
 SECCIÓN 3: Portafolio de Soluciones (Diseño en Cuadrícula / 4 Columnas)
 
-Pilar 1: Desarrollo Web y Apps. Ecosistemas digitales y plataformas de alto rendimiento.
+1. Desarrollo Web y Apps. Ecosistemas digitales y plataformas de alto rendimiento.
 
-Pilar 2: Datos y Estadística. Migración, estructuración y reportes precisos para decisiones gerenciales.
+2. Datos y Estadística. Migración, estructuración y reportes precisos para decisiones gerenciales.
 
-Pilar 3: Automatización Operativa. Flujos de trabajo para eliminar tareas manuales y sincronizar sistemas.
+3. Automatización. Flujos de trabajo para eliminar tareas manuales y sincronizar sistemas.
 
-Pilar 4: Comercio Electrónico y Retail SaaS. Tiendas virtuales, gestión de catálogos, automatización de cotizaciones, pasarelas de pago y chatbots 24/7.
+4. Comercio Electrónico. Tiendas virtuales, gestión de catálogos, automatización de cotizaciones, pasarelas de pago y chatbots 24/7.
 
 SECCIÓN 4: Infraestructura y Stack Tecnológico (Cinta de Logos)
 
