@@ -462,33 +462,32 @@ function initScrollSpy() {
    8. Solution Service Selector Sync
    ========================================================================== */
 function initSolutionHighlights() {
-  const serviceCards = document.querySelectorAll('.solution-card');
+  const actionBtns = document.querySelectorAll('.select-service-btn');
   const serviceSelect = document.getElementById('form-service');
 
-  serviceCards.forEach(card => {
-    const actionBtn = card.querySelector('.select-service-btn');
-    if (actionBtn) {
-      actionBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const serviceValue = actionBtn.getAttribute('data-service-val');
-        if (serviceSelect && serviceValue) {
-          serviceSelect.value = serviceValue;
-          
-          const contactSec = document.getElementById('contacto');
-          if (contactSec) {
-            contactSec.scrollIntoView({ behavior: 'smooth' });
-            
-            // Highlight selector briefly
+  actionBtns.forEach(actionBtn => {
+    actionBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const serviceValue = actionBtn.getAttribute('data-service-val');
+      if (serviceSelect && serviceValue) {
+        serviceSelect.value = serviceValue;
+      }
+      
+      const contactSec = document.getElementById('contacto');
+      if (contactSec) {
+        contactSec.scrollIntoView({ behavior: 'smooth' });
+        
+        // Highlight selector briefly
+        setTimeout(() => {
+          if (serviceSelect) {
+            serviceSelect.classList.add('ring-2', 'ring-cyan-400');
+            serviceSelect.focus();
             setTimeout(() => {
-              serviceSelect.classList.add('ring-2', 'ring-cyan-400');
-              serviceSelect.focus();
-              setTimeout(() => {
-                serviceSelect.classList.remove('ring-2', 'ring-cyan-400');
-              }, 1500);
-            }, 600);
+              serviceSelect.classList.remove('ring-2', 'ring-cyan-400');
+            }, 1500);
           }
-        }
-      });
-    }
+        }, 600);
+      }
+    });
   });
 }

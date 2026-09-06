@@ -45,9 +45,15 @@ La interfaz sigue estrictamente la directriz **"Dark Mode (Cloud Enterprise)"**:
    - 02. Diseño de arquitectura
    - 03. Desarrollo ágil (MVP)
    - 04. Despliegue y soporte continuo
-7. **SECCIÓN 6: Footer y Captación**:
+6. **SECCIÓN: Nueva Solución Fiscal 2026 (Facturación B2B Libre y Legal)**:
+   - Badge: `✨ NUEVA SOLUCIÓN FISCAL 2026`
+   - Título: `Olvídate de sistemas obsoletos. Tu facturación B2B, libre y 100% legal.`
+   - Introducción: Derogación de la homologación obligatoria del SENIAT (Gaceta Oficial Nº 43.435, Providencia SNAT/2026/00084 y Providencia 0071).
+   - Beneficios clave: *Libertad y Modernidad*, *Cumplimiento Fiscal Estricto* e *Integración Total*.
+   - CTA directo al diagnóstico: `Modernizar mi Facturación Ahora`.
+7. **SECCIÓN: Footer y Captación**:
    - Título: `¿Listo para modernizar y escalar tu operación?`
-   - Formulario interactivo con validación: *Nombre*, *Empresa*, *Correo*, *Selector de Servicio*.
+   - Formulario interactivo con validación: *Nombre*, *Empresa*, *Correo*, *Selector de Servicio* (incluye *Facturación B2B & Cumplimiento Fiscal*).
    - Botón Final: `[Solicitar Diagnóstico Tecnológico]` en `#06B6D4`.
    - Modal emergente para agendamiento rápido de consultoría.
 

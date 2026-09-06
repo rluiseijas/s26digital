@@ -1,0 +1,27 @@
+Actúa como un desarrollador web experto en UI/UX y diseño frontend para plataformas B2B. Necesito que agregues una sección completamente nueva en la Página de Inicio (Homepage) de mi sitio web. Esta sección debe ubicarse exactamente ANTES del formulario de contacto actual.
+
+El objetivo de la sección es anunciar un nuevo servicio/solución tecnológica tras la reciente eliminación de la homologación obligatoria de software por parte del SENIAT (Providencia SNAT/2026/00084), posicionando nuestro software como la alternativa moderna, legal y eficiente para empresas venezolanas.
+
+Por favor, estructura y diseña la sección con las siguientes especificaciones:
+
+[DISEÑO Y COMPORTAMIENTO VISUAL]
+- Estilo: Moderno, corporativo y tecnológico (B2B SaaS).
+- Contraste: Debe destacar visualmente como un lanzamiento de "NUEVO SERVICIO", usando una etiqueta o badge llamativo al inicio.
+- Componentes: Un titular fuerte, un párrafo introductorio, una cuadrícula (grid) de 3 o 4 beneficios clave con iconos modernos, y un botón de llamada a la acción (CTA).
+- Ubicación: Insértala justo arriba del formulario de contacto de la página de inicio, manteniendo la misma línea de diseño, fuentes y paleta de colores del sitio.
+
+[CONTENIDO DE TEXTO]
+
+- Etiqueta superior: "✨ NUEVA SOLUCIÓN FISCAL 2026"
+- Título principal: "Olvídate de sistemas obsoletos. Tu facturación B2B, libre y 100% legal."
+- Subtítulo/Introducción: "Con la derogación de la homologación obligatoria del SENIAT (Gaceta Oficial Nº 43.435), tu empresa ya no está atada a un listado cerrado de software. Implementamos sistemas de facturación y ERPs modernos, rápidos y adaptados estrictamente a la Providencia 0071."
+
+- Cuadrícula de Beneficios (Grid de 3 columnas con iconos):
+  1. Icono: Nube o Rayo -> "Libertad y Modernidad: Migramos tu negocio desde sistemas lentos o antiguos hacia plataformas en la nube o soluciones a la medida sin trabas burocráticas."
+  2. Icono: Check/Escudo -> "Cumplimiento Fiscal Estricto: Automatizamos la emisión de facturas, cálculo de IVA, IGTF y reportes obligatorios bajo la normativa vigente."
+  3. Icono: Enchufe/Conectividad -> "Integración Total: Conectamos tus sistemas actuales (e-commerce, CRM, ERP internacionales) con impresoras fiscales y formatos de formas libres."
+
+- Botón de Acción (CTA): "Modernizar mi Facturación Ahora" (Este botón debe hacer scroll dinámico o redirigir directamente al formulario de contacto que está justo abajo).
+
+Por favor, genera el código o la estructura visual correspondiente e intégralo en la posición solicitada respetando el responsive design (móvil y escritorio).
+Use code with caution.
