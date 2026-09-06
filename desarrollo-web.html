@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desarrollo Web y Apps con IA | S26Digital • Socio Tecnológico B2B</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Páginas web y aplicaciones modernas para empresas, potenciadas con Inteligencia Artificial, arquitectura cloud de alto rendimiento, hosting y dominio incluidos. Entrega en 15 días hábiles." />
+  <meta name="keywords" content="desarrollo web venezuela, aplicaciones web b2b, software con IA, react, nextjs, diseño web corporativo, hosting cloudflare, s26digital" />
+  <meta name="theme-color" content="#0F172A" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Desarrollo Web y Apps con IA | S26Digital" />
+  <meta property="og:description" content="Páginas web profesionales, rápidas y potenciadas con Inteligencia Artificial para empresas que buscan liderar su mercado." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2306B6D4'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'midnight': '#0F172A',
+            'cyan-electric': '#06B6D4',
+            'chalk-white': '#F8FAFC',
+            'slate-card': '#1E293B',
+            'slate-border': '#334155',
+            'slate-muted': '#94A3B8'
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-[#0F172A] text-[#F8FAFC] antialiased selection:bg-cyan-500/30 selection:text-white relative">
+
+  <!-- Top Notification Bar -->
+  <div class="bg-[#1E293B]/70 border-b border-slate-800 text-xs py-1.5 px-4 text-center text-slate-300 flex items-center justify-center space-x-2">
+    <span class="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse-dot"></span>
+    <span class="font-mono text-cyan-400 font-semibold">S26 Core Cloud:</span>
+    <span>Soluciones digitales de alto rendimiento • Entrega garantizada en 15 días hábiles</span>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <header id="main-navbar" class="sticky top-0 z-40 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all duration-300">
+            <i data-lucide="layers" class="w-6 h-6 text-slate-950 stroke-[2.5]"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-extrabold tracking-tight text-[#F8FAFC] font-sans">
+              S26<span class="text-[#06B6D4] glow-text-cyan">Digital</span>
+            </span>
+            <span class="text-[10px] uppercase tracking-widest text-slate-400 font-mono -mt-1">
+              Socio Tecnológico
+            </span>
+          </div>
+        </a>
+
+        <!-- Breadcrumb / Service Title -->
+        <div class="hidden lg:flex items-center space-x-2 text-xs font-mono text-slate-400 border-l border-slate-700 pl-6 ml-2">
+          <a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a>
+          <span>/</span>
+          <a href="index.html#soluciones" class="hover:text-cyan-400 transition-colors">Soluciones</a>
+          <span>/</span>
+          <span class="text-cyan-400 font-semibold">Desarrollo Web y Apps</span>
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+          <a href="#que-incluye" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">¿Qué incluye?</a>
+          <a href="#por-que-ia" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Ventaja IA</a>
+          <a href="#metodologia" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Proceso</a>
+          <a href="#faq" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Preguntas</a>
+          <a href="#contacto" class="btn-cyan px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-bold flex items-center space-x-1.5 transition-all">
+            <span>Cotizar Web</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Trigger -->
+        <div class="flex md:hidden">
+          <button id="mobile-menu-btn" type="button" aria-expanded="false" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-[#1E293B] focus:outline-none" aria-label="Menú principal">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0F172A]/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3 backdrop-blur-xl">
+      <a href="index.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">← Volver al Inicio</a>
+      <a href="#que-incluye" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">¿Qué incluye el paquete?</a>
+      <a href="#por-que-ia" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">Potenciado con IA</a>
+      <a href="#metodologia" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">Metodología de entrega</a>
+      <a href="#faq" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">Preguntas frecuentes</a>
+      <div class="pt-2">
+        <a href="#contacto" class="btn-cyan w-full text-center block py-3 rounded-lg text-xs font-bold uppercase tracking-wider">
+          Solicitar Cotización Web
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION: Desarrollo Web y Apps B2B
+       ========================================================================= -->
+  <section class="relative min-h-[75vh] flex items-center justify-center overflow-hidden pt-16 pb-20 bg-cyber-grid">
+    <!-- Ambient Glows -->
+    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-cyan-500/15 blur-[140px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full">
+      <div class="text-center max-w-4xl mx-auto space-y-6">
+        
+        <!-- Pill Badge -->
+        <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#1E293B]/90 border border-cyan-500/40 text-cyan-300 text-xs font-mono tracking-wide shadow-lg shadow-cyan-500/10 backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+          <span>Ecosistemas Web & Apps • Arquitectura Potenciada con IA</span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#F8FAFC] leading-[1.12]">
+          Páginas web y aplicaciones modernas, rápidas y <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400 glow-text-cyan">potenciadas con Inteligencia Artificial.</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          Tu empresa merece más que una plantilla genérica. Diseñamos plataformas web profesionales de alto impacto comercial, con tiempos de carga ultrarrápidos, optimizadas para Google y para los nuevos buscadores de IA (ChatGPT y Gemini).
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#contacto" class="btn-cyan w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold tracking-wide uppercase flex items-center justify-center space-x-3 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/50">
+            <i data-lucide="sparkles" class="w-5 h-5 text-slate-950"></i>
+            <span>Quiero mi Solución Web</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-slate-950"></i>
+          </a>
+          <a href="#que-incluye" class="btn-outline-dark w-full sm:w-auto px-7 py-4 rounded-xl text-sm font-medium flex items-center justify-center space-x-2">
+            <i data-lucide="list-checks" class="w-4 h-4 text-cyan-400"></i>
+            <span>Ver Todo lo que Incluye</span>
+          </a>
+        </div>
+
+        <!-- Metric Highlights -->
+        <div class="pt-10 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+          <div class="bg-[#1E293B]/70 border border-slate-800 rounded-xl p-4">
+            <div class="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] font-mono">15 Días</div>
+            <div class="text-xs text-slate-400 mt-1">Tiempo de Entrega Hábiles</div>
+          </div>
+          <div class="bg-[#1E293B]/70 border border-slate-800 rounded-xl p-4">
+            <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">99.8</div>
+            <div class="text-xs text-slate-400 mt-1">PageSpeed Performance</div>
+          </div>
+          <div class="bg-[#1E293B]/70 border border-slate-800 rounded-xl p-4">
+            <div class="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] font-mono">100%</div>
+            <div class="text-xs text-slate-400 mt-1">Autoadministrable</div>
+          </div>
+          <div class="bg-[#1E293B]/70 border border-slate-800 rounded-xl p-4">
+            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">0 Ataduras</div>
+            <div class="text-xs text-slate-400 mt-1">Propiedad Total del Código</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION: TODO LO QUE INCLUYE (El Paquete Completo)
+       ========================================================================= -->
+  <section id="que-incluye" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i data-lucide="package-check" class="w-3.5 h-3.5"></i>
+          <span>Solución Llave en Mano</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
+          Todo lo que necesitas para triunfar online, en una sola arquitectura.
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg">
+          Sin costos ocultos, sin sorpresas técnicas. Diseñamos un ecosistema digital integral para que tu empresa comience a convertir desde el primer día.
+        </p>
+      </div>
+
+      <!-- Grid of Features / What's Included -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- 1. Hosting y Dominio -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="server" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Hosting Cloud & Dominio por 1 Año</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Alojamiento ultrarrápido con CDN perimetral global de Cloudflare, certificados SSL automáticos y tu propio dominio corporativo (.com) gestionado y asegurado.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Incluido en la solución</span>
+          </div>
+        </div>
+
+        <!-- 2. Correos Corporativos -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="mail-check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Cuentas de Correo Corporativo</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Presencia profesional de nivel enterprise con casillas vinculadas a tu propio dominio (ej. <code class="text-cyan-300 font-mono">contacto@tuempresa.com</code>), con políticas DKIM y SPF para evitar spam.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Configuración DNS incluida</span>
+          </div>
+        </div>
+
+        <!-- 3. Diseño Profesional y Móvil -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="smartphone" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Diseño UI/UX 100% Adaptable</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Interfaces modernas, minimalistas y elegantes creadas para reflejar el valor de tu marca y brindar una navegación fluida e intuitiva en computadoras, tablets y teléfonos móviles.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Mobile-First Responsive</span>
+          </div>
+        </div>
+
+        <!-- 4. Desarrollo con IA Avanzada -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="cpu" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Desarrollo con IA Avanzada</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Aprovechamos modelos de Inteligencia Artificial de vanguardia para optimizar la estructura del código, depurar cuellos de botella y crear experiencias dinámicas de máxima velocidad.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Arquitectura de última generación</span>
+          </div>
+        </div>
+
+        <!-- 5. Optimizado para Buscadores (SEO) e IA -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="search" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">SEO Técnico & Preparado para IA</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Estructura con datos enriquecidos (Schema.org) optimizada para Google, además de estar lista para ser comprendida e indexada por los nuevos motores de búsqueda de IA como ChatGPT y Gemini.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Google + ChatGPT Search Ready</span>
+          </div>
+        </div>
+
+        <!-- 6. Seguridad Antihack -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Sistema de Seguridad & Antihack</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Blindaje perimetral contra inyecciones SQL, bots maliciosos y ataques DDoS mediante Cloudflare Edge Security, con copias de respaldo automatizadas periódicamente.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>WAF & SSL TLS 1.3 activo</span>
+          </div>
+        </div>
+
+        <!-- 7. Panel Autoadministrable -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Panel de Edición y Capacitación</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Tú tienes el control total: actualiza textos, banners, productos y artículos con total facilidad sin depender de intermediarios. Incluye sesión de capacitación guiada para tu equipo.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Capacitación en vivo incluida</span>
+          </div>
+        </div>
+
+        <!-- 8. Botones de Conversión WhatsApp -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="message-circle" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Botones de Contacto Inmediato</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Integración de botones flotantes de WhatsApp, llamadas con un clic y formularios de captación de leads orientados a convertir visitantes en cotizaciones reales.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Conversión B2B optimizada</span>
+          </div>
+        </div>
+
+        <!-- 9. Entrega en 15 Días Hábiles -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="clock" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Entrega Ágil en 15 Días Hábiles</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Metodología ágil en sprints semanales. No pierdas meses esperando resultados: tu nueva plataforma web estará online y lista para operar en tiempo récord.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Compromiso contractual por escrito</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION: POR QUÉ UNA WEB CON INTELIGENCIA ARTIFICIAL
+       ========================================================================= -->
+  <section id="por-que-ia" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80 overflow-hidden">
+    <div class="absolute -left-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 blur-[130px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            <span>La Ventaja Estratégica</span>
+          </div>
+          
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight leading-tight">
+            ¿Por qué una web desarrollada con Inteligencia Artificial?
+          </h2>
+
+          <p class="text-slate-300 text-base leading-relaxed">
+            La Inteligencia Artificial no es una tendencia pasajera: es la herramienta más poderosa para multiplicar los resultados comerciales de una empresa. Una web desarrollada bajo esta metodología ofrece ventajas palpables frente a sitios tradicionales:
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start space-x-4 bg-[#1E293B]/70 p-4 rounded-xl border border-slate-800">
+              <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-0.5">
+                <i data-lucide="trending-up" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Se Posiciona Mejor en Motores de Búsqueda</h4>
+                <p class="text-slate-300 text-xs mt-1 leading-relaxed">
+                  Estructuramos tu código y contenidos para que los algoritmos de Google, Gemini y ChatGPT identifiquen a tu empresa como la autoridad en tu sector.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 bg-[#1E293B]/70 p-4 rounded-xl border border-slate-800">
+              <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-0.5">
+                <i data-lucide="zap" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Carga Ultrarrápida y Cero Rebote</h4>
+                <p class="text-slate-300 text-xs mt-1 leading-relaxed">
+                  Optimizamos activos, fuentes y renderizado para entregar tiempos de carga inferiores a 1.2 segundos, reteniendo a clientes con poca paciencia.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 bg-[#1E293B]/70 p-4 rounded-xl border border-slate-800">
+              <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-0.5">
+                <i data-lucide="target" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Comunicación Persuasiva y Alto Valor B2B</h4>
+                <p class="text-slate-300 text-xs mt-1 leading-relaxed">
+                  Diseñamos la jerarquía visual y los llamados a la acción para guiar al visitante directamente hacia la toma de contacto y la solicitud de cotización.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column Visual: Tech Dashboard Snapshot -->
+        <div class="lg:col-span-6 relative">
+          <div class="bg-[#1E293B] border border-slate-700/80 rounded-2xl p-6 shadow-2xl space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+              <div class="flex items-center space-x-2">
+                <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                <span class="text-xs font-mono text-slate-400 ml-2">s26-web-performance-audit</span>
+              </div>
+              <span class="text-xs font-mono text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800">
+                SCORE: 100/100
+              </span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-[#0F172A] p-4 rounded-xl border border-slate-800 text-center">
+                <div class="text-3xl font-bold font-mono text-emerald-400">99.8%</div>
+                <div class="text-xs text-slate-400 mt-1">Core Web Vitals</div>
+              </div>
+              <div class="bg-[#0F172A] p-4 rounded-xl border border-slate-800 text-center">
+                <div class="text-3xl font-bold font-mono text-cyan-400">&lt; 0.9s</div>
+                <div class="text-xs text-slate-400 mt-1">First Contentful Paint</div>
+              </div>
+            </div>
+
+            <div class="bg-[#0F172A] p-4 rounded-xl border border-slate-800 font-mono text-xs text-slate-300 space-y-2">
+              <div class="text-cyan-400">// Auditoría de Estructura Semántica & AI Discovery</div>
+              <div class="text-slate-400">✓ Schema.org Organization, Service & FAQ structured data</div>
+              <div class="text-slate-400">✓ AI-ready metadata (Gemini & ChatGPT Bot verified)</div>
+              <div class="text-slate-400">✓ Edge Cache HIT (Global CDN Cloudflare activo)</div>
+              <div class="text-emerald-400">✓ Zero security vulnerabilities detected</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION: METODOLOGÍA DE DESARROLLO (Paso a Paso)
+       ========================================================================= -->
+  <section id="metodologia" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i data-lucide="git-branch" class="w-3.5 h-3.5"></i>
+          <span>Metodología Ágil</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
+          Lanzar tu web nunca fue tan transparente.
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg">
+          Un proceso claro y colaborativo en 4 pasos, sin tecnicismos innecesarios ni tiempos muertos.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="enterprise-card rounded-2xl p-6 bg-[#1E293B]/80 border border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center font-mono font-bold text-cyan-400 text-lg">
+            01
+          </div>
+          <h3 class="text-lg font-bold text-white">Reunión & Estrategia</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Nos cuentas sobre tu negocio, tus metas comerciales y tu cliente ideal. Definimos la arquitectura de navegación y los objetivos de conversión.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="enterprise-card rounded-2xl p-6 bg-[#1E293B]/80 border border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center font-mono font-bold text-cyan-400 text-lg">
+            02
+          </div>
+          <h3 class="text-lg font-bold text-white">Diseño & Desarrollo IA</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Creamos un diseño moderno y desarrollamos el código limpio asistido por IA para garantizar tiempos de carga relámpago y máxima seguridad.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="enterprise-card rounded-2xl p-6 bg-[#1E293B]/80 border border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center font-mono font-bold text-cyan-400 text-lg">
+            03
+          </div>
+          <h3 class="text-lg font-bold text-white">Revisión & Ajustes</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Te presentamos la plataforma funcional en un entorno de pruebas privado. Revisamos cada detalle contigo hasta que estés 100% conforme.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="enterprise-card rounded-2xl p-6 bg-[#1E293B]/80 border border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center font-mono font-bold text-emerald-400 text-lg">
+            04
+          </div>
+          <h3 class="text-lg font-bold text-white">Lanzamiento & Taller</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            ¡Tu web está online! Conectamos el dominio, activamos la seguridad Cloudflare y te brindamos una sesión práctica para administrar tu contenido.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION: PREGUNTAS FRECUENTES (FAQ)
+       ========================================================================= -->
+  <section id="faq" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Dudas Resueltas</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
+          Preguntas Frecuentes sobre el Servicio
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg">
+          Transparencia absoluta para que tomes la mejor decisión técnica para tu negocio.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- FAQ 1 -->
+        <details class="group enterprise-card rounded-2xl p-6 bg-[#1E293B]/90 border border-slate-700/80 cursor-pointer">
+          <summary class="flex justify-between items-center text-lg font-bold text-white select-none">
+            <span>¿Seré el propietario de mi página web y dominio?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-cyan-400 flex-shrink-0 ml-4"></i>
+          </summary>
+          <div class="pt-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 mt-4">
+            Totalmente sí. En S26Digital creemos en la libertad tecnológica: tú eres el dueño absoluto del código fuente, del nombre de dominio, de las licencias y de todos los activos digitales generados. No existen cláusulas de retención ni ataduras forzosas.
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group enterprise-card rounded-2xl p-6 bg-[#1E293B]/90 border border-slate-700/80 cursor-pointer">
+          <summary class="flex justify-between items-center text-lg font-bold text-white select-none">
+            <span>¿De verdad podré administrar la web sin conocimientos técnicos?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-cyan-400 flex-shrink-0 ml-4"></i>
+          </summary>
+          <div class="pt-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 mt-4">
+            Sí. Te entregamos un panel de administración visual sumamente intuitivo y amigable. Además, incluimos una sesión de capacitación personalizada donde te enseñamos paso a paso cómo editar textos, subir imágenes, crear nuevas entradas y gestionar formularios sin tocar una sola línea de código.
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group enterprise-card rounded-2xl p-6 bg-[#1E293B]/90 border border-slate-700/80 cursor-pointer">
+          <summary class="flex justify-between items-center text-lg font-bold text-white select-none">
+            <span>¿En cuánto tiempo tendré mi página web en línea?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-cyan-400 flex-shrink-0 ml-4"></i>
+          </summary>
+          <div class="pt-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 mt-4">
+            Nuestro plazo estándar para una solución web corporativa es de 15 días hábiles contados a partir de la entrega de los contenidos e información inicial de tu empresa. Si tu proyecto requiere desarrollos o integraciones especiales de mayor complejidad, se establece un cronograma detallado antes de iniciar.
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group enterprise-card rounded-2xl p-6 bg-[#1E293B]/90 border border-slate-700/80 cursor-pointer">
+          <summary class="flex justify-between items-center text-lg font-bold text-white select-none">
+            <span>¿Qué ocurre a partir del segundo año con el hosting y dominio?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-cyan-400 flex-shrink-0 ml-4"></i>
+          </summary>
+          <div class="pt-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 mt-4">
+            El primer año completo de hosting de alta velocidad, dominio .com y certificados SSL está 100% cubierto en tu inversión inicial. A partir del segundo año, solo abonas una tarifa de renovación preferencial que incluye el mantenimiento de la infraestructura y el soporte preventivo.
+          </div>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="group enterprise-card rounded-2xl p-6 bg-[#1E293B]/90 border border-slate-700/80 cursor-pointer">
+          <summary class="flex justify-between items-center text-lg font-bold text-white select-none">
+            <span>¿Y si en el futuro necesito agregar tienda online o facturación?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-cyan-400 flex-shrink-0 ml-4"></i>
+          </summary>
+          <div class="pt-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 mt-4">
+            Esa es la mayor ventaja de trabajar con S26Digital: construimos tu plataforma sobre una arquitectura modular escalable. Si más adelante decides incorporar catálogo transaccional e-commerce, integración con pasarelas de pago o sincronización con impresoras fiscales y la Providencia 0071 del SENIAT, se integra limpiamente sin tener que rehacer tu sitio desde cero.
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION: FORMULARIO DE COTIZACIÓN DIRECTA (Desarrollo Web)
+       ========================================================================= -->
+  <footer id="contacto" class="pt-20 pb-12 bg-[#0F172A] relative border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Lead Capture Card -->
+      <div class="bg-[#1E293B] border border-slate-700/80 rounded-3xl p-8 sm:p-12 lg:p-16 mb-20 shadow-2xl relative overflow-hidden">
+        
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+          
+          <!-- Left Column -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#0F172A] border border-cyan-500/40 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+              <span>Propuesta a la Medida</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight leading-tight">
+              Diseñemos la plataforma que tu empresa merece.
+            </h2>
+
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Completa el formulario y te enviaremos una propuesta técnica y económica detallada para tu proyecto web en menos de 24 horas hábiles.
+            </p>
+
+            <div class="space-y-3 pt-2">
+              <div class="flex items-center space-x-3 text-xs text-slate-300">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Garantía de entrega en 15 días hábiles</span>
+              </div>
+              <div class="flex items-center space-x-3 text-xs text-slate-300">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Hosting, dominio y correos corporativos incluidos</span>
+              </div>
+              <div class="flex items-center space-x-3 text-xs text-slate-300">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Capacitación en vivo y soporte post-lanzamiento</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Form -->
+          <div class="lg:col-span-7 bg-[#0F172A] p-6 sm:p-8 rounded-2xl border border-slate-700/80 shadow-xl">
+            
+            <div id="form-success-alert" class="hidden mb-6 p-4 rounded-xl bg-cyan-950/80 border border-cyan-500/50 text-cyan-200 text-sm flex items-start space-x-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="block font-bold text-white">¡Solicitud Enviada con Éxito!</strong>
+                <span>Hemos recibido los requerimientos de tu proyecto web. Un arquitecto de soluciones de S26Digital te contactará en breve.</span>
+              </div>
+            </div>
+
+            <form id="main-contact-form" class="space-y-5">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div class="space-y-1.5">
+                  <label for="form-name" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                    Nombre Completo <span class="text-cyan-400">*</span>
+                  </label>
+                  <input type="text" id="form-name" name="nombre" required placeholder="Ej. Carlos Mendoza" class="custom-input w-full px-4 py-3 rounded-xl text-sm" />
+                </div>
+
+                <div class="space-y-1.5">
+                  <label for="form-company" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                    Empresa <span class="text-cyan-400">*</span>
+                  </label>
+                  <input type="text" id="form-company" name="empresa" required placeholder="Ej. Distribuidora Central C.A." class="custom-input w-full px-4 py-3 rounded-xl text-sm" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div class="space-y-1.5">
+                  <label for="form-email" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                    Correo Corporativo <span class="text-cyan-400">*</span>
+                  </label>
+                  <input type="email" id="form-email" name="correo" required placeholder="carlos@empresa.com" class="custom-input w-full px-4 py-3 rounded-xl text-sm" />
+                </div>
+
+                <div class="space-y-1.5">
+                  <label for="form-service" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                    Solución de Interés <span class="text-cyan-400">*</span>
+                  </label>
+                  <select id="form-service" name="servicio" required class="custom-input w-full px-4 py-3 rounded-xl text-sm cursor-pointer">
+                    <option value="web" selected>Desarrollo Web y Apps</option>
+                    <option value="datos">Datos y Estadística</option>
+                    <option value="automatizacion">Automatización</option>
+                    <option value="ecommerce">Comercio Electrónico</option>
+                    <option value="facturacion">Facturación B2B Fiscal</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="form-notes" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                  ¿Qué funcionalidades o metas buscas para tu nueva web? (Opcional)
+                </label>
+                <textarea id="form-notes" name="mensaje" rows="3" placeholder="Ej. Necesitamos renovar nuestro portal corporativo, captar clientes B2B e integrar catálogo digital..." class="custom-input w-full px-4 py-3 rounded-xl text-sm resize-none"></textarea>
+              </div>
+
+              <button type="submit" class="btn-cyan w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wider flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/50 transition-all">
+                <span>Solicitar Cotización de Desarrollo Web</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 text-slate-950"></i>
+              </button>
+
+              <div class="text-center text-[11px] text-slate-400 pt-1">
+                🔒 Confidencialidad garantizada. Respuesta directa por un arquitecto senior en menos de 24 horas.
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Navigation to Other Solutions -->
+      <div class="mb-14 p-8 rounded-2xl bg-[#1E293B]/60 border border-slate-800">
+        <div class="text-sm font-mono text-cyan-400 uppercase tracking-wider mb-4">
+          Explora otras soluciones del Portafolio S26Digital:
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <a href="datos-estadistica.html" class="p-4 rounded-xl bg-[#0F172A] border border-slate-800 hover:border-cyan-400 text-slate-300 hover:text-white transition-all flex items-center space-x-3 group">
+            <i data-lucide="bar-chart-3" class="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform"></i>
+            <div>
+              <div class="font-bold text-sm">Datos y Estadística</div>
+              <div class="text-xs text-slate-400">Dashboards y ETL Pipelines →</div>
+            </div>
+          </a>
+          <a href="automatizacion.html" class="p-4 rounded-xl bg-[#0F172A] border border-slate-800 hover:border-cyan-400 text-slate-300 hover:text-white transition-all flex items-center space-x-3 group">
+            <i data-lucide="git-merge" class="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform"></i>
+            <div>
+              <div class="font-bold text-sm">Automatización</div>
+              <div class="text-xs text-slate-400">Flujos sin errores manuales →</div>
+            </div>
+          </a>
+          <a href="comercio-electronico.html" class="p-4 rounded-xl bg-[#0F172A] border border-slate-800 hover:border-cyan-400 text-slate-300 hover:text-white transition-all flex items-center space-x-3 group">
+            <i data-lucide="shopping-cart" class="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform"></i>
+            <div>
+              <div class="font-bold text-sm">Comercio Electrónico</div>
+              <div class="text-xs text-slate-400">Ventas B2B multimoneda →</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Navigation & Copyright -->
+      <div class="border-t border-slate-800/80 pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-400">
+        <div class="flex items-center space-x-3">
+          <div class="w-7 h-7 rounded-lg bg-cyan-500 flex items-center justify-center">
+            <i data-lucide="layers" class="w-4 h-4 text-slate-950 stroke-[2.5]"></i>
+          </div>
+          <span class="font-bold text-white tracking-wide">S26Digital</span>
+          <span>— Consultora B2B & Socio Tecnológico Enterprise.</span>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a>
+          <a href="index.html#soluciones" class="hover:text-cyan-400 transition-colors">Portafolio</a>
+          <a href="index.html#facturacion" class="hover:text-cyan-400 transition-colors">Solución Fiscal 2026</a>
+          <a href="index.html#contacto" class="hover:text-cyan-400 transition-colors">Contacto</a>
+          <span class="text-slate-600">|</span>
+          <span>© 2026 S26Digital. Todos los derechos reservados.</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Master JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

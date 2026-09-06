@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datos y Estadística para Empresas | S26Digital • BI, ETL & Analítica</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Centralización, estructuración y analítica de datos para empresas B2B. Pipelines ETL automatizados, bases de datos optimizadas y dashboards ejecutivos en tiempo real." />
+  <meta name="keywords" content="analitica de datos venezuela, business intelligence b2b, pipelines etl, dashboards gerenciales, postgresql, ciencia de datos empresarial, s26digital" />
+  <meta name="theme-color" content="#0F172A" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Datos y Estadística para Empresas | S26Digital" />
+  <meta property="og:description" content="Transforma datos dispersos en decisiones comerciales rentables con dashboards ejecutivos y canalizaciones ETL automatizadas." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2306B6D4'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'midnight': '#0F172A',
+            'cyan-electric': '#06B6D4',
+            'chalk-white': '#F8FAFC',
+            'slate-card': '#1E293B',
+            'slate-border': '#334155',
+            'slate-muted': '#94A3B8'
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-[#0F172A] text-[#F8FAFC] antialiased selection:bg-cyan-500/30 selection:text-white relative">
+
+  <!-- Top Notification Bar -->
+  <div class="bg-[#1E293B]/70 border-b border-slate-800 text-xs py-1.5 px-4 text-center text-slate-300 flex items-center justify-center space-x-2">
+    <span class="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse-dot"></span>
+    <span class="font-mono text-cyan-400 font-semibold">S26 Data Engine:</span>
+    <span>Arquitectura analítica empresarial • Cero silos de información • SLA 99.99%</span>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <header id="main-navbar" class="sticky top-0 z-40 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all duration-300">
+            <i data-lucide="layers" class="w-6 h-6 text-slate-950 stroke-[2.5]"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-extrabold tracking-tight text-[#F8FAFC] font-sans">
+              S26<span class="text-[#06B6D4] glow-text-cyan">Digital</span>
+            </span>
+            <span class="text-[10px] uppercase tracking-widest text-slate-400 font-mono -mt-1">
+              Socio Tecnológico
+            </span>
+          </div>
+        </a>
+
+        <!-- Breadcrumb / Service Title -->
+        <div class="hidden lg:flex items-center space-x-2 text-xs font-mono text-slate-400 border-l border-slate-700 pl-6 ml-2">
+          <a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a>
+          <span>/</span>
+          <a href="index.html#soluciones" class="hover:text-cyan-400 transition-colors">Soluciones</a>
+          <span>/</span>
+          <span class="text-cyan-400 font-semibold">Datos y Estadística</span>
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+          <a href="#que-incluye" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Capacidades</a>
+          <a href="#impacto-analitico" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Impacto de Datos</a>
+          <a href="#metodologia" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Metodología</a>
+          <a href="#faq" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Preguntas</a>
+          <a href="#contacto" class="btn-cyan px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-bold flex items-center space-x-1.5 transition-all">
+            <span>Auditoría de Datos</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Trigger -->
+        <div class="flex md:hidden">
+          <button id="mobile-menu-btn" type="button" aria-expanded="false" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-[#1E293B] focus:outline-none" aria-label="Menú principal">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0F172A]/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3 backdrop-blur-xl">
+      <a href="index.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">← Volver al Inicio</a>
+      <a href="#que-incluye" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">Capacidades de la Solución</a>
+      <a href="#impacto-analitico" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">El Impacto de tus Datos</a>
+      <a href="#metodologia" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">Metodología en 4 pasos</a>
+      <a href="#faq" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">Preguntas frecuentes</a>
+      <div class="pt-2">
+        <a href="#contacto" class="btn-cyan w-full text-center block py-3 rounded-lg text-xs font-bold uppercase tracking-wider">
+          Solicitar Auditoría de Datos
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION: Datos y Estadística
+       ========================================================================= -->
+  <section class="relative min-h-[75vh] flex items-center justify-center overflow-hidden pt-16 pb-20 bg-cyber-grid">
+    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-cyan-500/15 blur-[140px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-10 left-10 w-96 h-96 bg-teal-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full">
+      <div class="text-center max-w-4xl mx-auto space-y-6">
+        
+        <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#1E293B]/90 border border-cyan-500/40 text-cyan-300 text-xs font-mono tracking-wide shadow-lg shadow-cyan-500/10 backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+          <span>Business Intelligence • ETL Pipelines • Analítica Predictiva</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#F8FAFC] leading-[1.12]">
+          De datos dispersos a <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400 glow-text-cyan">decisiones gerenciales precisas y rentables.</span>
+        </h1>
+
+        <p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          Elimina los archivos de Excel inconexos y la incertidumbre en tus operaciones. Centralizamos, limpiamos y estructuramos tus flujos de información en tiempo real para que dirijas tu empresa con visibilidad total.
+        </p>
+
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#contacto" class="btn-cyan w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold tracking-wide uppercase flex items-center justify-center space-x-3 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/50">
+            <i data-lucide="database" class="w-5 h-5 text-slate-950"></i>
+            <span>Solicitar Diagnóstico de Datos</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-slate-950"></i>
+          </a>
+          <a href="#que-incluye" class="btn-outline-dark w-full sm:w-auto px-7 py-4 rounded-xl text-sm font-medium flex items-center justify-center space-x-2">
+            <i data-lucide="bar-chart-2" class="w-4 h-4 text-cyan-400"></i>
+            <span>Explorar Capacidades</span>
+          </a>
+        </div>
+
+        <div class="pt-10 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+          <div class="bg-[#1E293B]/70 border border-slate-800 rounded-xl p-4">
+            <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">0%</div>
+            <div class="text-xs text-slate-400 mt-1">Pérdida de Datos en Migración</div>
+          </div>
+          <div class="bg-[#1E293B]/70 border border-slate-800 rounded-xl p-4">
+            <div class="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] font-mono">Tiempo Real</div>
+            <div class="text-xs text-slate-400 mt-1">Sincronización de Paneles</div>
+          </div>
+          <div class="bg-[#1E293B]/70 border border-slate-800 rounded-xl p-4">
+            <div class="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] font-mono">100%</div>
+            <div class="text-xs text-slate-400 mt-1">Gobernanza & Trazabilidad</div>
+          </div>
+          <div class="bg-[#1E293B]/70 border border-slate-800 rounded-xl p-4">
+            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">-60%</div>
+            <div class="text-xs text-slate-400 mt-1">Tiempo en Reportes Manuales</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION: QUÉ INCLUYE LA SOLUCIÓN DE DATOS
+       ========================================================================= -->
+  <section id="que-incluye" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+          <span>Arquitectura Integral de Datos</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
+          Ecosistemas analíticos construidos para la era del Big Data B2B.
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg">
+          Diseñamos canalizaciones de datos sólidas y dashboards a la medida que transforman registros dispersos en ventajas competitivas duraderas.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- 1. Consolidación de Fuentes -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="database" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Consolidación y Migración de Datos</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Unificamos información desde ERPs, CRMs, hojas de cálculo, APIs y bases de datos relacionales (PostgreSQL, MySQL, SQL Server) en un repositorio centralizado sin redundancias.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Cero pérdida de registros históricos</span>
+          </div>
+        </div>
+
+        <!-- 2. Pipelines ETL / ELT -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="workflow" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Pipelines ETL Automatizados</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Canalizaciones automáticas de extracción, limpieza, validación y transformación de datos que operan continuamente en segundo plano con monitoreo de errores y reintentos automáticos.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Ejecución continua sin intervención</span>
+          </div>
+        </div>
+
+        <!-- 3. Dashboards Ejecutivos -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="layout" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Dashboards Ejecutivos en Tiempo Real</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Paneles de control limpios y accionables para directores y gerentes de área. Visualiza KPIs críticos de rentabilidad, ventas, inventario, cobranza y productividad en tiempo real.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Acceso web y móvil seguro</span>
+          </div>
+        </div>
+
+        <!-- 4. Modelos Estadísticos y Predicción -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="trending-up" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Modelos Predictivos y Estadística</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Algoritmos aplicados para proyección de demanda de inventario, predicción de flujo de caja, identificación de clientes en riesgo de abandono y estacionalidad de compras.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Anticipa decisiones estratégicas</span>
+          </div>
+        </div>
+
+        <!-- 5. Seguridad y Gobernanza de Datos -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Seguridad & Control de Roles (RBAC)</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Protección estricta de datos sensibles con cifrado en reposo y tránsito. Políticas de acceso basadas en roles para que cada usuario vea exclusivamente lo que le corresponde.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Trazabilidad y logs de auditoría</span>
+          </div>
+        </div>
+
+        <!-- 6. Alertas Tempranas de Anomalías -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="bell-ring" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Alertas Automáticas de Desviación</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Notificaciones instantáneas vía correo electrónico, Telegram o WhatsApp cuando una métrica clave se sale del umbral esperado (ej. caída atípica de margen, quiebre de stock).
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Respuesta proactiva ante incidentes</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION: IMPACTO ANALÍTICO EN CIFRAS
+       ========================================================================= -->
+  <section id="impacto-analitico" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            <span>Cultura Data-Driven</span>
+          </div>
+          
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight leading-tight">
+            El verdadero costo de operar a ciegas con datos dispersos.
+          </h2>
+
+          <p class="text-slate-300 text-base leading-relaxed">
+            Las empresas que gestionan sus métricas mediante reportes manuales semanales o mensuales toman decisiones con días de retraso. Una arquitectura analítica moderna en la nube te devuelve el control absoluto:
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start space-x-4 bg-[#1E293B]/70 p-4 rounded-xl border border-slate-800">
+              <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-0.5">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Decisiones en Horas, no en Semanas</h4>
+                <p class="text-slate-300 text-xs mt-1 leading-relaxed">
+                  Accede a información consolidada en el momento exacto en que ocurren las transacciones, facilitando respuestas comerciales ágiles ante cambios de mercado.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 bg-[#1E293B]/70 p-4 rounded-xl border border-slate-800">
+              <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-0.5">
+                <i data-lucide="dollar-sign" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Detección Inmediata de Fugas de Margen</h4>
+                <p class="text-slate-300 text-xs mt-1 leading-relaxed">
+                  Identifica productos con rentabilidad negativa, clientes con cuentas por cobrar vencidas y costos operativos ocultos que drenan la liquidez de tu empresa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 relative">
+          <div class="bg-[#1E293B] border border-slate-700/80 rounded-2xl p-6 shadow-2xl space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+              <div class="flex items-center space-x-2">
+                <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                <span class="text-xs font-mono text-slate-400 ml-2">s26-etl-cluster-metrics</span>
+              </div>
+              <span class="text-xs font-mono text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800">
+                LIVE PIPELINE
+              </span>
+            </div>
+
+            <div class="space-y-3">
+              <div class="flex justify-between text-xs font-mono text-slate-300">
+                <span>Ingesta ETL Diaria</span>
+                <span class="text-emerald-400">100% Sincronizado</span>
+              </div>
+              <div class="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-cyan-400 rounded-full w-full"></div>
+              </div>
+            </div>
+
+            <div class="bg-[#0F172A] p-4 rounded-xl border border-slate-800 font-mono text-xs text-slate-300 space-y-2">
+              <div class="text-cyan-400">// Estado del Pipeline Analítico S26</div>
+              <div class="text-slate-400">✓ Conector ERP PostgreSQL: 1.4M filas sincronizadas</div>
+              <div class="text-slate-400">✓ Sanitización & Deduplicación: 0 errores detectados</div>
+              <div class="text-slate-400">✓ Latencia de consulta en Dashboard: 18.2 ms</div>
+              <div class="text-emerald-400">✓ Alertas de desvío presupuestario: Ninguna activa</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION: METODOLOGÍA DE IMPLEMENTACIÓN
+       ========================================================================= -->
+  <section id="metodologia" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i data-lucide="git-branch" class="w-3.5 h-3.5"></i>
+          <span>Metodología Paso a Paso</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
+          De los datos crudos a la claridad total.
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg">
+          Un plan de implementación estructurado en 4 fases para garantizar precisión analítica sin interrumpir tus operaciones diarias.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <div class="enterprise-card rounded-2xl p-6 bg-[#1E293B]/80 border border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center font-mono font-bold text-cyan-400 text-lg">01</div>
+          <h3 class="text-lg font-bold text-white">Auditoría & Fuentes</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Revisamos tus sistemas actuales, formatos de almacenamiento y requerimientos de información de cada departamento.
+          </p>
+        </div>
+
+        <div class="enterprise-card rounded-2xl p-6 bg-[#1E293B]/80 border border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center font-mono font-bold text-cyan-400 text-lg">02</div>
+          <h3 class="text-lg font-bold text-white">Arquitectura & ETL</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Diseñamos el esquema de bases de datos relacional y programamos los flujos de extracción y limpieza automática.
+          </p>
+        </div>
+
+        <div class="enterprise-card rounded-2xl p-6 bg-[#1E293B]/80 border border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center font-mono font-bold text-cyan-400 text-lg">03</div>
+          <h3 class="text-lg font-bold text-white">Construcción Visual</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Desarrollamos los dashboards ejecutivos interactivos con métricas clave y filtros dinámicos por fecha, sucursal y producto.
+          </p>
+        </div>
+
+        <div class="enterprise-card rounded-2xl p-6 bg-[#1E293B]/80 border border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center font-mono font-bold text-emerald-400 text-lg">04</div>
+          <h3 class="text-lg font-bold text-white">Validación & Taller</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Contrastamos los reportes contra datos reales, configuramos los roles de seguridad y capacitamos a tu equipo gerencial.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION: PREGUNTAS FRECUENTES (FAQ)
+       ========================================================================= -->
+  <section id="faq" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Dudas Comunes</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
+          Preguntas Frecuentes sobre Analítica y Datos
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg">
+          Respuestas técnicas y operacionales para líderes de negocio.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <details class="group enterprise-card rounded-2xl p-6 bg-[#1E293B]/90 border border-slate-700/80 cursor-pointer">
+          <summary class="flex justify-between items-center text-lg font-bold text-white select-none">
+            <span>¿Es necesario cambiar nuestro sistema o software actual?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-cyan-400 flex-shrink-0 ml-4"></i>
+          </summary>
+          <div class="pt-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 mt-4">
+            No. Nos conectamos directamente a las bases de datos o archivos de tus sistemas actuales (ERP, CRM, software administrativo) sin interferir en su funcionamiento regular. Extraemos la información de forma segura y no invasiva para procesarla en un entorno analítico independiente.
+          </div>
+        </details>
+
+        <details class="group enterprise-card rounded-2xl p-6 bg-[#1E293B]/90 border border-slate-700/80 cursor-pointer">
+          <summary class="flex justify-between items-center text-lg font-bold text-white select-none">
+            <span>¿Cómo se garantiza la confidencialidad de nuestros datos financieros?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-cyan-400 flex-shrink-0 ml-4"></i>
+          </summary>
+          <div class="pt-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 mt-4">
+            Firmamos un Acuerdo de Confidencialidad Estricto (NDA) antes de iniciar cualquier análisis. Además, toda la arquitectura implementa cifrado AES-256 en reposo, certificados TLS 1.3 en tránsito y políticas granulares de acceso por rol para que sólo el personal autorizado acceda a datos estratégicos.
+          </div>
+        </details>
+
+        <details class="group enterprise-card rounded-2xl p-6 bg-[#1E293B]/90 border border-slate-700/80 cursor-pointer">
+          <summary class="flex justify-between items-center text-lg font-bold text-white select-none">
+            <span>¿Podemos consultar los dashboards desde dispositivos móviles?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-cyan-400 flex-shrink-0 ml-4"></i>
+          </summary>
+          <div class="pt-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 mt-4">
+            Sí. Todos los paneles analíticos están diseñados con interfaces responsivas seguras, permitiendo a la directiva consultar el estado del negocio en cualquier momento desde su teléfono inteligente o tableta.
+          </div>
+        </details>
+
+        <details class="group enterprise-card rounded-2xl p-6 bg-[#1E293B]/90 border border-slate-700/80 cursor-pointer">
+          <summary class="flex justify-between items-center text-lg font-bold text-white select-none">
+            <span>¿Cuánto tiempo toma implementar un proyecto analítico completo?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-cyan-400 flex-shrink-0 ml-4"></i>
+          </summary>
+          <div class="pt-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 mt-4">
+            Un MVP analítico con ingesta de datos y el primer set de dashboards gerenciales suele completarse en 2 a 3 semanas hábiles. Proyectos que involucren modelos predictivos complejos o múltiples fuentes descentralizadas se despliegan en sprints iterativos acordados previamente.
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION: FORMULARIO DE COTIZACIÓN DIRECTA (Datos y Estadística)
+       ========================================================================= -->
+  <footer id="contacto" class="pt-20 pb-12 bg-[#0F172A] relative border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-[#1E293B] border border-slate-700/80 rounded-3xl p-8 sm:p-12 lg:p-16 mb-20 shadow-2xl relative overflow-hidden">
+        
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#0F172A] border border-cyan-500/40 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+              <span>Auditoría Confidencial</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight leading-tight">
+              Convierte tus datos en tu mayor ventaja competitiva.
+            </h2>
+
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Solicita una sesión de diagnóstico con nuestros ingenieros de datos. Evaluaremos tus fuentes y te entregaremos una hoja de ruta arquitectónica en menos de 24 horas hábiles.
+            </p>
+
+            <div class="space-y-3 pt-2">
+              <div class="flex items-center space-x-3 text-xs text-slate-300">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Acuerdo de Confidencialidad (NDA) garantizado</span>
+              </div>
+              <div class="flex items-center space-x-3 text-xs text-slate-300">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Arquitectura escalable en Cloud o infraestructura propia</span>
+              </div>
+              <div class="flex items-center space-x-3 text-xs text-slate-300">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Respuesta directa por un Arquitecto de Datos Senior</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 bg-[#0F172A] p-6 sm:p-8 rounded-2xl border border-slate-700/80 shadow-xl">
+            
+            <div id="form-success-alert" class="hidden mb-6 p-4 rounded-xl bg-cyan-950/80 border border-cyan-500/50 text-cyan-200 text-sm flex items-start space-x-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="block font-bold text-white">¡Solicitud Recibida con Éxito!</strong>
+                <span>Nuestro equipo de analítica de datos se pondrá en contacto contigo a la brevedad.</span>
+              </div>
+            </div>
+
+            <form id="main-contact-form" class="space-y-5">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div class="space-y-1.5">
+                  <label for="form-name" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                    Nombre Completo <span class="text-cyan-400">*</span>
+                  </label>
+                  <input type="text" id="form-name" name="nombre" required placeholder="Ej. Roberto Castillo" class="custom-input w-full px-4 py-3 rounded-xl text-sm" />
+                </div>
+
+                <div class="space-y-1.5">
+                  <label for="form-company" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                    Empresa <span class="text-cyan-400">*</span>
+                  </label>
+                  <input type="text" id="form-company" name="empresa" required placeholder="Ej. Logística Continental S.A." class="custom-input w-full px-4 py-3 rounded-xl text-sm" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div class="space-y-1.5">
+                  <label for="form-email" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                    Correo Corporativo <span class="text-cyan-400">*</span>
+                  </label>
+                  <input type="email" id="form-email" name="correo" required placeholder="roberto@empresa.com" class="custom-input w-full px-4 py-3 rounded-xl text-sm" />
+                </div>
+
+                <div class="space-y-1.5">
+                  <label for="form-service" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                    Solución de Interés <span class="text-cyan-400">*</span>
+                  </label>
+                  <select id="form-service" name="servicio" required class="custom-input w-full px-4 py-3 rounded-xl text-sm cursor-pointer">
+                    <option value="datos" selected>Datos y Estadística</option>
+                    <option value="web">Desarrollo Web y Apps</option>
+                    <option value="automatizacion">Automatización</option>
+                    <option value="ecommerce">Comercio Electrónico</option>
+                    <option value="facturacion">Facturación B2B Fiscal</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="form-notes" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                  Describe brevemente tus sistemas actuales o el desafío de datos (Opcional)
+                </label>
+                <textarea id="form-notes" name="mensaje" rows="3" placeholder="Ej. Manejamos ventas en SQL Server y reportes en Excel; queremos un dashboard unificado en tiempo real..." class="custom-input w-full px-4 py-3 rounded-xl text-sm resize-none"></textarea>
+              </div>
+
+              <button type="submit" class="btn-cyan w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wider flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/50 transition-all">
+                <span>Solicitar Auditoría de Datos</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 text-slate-950"></i>
+              </button>
+
+              <div class="text-center text-[11px] text-slate-400 pt-1">
+                🔒 Acuerdo de confidencialidad incluido. Respuesta en menos de 24 horas.
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Navigation to Other Solutions -->
+      <div class="mb-14 p-8 rounded-2xl bg-[#1E293B]/60 border border-slate-800">
+        <div class="text-sm font-mono text-cyan-400 uppercase tracking-wider mb-4">
+          Explora otras soluciones del Portafolio S26Digital:
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <a href="desarrollo-web.html" class="p-4 rounded-xl bg-[#0F172A] border border-slate-800 hover:border-cyan-400 text-slate-300 hover:text-white transition-all flex items-center space-x-3 group">
+            <i data-lucide="code-2" class="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform"></i>
+            <div>
+              <div class="font-bold text-sm">Desarrollo Web y Apps</div>
+              <div class="text-xs text-slate-400">Páginas modernas con IA →</div>
+            </div>
+          </a>
+          <a href="automatizacion.html" class="p-4 rounded-xl bg-[#0F172A] border border-slate-800 hover:border-cyan-400 text-slate-300 hover:text-white transition-all flex items-center space-x-3 group">
+            <i data-lucide="git-merge" class="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform"></i>
+            <div>
+              <div class="font-bold text-sm">Automatización</div>
+              <div class="text-xs text-slate-400">Flujos sin errores manuales →</div>
+            </div>
+          </a>
+          <a href="comercio-electronico.html" class="p-4 rounded-xl bg-[#0F172A] border border-slate-800 hover:border-cyan-400 text-slate-300 hover:text-white transition-all flex items-center space-x-3 group">
+            <i data-lucide="shopping-cart" class="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform"></i>
+            <div>
+              <div class="font-bold text-sm">Comercio Electrónico</div>
+              <div class="text-xs text-slate-400">Ventas B2B multimoneda →</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Navigation & Copyright -->
+      <div class="border-t border-slate-800/80 pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-400">
+        <div class="flex items-center space-x-3">
+          <div class="w-7 h-7 rounded-lg bg-cyan-500 flex items-center justify-center">
+            <i data-lucide="layers" class="w-4 h-4 text-slate-950 stroke-[2.5]"></i>
+          </div>
+          <span class="font-bold text-white tracking-wide">S26Digital</span>
+          <span>— Consultora B2B & Socio Tecnológico Enterprise.</span>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a>
+          <a href="index.html#soluciones" class="hover:text-cyan-400 transition-colors">Portafolio</a>
+          <a href="index.html#facturacion" class="hover:text-cyan-400 transition-colors">Solución Fiscal 2026</a>
+          <a href="index.html#contacto" class="hover:text-cyan-400 transition-colors">Contacto</a>
+          <span class="text-slate-600">|</span>
+          <span>© 2026 S26Digital. Todos los derechos reservados.</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Master JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

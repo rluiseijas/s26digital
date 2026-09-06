@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automatización Operativa B2B | S26Digital • Flujos de Trabajo & Bots</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Automatización de procesos empresariales B2B. Conectamos ERP, CRM, inventarios y canales de mensajería para eliminar el 70% de las tareas manuales y erradicar el error humano." />
+  <meta name="keywords" content="automatizacion de procesos venezuela, rpa b2b, integracion erp crm, flujos de trabajo automaticos, python automatizacion, s26digital" />
+  <meta name="theme-color" content="#0F172A" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Automatización Operativa B2B | S26Digital" />
+  <meta property="og:description" content="Erradica tareas mecánicas y sincroniza tus sistemas empresariales con flujos automáticos inteligentes 24/7." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2306B6D4'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'midnight': '#0F172A',
+            'cyan-electric': '#06B6D4',
+            'chalk-white': '#F8FAFC',
+            'slate-card': '#1E293B',
+            'slate-border': '#334155',
+            'slate-muted': '#94A3B8'
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-[#0F172A] text-[#F8FAFC] antialiased selection:bg-cyan-500/30 selection:text-white relative">
+
+  <!-- Top Notification Bar -->
+  <div class="bg-[#1E293B]/70 border-b border-slate-800 text-xs py-1.5 px-4 text-center text-slate-300 flex items-center justify-center space-x-2">
+    <span class="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse-dot"></span>
+    <span class="font-mono text-cyan-400 font-semibold">S26 Automations:</span>
+    <span>Operaciones 24/7 sin fallos • Reducción comprobada del 70% en horas manuales</span>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <header id="main-navbar" class="sticky top-0 z-40 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all duration-300">
+            <i data-lucide="layers" class="w-6 h-6 text-slate-950 stroke-[2.5]"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-extrabold tracking-tight text-[#F8FAFC] font-sans">
+              S26<span class="text-[#06B6D4] glow-text-cyan">Digital</span>
+            </span>
+            <span class="text-[10px] uppercase tracking-widest text-slate-400 font-mono -mt-1">
+              Socio Tecnológico
+            </span>
+          </div>
+        </a>
+
+        <!-- Breadcrumb / Service Title -->
+        <div class="hidden lg:flex items-center space-x-2 text-xs font-mono text-slate-400 border-l border-slate-700 pl-6 ml-2">
+          <a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a>
+          <span>/</span>
+          <a href="index.html#soluciones" class="hover:text-cyan-400 transition-colors">Soluciones</a>
+          <span>/</span>
+          <span class="text-cyan-400 font-semibold">Automatización</span>
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+          <a href="#que-incluye" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Flujos Clave</a>
+          <a href="#ahorro-operativo" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Ahorro y ROI</a>
+          <a href="#metodologia" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Metodología</a>
+          <a href="#faq" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Preguntas</a>
+          <a href="#contacto" class="btn-cyan px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-bold flex items-center space-x-1.5 transition-all">
+            <span>Cotizar Automatización</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Trigger -->
+        <div class="flex md:hidden">
+          <button id="mobile-menu-btn" type="button" aria-expanded="false" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-[#1E293B] focus:outline-none" aria-label="Menú principal">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0F172A]/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3 backdrop-blur-xl">
+      <a href="index.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">← Volver al Inicio</a>
+      <a href="#que-incluye" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">Flujos y Capacidades</a>
+      <a href="#ahorro-operativo" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">Ahorro Operativo</a>
+      <a href="#metodologia" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">Proceso de Entrega</a>
+      <a href="#faq" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">Preguntas Frecuentes</a>
+      <div class="pt-2">
+        <a href="#contacto" class="btn-cyan w-full text-center block py-3 rounded-lg text-xs font-bold uppercase tracking-wider">
+          Solicitar Diagnóstico de Automatización
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION: Automatización Operativa B2B
+       ========================================================================= -->
+  <section class="relative min-h-[75vh] flex items-center justify-center overflow-hidden pt-16 pb-20 bg-cyber-grid">
+    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-cyan-500/15 blur-[140px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full">
+      <div class="text-center max-w-4xl mx-auto space-y-6">
+        
+        <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#1E293B]/90 border border-cyan-500/40 text-cyan-300 text-xs font-mono tracking-wide shadow-lg shadow-cyan-500/10 backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+          <span>Business Process Automation • Sincronización de Sistemas 24/7</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#F8FAFC] leading-[1.12]">
+          Erradica tareas repetitivas. <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400 glow-text-cyan">Pon las operaciones de tu empresa en piloto automático.</span>
+        </h1>
+
+        <p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          Conectamos tus sistemas aislados (ERP, CRM, inventarios, correos y WhatsApp) mediante flujos automatizados de alto rendimiento. Elimina el error humano y libera a tu equipo para tareas estratégicas de alto valor.
+        </p>
+
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#contacto" class="btn-cyan w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold tracking-wide uppercase flex items-center justify-center space-x-3 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/50">
+            <i data-lucide="git-merge" class="w-5 h-5 text-slate-950"></i>
+            <span>Automatizar mi Operación</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-slate-950"></i>
+          </a>
+          <a href="#que-incluye" class="btn-outline-dark w-full sm:w-auto px-7 py-4 rounded-xl text-sm font-medium flex items-center justify-center space-x-2">
+            <i data-lucide="cpu" class="w-4 h-4 text-cyan-400"></i>
+            <span>Ver Flujos Automatizables</span>
+          </a>
+        </div>
+
+        <div class="pt-10 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+          <div class="bg-[#1E293B]/70 border border-slate-800 rounded-xl p-4">
+            <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">-70%</div>
+            <div class="text-xs text-slate-400 mt-1">Tiempo de Trabajo Manual</div>
+          </div>
+          <div class="bg-[#1E293B]/70 border border-slate-800 rounded-xl p-4">
+            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">0%</div>
+            <div class="text-xs text-slate-400 mt-1">Errores de Digitación</div>
+          </div>
+          <div class="bg-[#1E293B]/70 border border-slate-800 rounded-xl p-4">
+            <div class="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] font-mono">24/7</div>
+            <div class="text-xs text-slate-400 mt-1">Disponibilidad Operativa</div>
+          </div>
+          <div class="bg-[#1E293B]/70 border border-slate-800 rounded-xl p-4">
+            <div class="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] font-mono">&lt; 3 Semanas</div>
+            <div class="text-xs text-slate-400 mt-1">Retorno de Inversión (ROI)</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION: FLUJOS QUE INCLUYE LA AUTOMATIZACIÓN
+       ========================================================================= -->
+  <section id="que-incluye" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+          <span>Capacidades de Automatización</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
+          Conectores inteligentes que orquestan tu empresa.
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg">
+          Transformamos procesos lentos y manuales en pipelines automatizados robustos con manejo proactivo de errores y trazabilidad completa.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- 1. Integración de Sistemas -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="git-merge" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Sincronización Bidireccional de Sistemas</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Integramos tu CRM, ERP, sistema de facturación, almacén y herramientas de correo para que los datos viajen de forma instantánea sin necesidad de copiar y pegar manualmente.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Sincronización en tiempo real</span>
+          </div>
+        </div>
+
+        <!-- 2. Procesamiento de Documentos con IA -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="file-text" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Extracción de Documentos con IA / OCR</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Lectura y digitalización automatizada de facturas en PDF, cotizaciones recibidas, órdenes de compra y comprobantes bancarios, cargando los datos directo en tu sistema.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Cero captura manual de datos</span>
+          </div>
+        </div>
+
+        <!-- 3. Automatización de Mensajería & WhatsApp -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="message-square" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Bots de Notificación y WhatsApp API</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Envío automático de confirmaciones de pedidos, recibos de pago, avisos de despacho y recordatorios de cobranza por WhatsApp y correo electrónico en cuanto cambia el estado.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Atención instantánea a tus clientes</span>
+          </div>
+        </div>
+
+        <!-- 4. Rutas de Aprobación Gerencial -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="check-square" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Flujos de Autorización y Aprobación</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Circuitos de aprobación de cotizaciones, descuentos especiales o pagos a proveedores con botones interactivos directamente en Telegram, Slack o correo con registro de auditoría.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Aprobaciones en 1 solo clic</span>
+          </div>
+        </div>
+
+        <!-- 5. Conciliación y Alertas Bancarias -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="credit-card" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Conciliación de Pagos y Bancos</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Cruce automatizado entre comprobantes reportados por clientes y estados de cuenta bancarios o pasarelas de pago, alertando discrepancias en cuestión de segundos.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Control financiero sin demoras</span>
+          </div>
+        </div>
+
+        <!-- 6. Monitoreo Proactivo y Resiliencia -->
+        <div class="enterprise-card rounded-2xl p-7 bg-[#1E293B]/90 backdrop-blur-sm border border-slate-700/80 hover:border-cyan-400/50 transition-all flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="shield-alert" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Monitoreo y Recuperación Automática</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Mecanismos de reintento automático ante fallas de red o caídas de APIs de terceros, con bitácora centralizada de eventos y alertas técnicas antes de que afecte la operación.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800 text-xs font-mono text-cyan-400 flex items-center space-x-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Alta tolerancia a fallos</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION: AHORRO Y ROI
+       ========================================================================= -->
+  <section id="ahorro-operativo" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+            <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+            <span>Eficiencia Financiera</span>
+          </div>
+          
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight leading-tight">
+            ¿Cuánto dinero pierde tu empresa en tareas repetitivas?
+          </h2>
+
+          <p class="text-slate-300 text-base leading-relaxed">
+            Un empleado administrativo promedio dedica hasta 18 horas semanales a digitar datos, conciliar pedidos o responder mensajes mecánicos. Al automatizar estos flujos obtienes:
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start space-x-4 bg-[#1E293B]/70 p-4 rounded-xl border border-slate-800">
+              <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-0.5">
+                <i data-lucide="trending-down" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Reducción Inmediata de Costos Operacionales</h4>
+                <p class="text-slate-300 text-xs mt-1 leading-relaxed">
+                  Tu empresa puede procesar 5x más volumen de operaciones y pedidos sin necesidad de ampliar la plantilla de personal para tareas mecánicas.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 bg-[#1E293B]/70 p-4 rounded-xl border border-slate-800">
+              <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-0.5">
+                <i data-lucide="smile" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Experiencia de Cliente Excepcional</h4>
+                <p class="text-slate-300 text-xs mt-1 leading-relaxed">
+                  Tus compradores reciben confirmaciones, facturas y números de seguimiento al segundo de comprar, mejorando drásticamente su fidelización.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 relative">
+          <div class="bg-[#1E293B] border border-slate-700/80 rounded-2xl p-6 shadow-2xl space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+              <div class="flex items-center space-x-2">
+                <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                <span class="text-xs font-mono text-slate-400 ml-2">s26-automation-engine-v2</span>
+              </div>
+              <span class="text-xs font-mono text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800">
+                STATUS: RUNNING
+              </span>
+            </div>
+
+            <div class="space-y-3 font-mono text-xs">
+              <div class="flex items-center justify-between bg-[#0F172A] p-3 rounded-xl border border-slate-800">
+                <span class="text-slate-300">Facturas Procesadas (Auto)</span>
+                <span class="text-cyan-400 font-bold">1,842 docs / mes</span>
+              </div>
+              <div class="flex items-center justify-between bg-[#0F172A] p-3 rounded-xl border border-slate-800">
+                <span class="text-slate-300">Horas Hombre Ahorradas</span>
+                <span class="text-emerald-400 font-bold">128 hrs / mes</span>
+              </div>
+              <div class="flex items-center justify-between bg-[#0F172A] p-3 rounded-xl border border-slate-800">
+                <span class="text-slate-300">Tasa de Error Humano</span>
+                <span class="text-cyan-400 font-bold">0.00%</span>
+              </div>
+            </div>
+
+            <div class="bg-[#0F172A] p-4 rounded-xl border border-slate-800 font-mono text-xs text-slate-400 space-y-1.5">
+              <div class="text-cyan-400">// Registro de Eventos en Tiempo Real</div>
+              <div>[14:23:01] ⚡ Webhook recibido: Pedido #8912 creado en Shopify</div>
+              <div>[14:23:02] ⚡ Stock actualizado en ERP PostgreSQL: -2 unidades</div>
+              <div>[14:23:03] ⚡ Factura generada y enviada a cliente por WhatsApp API</div>
+              <div class="text-emerald-400">[14:23:04] ✓ Pipeline ejecutado con éxito en 1.1s</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION: METODOLOGÍA DE AUTOMATIZACIÓN
+       ========================================================================= -->
+  <section id="metodologia" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i data-lucide="git-branch" class="w-3.5 h-3.5"></i>
+          <span>Metodología Ágil</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
+          De los cuellos de botella al flujo continuo.
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg">
+          Un proceso seguro en 4 etapas para automatizar sin riesgo de desajustes operacionales.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <div class="enterprise-card rounded-2xl p-6 bg-[#1E293B]/80 border border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center font-mono font-bold text-cyan-400 text-lg">01</div>
+          <h3 class="text-lg font-bold text-white">Mapeo & Cálculo ROI</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Analizamos tus flujos manuales actuales, medimos el tiempo invertido y priorizamos las automatizaciones con mayor retorno económico.
+          </p>
+        </div>
+
+        <div class="enterprise-card rounded-2xl p-6 bg-[#1E293B]/80 border border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center font-mono font-bold text-cyan-400 text-lg">02</div>
+          <h3 class="text-lg font-bold text-white">Arquitectura & Conectores</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Configuramos los webhooks, endpoints y lógica de negocio, definiendo reglas de validación y rutas de contingencia.
+          </p>
+        </div>
+
+        <div class="enterprise-card rounded-2xl p-6 bg-[#1E293B]/80 border border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center font-mono font-bold text-cyan-400 text-lg">03</div>
+          <h3 class="text-lg font-bold text-white">Pruebas en Simulado</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Probamos cada escenario con datos de prueba reales para asegurar que no existan duplicidades ni discrepancias de inventario.
+          </p>
+        </div>
+
+        <div class="enterprise-card rounded-2xl p-6 bg-[#1E293B]/80 border border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center font-mono font-bold text-emerald-400 text-lg">04</div>
+          <h3 class="text-lg font-bold text-white">Despliegue & Soporte</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Activamos los flujos en producción con monitoreo activo 24/7 y te entregamos un panel de control con las métricas de rendimiento.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION: PREGUNTAS FRECUENTES (FAQ)
+       ========================================================================= -->
+  <section id="faq" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Dudas Resueltas</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
+          Preguntas Frecuentes sobre Automatización
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg">
+          Claridad absoluta sobre cómo la tecnología optimiza tu flujo de trabajo.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <details class="group enterprise-card rounded-2xl p-6 bg-[#1E293B]/90 border border-slate-700/80 cursor-pointer">
+          <summary class="flex justify-between items-center text-lg font-bold text-white select-none">
+            <span>¿Qué ocurre si una plataforma externa (ej. WhatsApp o el banco) falla temporalmente?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-cyan-400 flex-shrink-0 ml-4"></i>
+          </summary>
+          <div class="pt-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 mt-4">
+            Nuestros flujos implementan colas de mensajes con reintentos exponenciales automáticos y almacenamiento en buffer. Si un servicio externo está temporalmente fuera de línea, la tarea queda en cola y se ejecuta automáticamente en cuanto el servicio se restablece, sin pérdida de información ni duplicados.
+          </div>
+        </details>
+
+        <details class="group enterprise-card rounded-2xl p-6 bg-[#1E293B]/90 border border-slate-700/80 cursor-pointer">
+          <summary class="flex justify-between items-center text-lg font-bold text-white select-none">
+            <span>¿Nuestros sistemas actuales deben tener APIs públicas obligatoriamente?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-cyan-400 flex-shrink-0 ml-4"></i>
+          </summary>
+          <div class="pt-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 mt-4">
+            No necesariamente. Aunque las APIs facilitan la conexión, también podemos interactuar con bases de datos directas, servicios web locales, procesamiento de correos con formato predefinido, webhooks o incluso scripts seguros de extracción para sistemas legacy o propietarios.
+          </div>
+        </details>
+
+        <details class="group enterprise-card rounded-2xl p-6 bg-[#1E293B]/90 border border-slate-700/80 cursor-pointer">
+          <summary class="flex justify-between items-center text-lg font-bold text-white select-none">
+            <span>¿El personal de la empresa necesita saber programar para supervisar las automatizaciones?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-cyan-400 flex-shrink-0 ml-4"></i>
+          </summary>
+          <div class="pt-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 mt-4">
+            Para nada. Entregamos paneles de supervisión y notificaciones sumamente amigables. Tu equipo solo interactúa con los resultados (ej. recibiendo un mensaje de alerta cuando una cotización necesita su visto bueno o revisando métricas de tareas completadas).
+          </div>
+        </details>
+
+        <details class="group enterprise-card rounded-2xl p-6 bg-[#1E293B]/90 border border-slate-700/80 cursor-pointer">
+          <summary class="flex justify-between items-center text-lg font-bold text-white select-none">
+            <span>¿Se pueden modificar o ampliar los flujos más adelante?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-cyan-400 flex-shrink-0 ml-4"></i>
+          </summary>
+          <div class="pt-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 mt-4">
+            Sí. La arquitectura que construimos es modular y escalable. A medida que tu negocio sume nuevos canales de venta, proveedores o sistemas de gestión, los nuevos nodos se integran sin necesidad de rehacer los flujos existentes.
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION: FORMULARIO DE COTIZACIÓN DIRECTA (Automatización)
+       ========================================================================= -->
+  <footer id="contacto" class="pt-20 pb-12 bg-[#0F172A] relative border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-[#1E293B] border border-slate-700/80 rounded-3xl p-8 sm:p-12 lg:p-16 mb-20 shadow-2xl relative overflow-hidden">
+        
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#0F172A] border border-cyan-500/40 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+              <span>Auditoría de Procesos</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight leading-tight">
+              Libera a tu equipo del trabajo repetitivo.
+            </h2>
+
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Cuéntanos qué procesos consumen más tiempo en tu empresa. Analizaremos la factibilidad técnica y te presentaremos un plan de automatización con cálculo de horas hombre ahorradas.
+            </p>
+
+            <div class="space-y-3 pt-2">
+              <div class="flex items-center space-x-3 text-xs text-slate-300">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Diagnóstico de flujos sin costo</span>
+              </div>
+              <div class="flex items-center space-x-3 text-xs text-slate-300">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Garantía de cero pérdidas de información</span>
+              </div>
+              <div class="flex items-center space-x-3 text-xs text-slate-300">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Soporte técnico continuo post-implementación</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 bg-[#0F172A] p-6 sm:p-8 rounded-2xl border border-slate-700/80 shadow-xl">
+            
+            <div id="form-success-alert" class="hidden mb-6 p-4 rounded-xl bg-cyan-950/80 border border-cyan-500/50 text-cyan-200 text-sm flex items-start space-x-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="block font-bold text-white">¡Diagnóstico Solicitado!</strong>
+                <span>Hemos recibido la descripción de tus procesos. Nuestro equipo técnico te contactará en menos de 24 horas.</span>
+              </div>
+            </div>
+
+            <form id="main-contact-form" class="space-y-5">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div class="space-y-1.5">
+                  <label for="form-name" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                    Nombre Completo <span class="text-cyan-400">*</span>
+                  </label>
+                  <input type="text" id="form-name" name="nombre" required placeholder="Ej. Mariana Gómez" class="custom-input w-full px-4 py-3 rounded-xl text-sm" />
+                </div>
+
+                <div class="space-y-1.5">
+                  <label for="form-company" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                    Empresa <span class="text-cyan-400">*</span>
+                  </label>
+                  <input type="text" id="form-company" name="empresa" required placeholder="Ej. Grupo Industrial M&G C.A." class="custom-input w-full px-4 py-3 rounded-xl text-sm" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div class="space-y-1.5">
+                  <label for="form-email" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                    Correo Corporativo <span class="text-cyan-400">*</span>
+                  </label>
+                  <input type="email" id="form-email" name="correo" required placeholder="mariana@empresa.com" class="custom-input w-full px-4 py-3 rounded-xl text-sm" />
+                </div>
+
+                <div class="space-y-1.5">
+                  <label for="form-service" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                    Solución de Interés <span class="text-cyan-400">*</span>
+                  </label>
+                  <select id="form-service" name="servicio" required class="custom-input w-full px-4 py-3 rounded-xl text-sm cursor-pointer">
+                    <option value="automatizacion" selected>Automatización Operativa</option>
+                    <option value="web">Desarrollo Web y Apps</option>
+                    <option value="datos">Datos y Estadística</option>
+                    <option value="ecommerce">Comercio Electrónico</option>
+                    <option value="facturacion">Facturación B2B Fiscal</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="form-notes" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                  ¿Qué procesos o tareas manuales buscas automatizar? (Opcional)
+                </label>
+                <textarea id="form-notes" name="mensaje" rows="3" placeholder="Ej. Queremos sincronizar pedidos de WhatsApp con nuestro inventario en el ERP y enviar facturas automáticas..." class="custom-input w-full px-4 py-3 rounded-xl text-sm resize-none"></textarea>
+              </div>
+
+              <button type="submit" class="btn-cyan w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wider flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/50 transition-all">
+                <span>Solicitar Diagnóstico de Automatización</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 text-slate-950"></i>
+              </button>
+
+              <div class="text-center text-[11px] text-slate-400 pt-1">
+                🔒 Confidencialidad garantizada. Respuesta directa por un arquitecto de soluciones.
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Navigation to Other Solutions -->
+      <div class="mb-14 p-8 rounded-2xl bg-[#1E293B]/60 border border-slate-800">
+        <div class="text-sm font-mono text-cyan-400 uppercase tracking-wider mb-4">
+          Explora otras soluciones del Portafolio S26Digital:
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <a href="desarrollo-web.html" class="p-4 rounded-xl bg-[#0F172A] border border-slate-800 hover:border-cyan-400 text-slate-300 hover:text-white transition-all flex items-center space-x-3 group">
+            <i data-lucide="code-2" class="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform"></i>
+            <div>
+              <div class="font-bold text-sm">Desarrollo Web y Apps</div>
+              <div class="text-xs text-slate-400">Páginas modernas con IA →</div>
+            </div>
+          </a>
+          <a href="datos-estadistica.html" class="p-4 rounded-xl bg-[#0F172A] border border-slate-800 hover:border-cyan-400 text-slate-300 hover:text-white transition-all flex items-center space-x-3 group">
+            <i data-lucide="bar-chart-3" class="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform"></i>
+            <div>
+              <div class="font-bold text-sm">Datos y Estadística</div>
+              <div class="text-xs text-slate-400">Dashboards y ETL Pipelines →</div>
+            </div>
+          </a>
+          <a href="comercio-electronico.html" class="p-4 rounded-xl bg-[#0F172A] border border-slate-800 hover:border-cyan-400 text-slate-300 hover:text-white transition-all flex items-center space-x-3 group">
+            <i data-lucide="shopping-cart" class="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform"></i>
+            <div>
+              <div class="font-bold text-sm">Comercio Electrónico</div>
+              <div class="text-xs text-slate-400">Ventas B2B multimoneda →</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Navigation & Copyright -->
+      <div class="border-t border-slate-800/80 pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-400">
+        <div class="flex items-center space-x-3">
+          <div class="w-7 h-7 rounded-lg bg-cyan-500 flex items-center justify-center">
+            <i data-lucide="layers" class="w-4 h-4 text-slate-950 stroke-[2.5]"></i>
+          </div>
+          <span class="font-bold text-white tracking-wide">S26Digital</span>
+          <span>— Consultora B2B & Socio Tecnológico Enterprise.</span>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a>
+          <a href="index.html#soluciones" class="hover:text-cyan-400 transition-colors">Portafolio</a>
+          <a href="index.html#facturacion" class="hover:text-cyan-400 transition-colors">Solución Fiscal 2026</a>
+          <a href="index.html#contacto" class="hover:text-cyan-400 transition-colors">Contacto</a>
+          <span class="text-slate-600">|</span>
+          <span>© 2026 S26Digital. Todos los derechos reservados.</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Master JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

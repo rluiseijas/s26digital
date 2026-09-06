@@ -32,11 +32,11 @@ La interfaz sigue estrictamente la directriz **"Dark Mode (Cloud Enterprise)"**:
    - `Soluciones Llave en Mano`
    - `Agilidad y Prototipado`
    - `Acompañamiento Continuo`
-4. **SECCIÓN 3: Portafolio de Soluciones (4 Columnas)**:
-   - Desarrollo Web y Apps
-   - Datos y Estadística
-   - Automatización
-   - Comercio Electrónico
+4. **SECCIÓN 3: Portafolio de Soluciones (4 Columnas con Subpáginas Dedicadas)**:
+   - **Desarrollo Web y Apps** (`desarrollo-web.html`): Páginas y apps B2B con IA, hosting y dominio incluidos, SEO para Google/Gemini/ChatGPT y entrega en 15 días hábiles.
+   - **Datos y Estadística** (`datos-estadistica.html`): Business Intelligence, pipelines ETL automatizados, dashboards ejecutivos en tiempo real y analítica predictiva.
+   - **Automatización** (`automatizacion.html`): Automatización de procesos (BPA), sincronización de ERP/CRM/WhatsApp y reducción del 70% de tareas repetitivas.
+   - **Comercio Electrónico** (`comercio-electronico.html`): Plataformas de e-commerce transaccionales, módulo mayorista B2B, pasarelas de pago multimoneda y stock en vivo.
 5. **SECCIÓN 4: Infraestructura y Stack Tecnológico (Cinta de Logos)**:
    - Logos vectoriales SVG minimalistas monocolor (`#F8FAFC` con hover `#06B6D4`) de:
      - `React`, `Vue.js`, `Tailwind CSS`, `Python`, `Node.js`, `PostgreSQL`, `SQLite`, `Docker`.
@@ -45,13 +45,13 @@ La interfaz sigue estrictamente la directriz **"Dark Mode (Cloud Enterprise)"**:
    - 02. Diseño de arquitectura
    - 03. Desarrollo ágil (MVP)
    - 04. Despliegue y soporte continuo
-6. **SECCIÓN: Nueva Solución Fiscal 2026 (Facturación B2B Libre y Legal)**:
+7. **SECCIÓN 6: Nueva Solución Fiscal 2026 (Facturación B2B Libre y Legal)**:
    - Badge: `✨ NUEVA SOLUCIÓN FISCAL 2026`
    - Título: `Olvídate de sistemas obsoletos. Tu facturación B2B, libre y 100% legal.`
    - Introducción: Derogación de la homologación obligatoria del SENIAT (Gaceta Oficial Nº 43.435, Providencia SNAT/2026/00084 y Providencia 0071).
    - Beneficios clave: *Libertad y Modernidad*, *Cumplimiento Fiscal Estricto* e *Integración Total*.
    - CTA directo al diagnóstico: `Modernizar mi Facturación Ahora`.
-7. **SECCIÓN: Footer y Captación**:
+8. **SECCIÓN 7: Footer y Captación**:
    - Título: `¿Listo para modernizar y escalar tu operación?`
    - Formulario interactivo con validación: *Nombre*, *Empresa*, *Correo*, *Selector de Servicio* (incluye *Facturación B2B & Cumplimiento Fiscal*).
    - Botón Final: `[Solicitar Diagnóstico Tecnológico]` en `#06B6D4`.
