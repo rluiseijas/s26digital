@@ -15,7 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Hero Tech Background Canvas
   initNetworkCanvas();
 
-  // Terminal Live Simulation
+  // Hero Solution Carousel
+  initHeroCarousel();
+
+  // Terminal Live Simulation (if present)
   initTerminalSimulation();
 
   // Interactive Modals
@@ -185,7 +188,108 @@ function initNetworkCanvas() {
 }
 
 /* ==========================================================================
-   3. Terminal Mockup Live Stream Simulation
+   3. Hero Image Carousel (Accessible, Auto-play & Touch/Click Friendly)
+   ========================================================================== */
+function initHeroCarousel() {
+  const container = document.getElementById('hero-carousel-container');
+  if (!container) return;
+
+  const slides = container.querySelectorAll('.hero-slide');
+  const dots = container.querySelectorAll('.carousel-dot');
+  const prevBtn = document.getElementById('carousel-prev');
+  const nextBtn = document.getElementById('carousel-next');
+
+  if (!slides.length) return;
+
+  let currentIndex = 0;
+  let autoPlayTimer = null;
+  const intervalMs = 5000;
+
+  function updateSlide(index) {
+    if (index < 0) {
+      currentIndex = slides.length - 1;
+    } else if (index >= slides.length) {
+      currentIndex = 0;
+    } else {
+      currentIndex = index;
+    }
+
+    slides.forEach((slide, i) => {
+      if (i === currentIndex) {
+        slide.classList.remove('opacity-0', 'pointer-events-none', 'z-0');
+        slide.classList.add('opacity-100', 'z-10');
+      } else {
+        slide.classList.remove('opacity-100', 'z-10');
+        slide.classList.add('opacity-0', 'pointer-events-none', 'z-0');
+      }
+    });
+
+    dots.forEach((dot, i) => {
+      if (i === currentIndex) {
+        dot.classList.remove('bg-slate-600');
+        dot.classList.add('bg-cyan-400', 'scale-125');
+      } else {
+        dot.classList.remove('bg-cyan-400', 'scale-125');
+        dot.classList.add('bg-slate-600');
+      }
+    });
+  }
+
+  function nextSlide() {
+    updateSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    updateSlide(currentIndex - 1);
+  }
+
+  function startAutoPlay() {
+    stopAutoPlay();
+    autoPlayTimer = setInterval(nextSlide, intervalMs);
+  }
+
+  function stopAutoPlay() {
+    if (autoPlayTimer) {
+      clearInterval(autoPlayTimer);
+      autoPlayTimer = null;
+    }
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      prevSlide();
+      startAutoPlay();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      nextSlide();
+      startAutoPlay();
+    });
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', (e) => {
+      e.preventDefault();
+      updateSlide(i);
+      startAutoPlay();
+    });
+  });
+
+  // Pause auto-play when hovering the carousel
+  container.addEventListener('mouseenter', stopAutoPlay);
+  container.addEventListener('mouseleave', startAutoPlay);
+
+  // Initialize first slide and auto-play
+  updateSlide(0);
+  startAutoPlay();
+}
+
+/* ==========================================================================
+   3.1. Terminal Mockup Live Stream Simulation
    ========================================================================== */
 function initTerminalSimulation() {
   const terminalLogs = document.getElementById('terminal-logs');

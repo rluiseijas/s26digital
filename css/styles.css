@@ -285,3 +285,13 @@ details[open] summary .faq-chevron {
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Hero Carousel Transitions & Styles */
+.hero-slide {
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-dot {
+  transition: all 0.3s ease;
+}
+
+
