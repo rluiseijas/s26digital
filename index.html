@@ -47,7 +47,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css?v=2.3" />
 </head>
 
 <body class="bg-[#0F172A] text-[#F8FAFC] antialiased selection:bg-cyan-500/30 selection:text-white relative">
@@ -162,58 +162,84 @@
           <!-- Pill Badge: Soluciones Claras para Empresas -->
           <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#1E293B]/90 border border-cyan-500/30 text-cyan-400 text-xs font-mono tracking-wide shadow-sm shadow-cyan-500/10 backdrop-blur-md">
             <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-            <span>Páginas Web • Aplicaciones a Medida • Automatización • Facturación</span>
+            <span>Plataformas Web • Automatización • Facturación y E-commerce</span>
           </div>
 
-          <!-- Master Headline: Mensaje comprensible para cualquier prospecto -->
+          <!-- Master Headline: Mensaje directo y orientado a resultados comerciales -->
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#F8FAFC] leading-[1.14]">
-            Creamos la <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400 glow-text-cyan">página web, app o sistema</span> que tu negocio necesita para vender más y trabajar mejor.
+            Digitaliza tu empresa y <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400 glow-text-cyan">escala tus ventas.</span>
           </h1>
 
-          <!-- Master Subtitle: Claro, directo y sin tecnicismos innecesarios -->
+          <!-- Master Subtitle: Directo al grano -->
           <p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl leading-relaxed">
-            ¿Quieres atraer clientes por internet, modernizar tus sistemas de trabajo o automatizar tareas para ahorrar tiempo? Desarrollamos soluciones digitales prácticas y fáciles de usar. <strong class="text-white font-semibold">Tú te enfocas en tu negocio; nosotros nos encargamos de toda la tecnología.</strong>
+            Desarrollamos tiendas online, sistemas de gestión y automatizaciones para medianas empresas. Tú operas tu negocio; nosotros gestionamos toda la infraestructura tecnológica.
           </p>
 
           <!-- CTAs & Trust Badges -->
           <div class="pt-3 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-            <!-- Main CTA Button -->
-            <a href="#contacto" class="btn-cyan w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold tracking-wide uppercase flex items-center justify-center space-x-3 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/50">
-              <i data-lucide="message-square" class="w-5 h-5 text-slate-950"></i>
-              <span>Cuéntanos tu Proyecto</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 text-slate-950"></i>
+            <!-- Main CTA Button (Exact match with Navbar) -->
+            <a href="#contacto" class="btn-cyan w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold tracking-wide uppercase flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/50">
+              <span>Agendar Consultoría</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-950 stroke-[2.5]"></i>
             </a>
 
-            <!-- Secondary Action -->
+            <!-- Secondary Action (Scroll directo a soluciones) -->
             <a href="#soluciones" class="btn-outline-dark w-full sm:w-auto px-7 py-4 rounded-xl text-sm font-medium flex items-center justify-center space-x-2">
               <i data-lucide="layout-grid" class="w-4 h-4 text-cyan-400"></i>
               <span>Explorar Soluciones</span>
             </a>
           </div>
 
-          <!-- Metric Highlights under Hero -->
-          <div class="pt-6 border-t border-slate-800/80 grid grid-cols-3 gap-4 max-w-xl mx-auto lg:mx-0">
-            <div>
-              <div class="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] font-mono">&lt; 3 Semanas</div>
-              <div class="text-xs text-slate-400 mt-0.5">Entrega Rápida y Funcional</div>
+          <!-- Metric Highlights under Hero (Animated Number Counters) -->
+          <div class="pt-6 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 max-w-3xl mx-auto lg:mx-0">
+            <!-- Counter 1: Proyectos Completados -->
+            <div class="space-y-0.5">
+              <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono flex items-baseline">
+                <span>+</span><span class="counter-number" data-target="226" data-start="1">1</span>
+              </div>
+              <div class="text-xs text-slate-400 leading-tight">Proyectos Completados</div>
             </div>
-            <div>
-              <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">100%</div>
-              <div class="text-xs text-slate-400 mt-0.5">Siempre Disponible y Seguro</div>
+
+            <!-- Counter 2: Clientes Satisfechos -->
+            <div class="space-y-0.5">
+              <div class="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] font-mono flex items-baseline">
+                <span>+</span><span class="counter-number" data-target="133" data-start="1">1</span>
+              </div>
+              <div class="text-xs text-slate-400 leading-tight">Clientes Satisfechos</div>
             </div>
-            <div>
-              <div class="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] font-mono">Llave en Mano</div>
-              <div class="text-xs text-slate-400 mt-0.5">Nos Encargamos de Todo</div>
+
+            <!-- Counter 3: Tiempo de Entrega (MVP) -->
+            <div class="space-y-0.5">
+              <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono flex items-baseline">
+                <span>&lt;&nbsp;</span><span class="counter-number" data-target="3" data-start="1">1</span><span class="text-base sm:text-lg font-sans ml-1 text-slate-300">Sem</span>
+              </div>
+              <div class="text-xs text-slate-400 leading-tight">Entrega Rápida (MVP)</div>
+            </div>
+
+            <!-- Counter 4: Disponibilidad / Uptime -->
+            <div class="space-y-0.5">
+              <div class="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] font-mono flex items-baseline">
+                <span class="counter-number" data-target="100" data-start="1">1</span><span>%</span>
+              </div>
+              <div class="text-xs text-slate-400 leading-tight">Siempre Disponible</div>
+            </div>
+
+            <!-- Metric 5: Llave en Mano -->
+            <div class="space-y-0.5 col-span-2 sm:col-span-1">
+              <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">
+                100%
+              </div>
+              <div class="text-xs text-slate-400 leading-tight">Llave en Mano</div>
             </div>
           </div>
         </div>
 
-        <!-- Right Hero Visual: Carrusel Visual de Soluciones para Todo Público -->
+        <!-- Right Hero Visual: Tarjeta Estática Dashboard / Punto de Venta (Soluciones en Acción) -->
         <div class="lg:col-span-5 relative">
-          <!-- Ambient Glow behind Carousel -->
+          <!-- Ambient Glow behind Card -->
           <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 to-blue-600/30 rounded-2xl blur-xl opacity-75"></div>
 
-          <div class="relative bg-[#1E293B] border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden glass-panel group" id="hero-carousel-container">
+          <div class="relative bg-[#1E293B] border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden glass-panel group" id="hero-card-container">
             
             <!-- Window Titlebar with live badge -->
             <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between z-20 relative">
@@ -231,98 +257,71 @@
               </div>
             </div>
 
-            <!-- Carousel Slides Track -->
-            <div class="relative h-[340px] sm:h-[390px] w-full overflow-hidden bg-slate-950">
+            <!-- Single Static Dashboard / Punto de Venta Display -->
+            <div class="relative h-[360px] sm:h-[400px] w-full overflow-hidden bg-slate-950">
+              <img src="assets/hero/slide-4-ecommerce.jpg" alt="E-commerce y Cobros Digitales - Dashboard y Punto de Venta" class="w-full h-full object-cover object-center pointer-events-none" />
               
-              <!-- Slide 1: Páginas Web y Tiendas Online -->
-              <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100 z-10" data-slide="0">
-                <img src="assets/hero/slide-1-web.jpg" alt="Páginas Web y Portales Modernos" class="w-full h-full object-cover object-center" />
-                <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/50 to-transparent"></div>
-                <div class="absolute bottom-0 inset-x-0 p-5 sm:p-6 space-y-1.5">
+              <!-- Subtle dark gradient overlay for optimal text contrast -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/75 to-[#0F172A]/25 pointer-events-none"></div>
+
+              <!-- Top live badge inside mockup -->
+              <div class="absolute top-4 right-4 flex items-center space-x-2 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-700/80 shadow-lg pointer-events-none">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-[11px] font-mono text-emerald-400 font-semibold">POS Operativo 24/7</span>
+              </div>
+
+              <!-- Static Card Core Text (Required in INSTRUCCIONES.txt) -->
+              <div class="absolute bottom-0 inset-x-0 p-5 sm:p-6 space-y-2 pointer-events-none">
+                <div>
                   <span class="inline-flex items-center px-2.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[10px] font-mono uppercase tracking-wider font-semibold">
-                    01 • Presencia & Ventas
+                    Sistemas Listos
                   </span>
-                  <h4 class="text-lg sm:text-xl font-bold text-white tracking-tight">Páginas Web y Portales a Medida</h4>
-                  <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">Sitios modernos, rápidos y adaptados a celulares diseñados para convertir visitas en clientes reales.</p>
+                </div>
+
+                <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug">
+                  E-commerce y Cobros Digitales
+                </h3>
+
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-md">
+                  Catálogos dinámicos, pasarelas de pago y facturación sincronizada.
+                </p>
+
+                <!-- Dashboard & POS Quick-Status Strip -->
+                <div class="pt-2 grid grid-cols-3 gap-2 border-t border-slate-800/80 mt-2 text-center">
+                  <div class="bg-slate-900/85 rounded-lg p-2 border border-slate-800 backdrop-blur-sm">
+                    <div class="text-[9px] text-slate-400 font-mono uppercase">Pasarelas</div>
+                    <div class="text-xs font-bold text-white">Stripe • Card</div>
+                  </div>
+                  <div class="bg-slate-900/85 rounded-lg p-2 border border-slate-800 backdrop-blur-sm">
+                    <div class="text-[9px] text-slate-400 font-mono uppercase">Facturación</div>
+                    <div class="text-xs font-bold text-cyan-400">Automática</div>
+                  </div>
+                  <div class="bg-slate-900/85 rounded-lg p-2 border border-slate-800 backdrop-blur-sm">
+                    <div class="text-[9px] text-slate-400 font-mono uppercase">Inventario</div>
+                    <div class="text-xs font-bold text-emerald-400">Sincronizado</div>
+                  </div>
                 </div>
               </div>
-
-              <!-- Slide 2: Aplicaciones y Plataformas -->
-              <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 z-0 pointer-events-none" data-slide="1">
-                <img src="assets/hero/slide-2-apps.jpg" alt="Aplicaciones y Software a tu Medida" class="w-full h-full object-cover object-center" />
-                <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/50 to-transparent"></div>
-                <div class="absolute bottom-0 inset-x-0 p-5 sm:p-6 space-y-1.5">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[10px] font-mono uppercase tracking-wider font-semibold">
-                    02 • Gestión Simple
-                  </span>
-                  <h4 class="text-lg sm:text-xl font-bold text-white tracking-tight">Aplicaciones y Software a tu Medida</h4>
-                  <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">Controla tus pedidos, clientes, inventarios y servicios desde cualquier lugar con sistemas intuitivos.</p>
-                </div>
-              </div>
-
-              <!-- Slide 3: Automatización de Procesos -->
-              <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 z-0 pointer-events-none" data-slide="2">
-                <img src="assets/hero/slide-3-automatizacion.jpg" alt="Automatización de Tareas Repetitivas" class="w-full h-full object-cover object-center" />
-                <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/50 to-transparent"></div>
-                <div class="absolute bottom-0 inset-x-0 p-5 sm:p-6 space-y-1.5">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[10px] font-mono uppercase tracking-wider font-semibold">
-                    03 • Ahorro de Tiempo
-                  </span>
-                  <h4 class="text-lg sm:text-xl font-bold text-white tracking-tight">Automatización de Tareas Repetitivas</h4>
-                  <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">Olvídate de procesos manuales y hojas de Excel enredadas conectando tus operaciones de forma automática.</p>
-                </div>
-              </div>
-
-              <!-- Slide 4: Comercio Electrónico & Ventas -->
-              <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 z-0 pointer-events-none" data-slide="3">
-                <img src="assets/hero/slide-4-ecommerce.jpg" alt="Tiendas Online y Cobros Digitales" class="w-full h-full object-cover object-center" />
-                <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/50 to-transparent"></div>
-                <div class="absolute bottom-0 inset-x-0 p-5 sm:p-6 space-y-1.5">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[10px] font-mono uppercase tracking-wider font-semibold">
-                    04 • Ventas 24/7
-                  </span>
-                  <h4 class="text-lg sm:text-xl font-bold text-white tracking-tight">Tiendas Online y Cobros Digitales</h4>
-                  <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">Vende tus productos o servicios por internet con catálogo dinámico, cobros seguros y atención automatizada.</p>
-                </div>
-              </div>
-
-              <!-- Carousel Navigation Buttons -->
-              <button id="carousel-prev" type="button" aria-label="Slide anterior" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-slate-900/80 border border-slate-700/80 text-white flex items-center justify-center backdrop-blur-md opacity-80 hover:opacity-100 hover:border-cyan-400 hover:text-cyan-400 transition-all cursor-pointer">
-                <i data-lucide="chevron-left" class="w-5 h-5"></i>
-              </button>
-              <button id="carousel-next" type="button" aria-label="Slide siguiente" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-slate-900/80 border border-slate-700/80 text-white flex items-center justify-center backdrop-blur-md opacity-80 hover:opacity-100 hover:border-cyan-400 hover:text-cyan-400 transition-all cursor-pointer">
-                <i data-lucide="chevron-right" class="w-5 h-5"></i>
-              </button>
-
-              <!-- Carousel Indicators (Dots) -->
-              <div class="absolute top-4 right-4 z-20 flex items-center space-x-1.5 bg-slate-900/80 px-2.5 py-1 rounded-full border border-slate-800 backdrop-blur-md">
-                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-cyan-400 transition-all cursor-pointer" data-target="0" aria-label="Ir al slide 1"></button>
-                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition-all cursor-pointer" data-target="1" aria-label="Ir al slide 2"></button>
-                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition-all cursor-pointer" data-target="2" aria-label="Ir al slide 3"></button>
-                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition-all cursor-pointer" data-target="3" aria-label="Ir al slide 4"></button>
-              </div>
-
             </div>
 
-            <!-- Subfooter under Carousel -->
+            <!-- Subfooter under Card -->
             <div class="p-3.5 bg-slate-900/90 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-300">
               <span class="flex items-center space-x-1.5">
-                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-cyan-400"></i>
-                <span class="font-medium text-[11px] sm:text-xs">Tecnología fácil, moderna y lista para usar</span>
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-cyan-400"></i>
+                <span class="font-medium text-[11px] sm:text-xs">Solución llave en mano lista para operar</span>
               </span>
               <span class="text-[11px] font-mono text-cyan-400 font-semibold">S26Digital</span>
             </div>
 
           </div>
 
-          <!-- Floating Badge -->
-          <div class="hidden sm:flex absolute -bottom-5 -left-5 bg-[#1E293B] border border-cyan-500/40 p-3.5 rounded-xl shadow-xl items-center space-x-3 backdrop-blur-md z-30">
-            <div class="w-9 h-9 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
-              <i data-lucide="check-circle" class="w-5 h-5"></i>
+          <!-- Insignia inferior (Checkmark verde) -->
+          <div class="hidden sm:flex absolute -bottom-5 -left-5 bg-[#1E293B] border border-emerald-500/30 p-3.5 rounded-xl shadow-xl items-center space-x-3 backdrop-blur-md z-30">
+            <div class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400"></i>
             </div>
             <div>
-              <div class="text-xs font-bold text-white">Nosotros nos encargamos</div>
-              <div class="text-[11px] text-slate-400">Desde la idea hasta el funcionamiento</div>
+              <div class="text-xs font-bold text-white">Infraestructura llave en mano.</div>
             </div>
           </div>
         </div>
@@ -362,10 +361,6 @@
               <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-105 group-hover:border-cyan-400 transition-all">
                 <i data-lucide="code-2" class="w-6 h-6"></i>
               </div>
-              <a href="desarrollo-web.html" class="text-[10px] font-mono uppercase px-2 py-1 rounded bg-[#0F172A] text-cyan-300 border border-cyan-500/30 hover:border-cyan-400 transition-colors flex items-center space-x-1">
-                <span>Detalles</span>
-                <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
-              </a>
             </div>
 
             <h3 class="text-xl font-bold text-[#F8FAFC]">
@@ -402,10 +397,6 @@
               <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-105 group-hover:border-cyan-400 transition-all">
                 <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
               </div>
-              <a href="datos-estadistica.html" class="text-[10px] font-mono uppercase px-2 py-1 rounded bg-[#0F172A] text-cyan-300 border border-cyan-500/30 hover:border-cyan-400 transition-colors flex items-center space-x-1">
-                <span>Detalles</span>
-                <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
-              </a>
             </div>
 
             <h3 class="text-xl font-bold text-[#F8FAFC]">
@@ -442,10 +433,6 @@
               <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-105 group-hover:border-cyan-400 transition-all">
                 <i data-lucide="git-merge" class="w-6 h-6"></i>
               </div>
-              <a href="automatizacion.html" class="text-[10px] font-mono uppercase px-2 py-1 rounded bg-[#0F172A] text-cyan-300 border border-cyan-500/30 hover:border-cyan-400 transition-colors flex items-center space-x-1">
-                <span>Detalles</span>
-                <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
-              </a>
             </div>
 
             <h3 class="text-xl font-bold text-[#F8FAFC]">
@@ -482,10 +469,6 @@
               <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-105 group-hover:border-cyan-400 transition-all">
                 <i data-lucide="shopping-cart" class="w-6 h-6"></i>
               </div>
-              <a href="comercio-electronico.html" class="text-[10px] font-mono uppercase px-2 py-1 rounded bg-[#0F172A] text-cyan-300 border border-cyan-500/30 hover:border-cyan-400 transition-colors flex items-center space-x-1">
-                <span>Detalles</span>
-                <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
-              </a>
             </div>
 
             <h3 class="text-xl font-bold text-[#F8FAFC]">
@@ -1269,6 +1252,6 @@
   </div>
 
   <!-- Master JavaScript -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=2.3"></script>
 </body>
 </html>

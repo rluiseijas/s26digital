@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Hero Solution Carousel
   initHeroCarousel();
 
+  // Animated Number Counters (Metric Highlights)
+  initCounterAnimation();
+
   // Terminal Live Simulation (if present)
   initTerminalSimulation();
 
@@ -188,16 +191,26 @@ function initNetworkCanvas() {
 }
 
 /* ==========================================================================
-   3. Hero Image Carousel (Accessible, Auto-play & Touch/Click Friendly)
+   3. Hero Image Carousel (Interactive, Robust, Touch & Auto-play)
    ========================================================================== */
 function initHeroCarousel() {
+  window.s26Carousel = {
+    next: () => {},
+    prev: () => {},
+    goTo: () => {},
+    stop: () => {},
+    play: () => {}
+  };
+
   const container = document.getElementById('hero-carousel-container');
   if (!container) return;
 
+  const track = document.getElementById('carousel-track') || container.querySelector('.relative.overflow-hidden');
   const slides = container.querySelectorAll('.hero-slide');
   const dots = container.querySelectorAll('.carousel-dot');
   const prevBtn = document.getElementById('carousel-prev');
   const nextBtn = document.getElementById('carousel-next');
+  const counterEl = document.getElementById('carousel-counter');
 
   if (!slides.length) return;
 
@@ -214,25 +227,29 @@ function initHeroCarousel() {
       currentIndex = index;
     }
 
+    // Update slides visibility and inline styling for 100% reliable transitions
     slides.forEach((slide, i) => {
+      const isActive = i === currentIndex;
+      slide.classList.toggle('active', isActive);
+      slide.style.opacity = isActive ? '1' : '0';
+      slide.style.visibility = isActive ? 'visible' : 'hidden';
+      slide.style.pointerEvents = isActive ? 'auto' : 'none';
+      slide.style.zIndex = isActive ? '10' : '1';
+    });
+
+    // Update dots indicators
+    dots.forEach((dot, i) => {
       if (i === currentIndex) {
-        slide.classList.remove('opacity-0', 'pointer-events-none', 'z-0');
-        slide.classList.add('opacity-100', 'z-10');
+        dot.className = 'carousel-dot h-2.5 w-6 rounded-full bg-cyan-400 transition-all cursor-pointer';
       } else {
-        slide.classList.remove('opacity-100', 'z-10');
-        slide.classList.add('opacity-0', 'pointer-events-none', 'z-0');
+        dot.className = 'carousel-dot h-2.5 w-2.5 rounded-full bg-slate-600 hover:bg-slate-400 transition-all cursor-pointer';
       }
     });
 
-    dots.forEach((dot, i) => {
-      if (i === currentIndex) {
-        dot.classList.remove('bg-slate-600');
-        dot.classList.add('bg-cyan-400', 'scale-125');
-      } else {
-        dot.classList.remove('bg-cyan-400', 'scale-125');
-        dot.classList.add('bg-slate-600');
-      }
-    });
+    // Update numeric counter (e.g. 01 / 04)
+    if (counterEl) {
+      counterEl.textContent = `0${currentIndex + 1} / 0${slides.length}`;
+    }
   }
 
   function nextSlide() {
@@ -255,41 +272,167 @@ function initHeroCarousel() {
     }
   }
 
-  if (prevBtn) {
-    prevBtn.addEventListener('click', (e) => {
-      e.preventDefault();
+  // Expose globally so inline onclick or external calls always work
+  window.s26Carousel = {
+    next: () => {
+      nextSlide();
+      startAutoPlay();
+    },
+    prev: () => {
       prevSlide();
       startAutoPlay();
+    },
+    goTo: (idx) => {
+      updateSlide(idx);
+      startAutoPlay();
+    },
+    stop: stopAutoPlay,
+    play: startAutoPlay
+  };
+
+  // Button listeners
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      window.s26Carousel.prev();
     });
   }
 
   if (nextBtn) {
     nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       e.preventDefault();
-      nextSlide();
-      startAutoPlay();
+      window.s26Carousel.next();
     });
   }
 
+  // Dots listeners
   dots.forEach((dot, i) => {
     dot.addEventListener('click', (e) => {
+      e.stopPropagation();
       e.preventDefault();
-      updateSlide(i);
-      startAutoPlay();
+      window.s26Carousel.goTo(i);
     });
   });
+
+  // Slide track click listener: clicking on the slide advances to next
+  if (track) {
+    track.addEventListener('click', (e) => {
+      // Ignore if user clicked on prev/next button or indicator dots
+      if (e.target.closest('#carousel-prev') || e.target.closest('#carousel-next') || e.target.closest('.carousel-dot')) {
+        return;
+      }
+      window.s26Carousel.next();
+    });
+
+    // Touch swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    track.addEventListener('touchstart', (e) => {
+      if (e.changedTouches && e.changedTouches[0]) {
+        touchStartX = e.changedTouches[0].screenX;
+      }
+    }, { passive: true });
+
+    track.addEventListener('touchend', (e) => {
+      if (e.changedTouches && e.changedTouches[0]) {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0) {
+            window.s26Carousel.next();
+          } else {
+            window.s26Carousel.prev();
+          }
+        }
+      }
+    }, { passive: true });
+  }
 
   // Pause auto-play when hovering the carousel
   container.addEventListener('mouseenter', stopAutoPlay);
   container.addEventListener('mouseleave', startAutoPlay);
 
-  // Initialize first slide and auto-play
+  // Keyboard navigation when container is focused
+  container.setAttribute('tabindex', '0');
+  container.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      window.s26Carousel.next();
+    } else if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      window.s26Carousel.prev();
+    }
+  });
+
+  // Initialize
   updateSlide(0);
   startAutoPlay();
 }
 
 /* ==========================================================================
-   3.1. Terminal Mockup Live Stream Simulation
+   3.1. Animated Number Counters (Metric Highlights)
+   ========================================================================== */
+function initCounterAnimation() {
+  const counters = document.querySelectorAll('.counter-number');
+  if (!counters.length) return;
+
+  function animateCounter(el) {
+    const target = parseInt(el.getAttribute('data-target'), 10) || 0;
+    const start = parseInt(el.getAttribute('data-start'), 10) || 1;
+    const duration = 1800; // ms
+    const startTime = performance.now();
+
+    function update(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out cubic
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(start + (target - start) * easeProgress);
+
+      el.textContent = current;
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        el.textContent = target;
+      }
+    }
+
+    requestAnimationFrame(update);
+  }
+
+  let animated = false;
+  function triggerCounters() {
+    if (animated) return;
+    animated = true;
+    counters.forEach(animateCounter);
+  }
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          triggerCounters();
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.15 });
+
+    const heroSection = document.getElementById('hero');
+    if (heroSection) {
+      observer.observe(heroSection);
+    } else {
+      triggerCounters();
+    }
+  } else {
+    triggerCounters();
+  }
+}
+
+/* ==========================================================================
+   3.2. Terminal Mockup Live Stream Simulation
    ========================================================================== */
 function initTerminalSimulation() {
   const terminalLogs = document.getElementById('terminal-logs');
