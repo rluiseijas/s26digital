@@ -1,31 +1,10 @@
-Actúa como un experto desarrollador de integraciones de Meta (WhatsApp Cloud API) y Cloudflare Workers.
+Actúa como un desarrollador web experto. Necesito que agregues a este proyecto una página web estática muy sencilla y profesional que sirva como "Política de Privacidad" (Privacy Policy) para cumplir con los requisitos de publicación de una aplicación en Meta (Facebook Developers).
 
-Necesito que crees el código para un Cloudflare Worker en JavaScript que funcionará como el Webhook de mi aplicación de WhatsApp. El archivo debe llamarse worker.js (o el nombre estándar para mi repo) y estará ubicado en mi carpeta backend.
+La página debe cumplir con lo siguiente:
+1. Estar escrita en un archivo HTML único y puedes ponerle el nombre mas adecuado.
+2. Estar redactada en un tono legal estándar, indicando que la aplicación (asociada a S26Digital) respeta la privacidad de los usuarios, maneja de manera segura los datos de mensajería y cumple con los estándares de la API de WhatsApp Cloud.
+3. Incluir secciones claras: Introducción, Datos que recopilamos, Uso de la información, Seguridad de los datos y Contacto (usando un correo de soporte como s26digital.ve@gmail.com).
+4. El diseño debe ser responsive (adaptado a dispositivos móviles).
+5. Utiliza la base para construirla (replicando el menu y footer de s26digital)
 
-Requisitos técnicos del código:
-
-Debe usar la sintaxis moderna de Cloudflare Workers (ES Modules con export default { async fetch(request, env, ctx) { ... } }).
-
-Debe manejar tanto peticiones GET (para la verificación inicial de Meta) como peticiones POST (para recibir los mensajes entrantes).
-
-La ruta que debe escuchar es /webhook (o la ruta raíz /, maneja ambas por seguridad).
-
-El token de verificación estático será: mi_token_secreto_s26
-
-Lógica del método GET (Verificación de Meta):
-
-Extrae los parámetros de la URL: hub.mode, hub.verify_token y hub.challenge.
-
-Si hub.mode es igual a "subscribe" y hub.verify_token coincide con mi token estático, devuelve únicamente el valor de hub.challenge con un status 200 OK.
-
-Si el token no coincide, devuelve un status 403 Forbidden.
-
-Lógica del método POST (Recepción de mensajes):
-
-Lee el cuerpo de la petición en formato JSON.
-
-Imprime el JSON en consola (usando console.log) para poder revisarlo luego en los logs de Cloudflare.
-
-Responde inmediatamente con un status 200 OK (y un texto como "EVENT_RECEIVED") para evitar que Meta reenvíe el mensaje múltiples veces.
-
-Por favor, dame el código limpio, estructurado de modo que pueda ser guardado en la carpeta backend
+Por favor, entrégame el código completo del archivo listo para subir a mi repositorio conectado con Cloudflare Pages.

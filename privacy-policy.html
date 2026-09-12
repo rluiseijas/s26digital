@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad | Privacy Policy | S26Digital • WhatsApp Cloud API</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Política de Privacidad y Protección de Datos de S26Digital para nuestras aplicaciones, integraciones con Meta (WhatsApp Cloud API) y plataformas digitales." />
+  <meta name="keywords" content="privacy policy, politica de privacidad, whatsapp cloud api, proteccion de datos, privacidad meta, s26digital" />
+  <meta name="theme-color" content="#0F172A" />
+  <link rel="canonical" href="https://s26digital.com/politica-de-privacidad.html" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Política de Privacidad | Privacy Policy | S26Digital" />
+  <meta property="og:description" content="Conoce nuestro compromiso con la protección de datos, la seguridad en mensajería y el cumplimiento con la API de WhatsApp Cloud." />
+  <meta property="og:url" content="https://s26digital.com/politica-de-privacidad.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2306B6D4'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'midnight': '#0F172A',
+            'cyan-electric': '#06B6D4',
+            'chalk-white': '#F8FAFC',
+            'slate-card': '#1E293B',
+            'slate-border': '#334155',
+            'slate-muted': '#94A3B8'
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-[#0F172A] text-[#F8FAFC] antialiased selection:bg-cyan-500/30 selection:text-white relative">
+
+  <!-- Top Notification Bar -->
+  <div class="bg-[#1E293B]/70 border-b border-slate-800 text-xs py-1.5 px-4 text-center text-slate-300 flex items-center justify-center space-x-2">
+    <span class="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse-dot"></span>
+    <span class="font-mono text-cyan-400 font-semibold">S26 Core Cloud:</span>
+    <span>Privacidad y Seguridad de Datos • Cumplimiento Meta & WhatsApp Cloud API</span>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <header id="main-navbar" class="sticky top-0 z-40 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all duration-300">
+            <i data-lucide="layers" class="w-6 h-6 text-slate-950 stroke-[2.5]"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-extrabold tracking-tight text-[#F8FAFC] font-sans">
+              S26<span class="text-[#06B6D4] glow-text-cyan">Digital</span>
+            </span>
+            <span class="text-[10px] uppercase tracking-widest text-slate-400 font-mono -mt-1">
+              Aliado Tecnológico
+            </span>
+          </div>
+        </a>
+
+        <!-- Breadcrumb / Section indicator -->
+        <div class="hidden lg:flex items-center space-x-2 text-xs font-mono text-slate-400 border-l border-slate-700 pl-6 ml-2">
+          <a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a>
+          <span>/</span>
+          <span class="text-slate-500">Legal</span>
+          <span>/</span>
+          <span class="text-cyan-400 font-semibold">Privacy Policy</span>
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+          <a href="#introduccion" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Introducción</a>
+          <a href="#datos" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Datos</a>
+          <a href="#uso" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Uso</a>
+          <a href="#seguridad" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Seguridad</a>
+          <a href="#contacto" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Contacto</a>
+          <a href="index.html" class="btn-cyan px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-bold flex items-center space-x-1.5 transition-all">
+            <span>Volver al Inicio</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Trigger -->
+        <div class="flex md:hidden">
+          <button id="mobile-menu-btn" type="button" aria-expanded="false" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-[#1E293B] focus:outline-none" aria-label="Menú principal">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0F172A]/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3 backdrop-blur-xl">
+      <a href="index.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">← Volver al Inicio</a>
+      <a href="#introduccion" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">1. Introducción</a>
+      <a href="#datos" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">2. Datos que recopilamos</a>
+      <a href="#uso" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">3. Uso de la información</a>
+      <a href="#whatsapp" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">4. Integración WhatsApp Cloud</a>
+      <a href="#seguridad" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">5. Seguridad de los datos</a>
+      <a href="#derechos" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">6. Tus derechos</a>
+      <a href="#contacto" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">7. Contacto</a>
+      <div class="pt-2">
+        <a href="mailto:s26digital.ve@gmail.com" class="btn-cyan w-full text-center block py-3 rounded-lg text-xs font-bold uppercase tracking-wider">
+          Escribir a Soporte
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header Section -->
+  <section class="relative py-16 md:py-20 border-b border-slate-800/80 overflow-hidden bg-cyber-grid bg-radial-gradient">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Top Badge -->
+      <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono mb-6">
+        <i data-lucide="shield-check" class="w-4 h-4"></i>
+        <span>Cumplimiento Legal • Meta Platform & WhatsApp Cloud API</span>
+      </div>
+
+      <!-- Main Title -->
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+        Política de <span class="text-cyan-400 glow-text-cyan">Privacidad</span>
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed mb-8">
+        En <strong class="text-white">S26Digital</strong> respetamos tu privacidad y nos comprometemos a proteger tus datos personales. Este documento describe de manera clara y transparente cómo recopilamos, utilizamos, almacenamos y protegemos la información cuando interactúas con nuestras aplicaciones, canales de mensajería empresarial de WhatsApp y servicios web.
+      </p>
+
+      <!-- Metadata Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs font-mono">
+        <div class="p-3.5 rounded-xl bg-[#1E293B]/70 border border-slate-800">
+          <div class="text-slate-400 mb-1 flex items-center space-x-1.5">
+            <i data-lucide="calendar" class="w-3.5 h-3.5 text-cyan-400"></i>
+            <span>Última actualización:</span>
+          </div>
+          <div class="text-white font-semibold">Septiembre 2026</div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-[#1E293B]/70 border border-slate-800">
+          <div class="text-slate-400 mb-1 flex items-center space-x-1.5">
+            <i data-lucide="building-2" class="w-3.5 h-3.5 text-cyan-400"></i>
+            <span>Responsable del tratamiento:</span>
+          </div>
+          <div class="text-white font-semibold">S26Digital</div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-[#1E293B]/70 border border-slate-800">
+          <div class="text-slate-400 mb-1 flex items-center space-x-1.5">
+            <i data-lucide="message-square" class="w-3.5 h-3.5 text-cyan-400"></i>
+            <span>Plataforma integrada:</span>
+          </div>
+          <div class="text-white font-semibold">WhatsApp Cloud API (Meta)</div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-[#1E293B]/70 border border-slate-800">
+          <div class="text-slate-400 mb-1 flex items-center space-x-1.5">
+            <i data-lucide="mail" class="w-3.5 h-3.5 text-cyan-400"></i>
+            <span>Correo de privacidad:</span>
+          </div>
+          <a href="mailto:s26digital.ve@gmail.com" class="text-cyan-400 hover:underline truncate block">
+            s26digital.ve@gmail.com
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="py-12 lg:py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+
+        <!-- Table of Contents (Desktop Sticky Sidebar) -->
+        <aside class="hidden lg:block lg:col-span-4">
+          <div class="sticky top-28 p-6 rounded-2xl bg-[#1E293B]/60 border border-slate-800 backdrop-blur-md">
+            <h3 class="text-xs font-mono text-cyan-400 uppercase tracking-wider mb-4 flex items-center space-x-2">
+              <i data-lucide="list" class="w-4 h-4"></i>
+              <span>Índice del documento</span>
+            </h3>
+            <nav class="space-y-2 text-xs">
+              <a href="#introduccion" class="block text-slate-300 hover:text-cyan-400 transition-colors py-1">1. Introducción y Ámbito</a>
+              <a href="#datos" class="block text-slate-300 hover:text-cyan-400 transition-colors py-1">2. Datos que Recopilamos</a>
+              <a href="#uso" class="block text-slate-300 hover:text-cyan-400 transition-colors py-1">3. Uso de la Información</a>
+              <a href="#whatsapp" class="block text-slate-300 hover:text-cyan-400 transition-colors py-1">4. API de WhatsApp Cloud</a>
+              <a href="#seguridad" class="block text-slate-300 hover:text-cyan-400 transition-colors py-1">5. Seguridad de los Datos</a>
+              <a href="#retencion" class="block text-slate-300 hover:text-cyan-400 transition-colors py-1">6. Retención de Información</a>
+              <a href="#derechos" class="block text-slate-300 hover:text-cyan-400 transition-colors py-1">7. Derechos del Usuario</a>
+              <a href="#cambios" class="block text-slate-300 hover:text-cyan-400 transition-colors py-1">8. Modificaciones</a>
+              <a href="#contacto" class="block text-slate-300 hover:text-cyan-400 transition-colors py-1">9. Contacto y Soporte</a>
+            </nav>
+
+            <div class="mt-6 pt-6 border-t border-slate-800">
+              <div class="text-[11px] text-slate-400 leading-relaxed">
+                ¿Tienes dudas sobre cómo tratamos tus datos o deseas solicitar su eliminación? Escríbenos directamente a <a href="mailto:s26digital.ve@gmail.com" class="text-cyan-400 underline">s26digital.ve@gmail.com</a>.
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Articles / Content Column -->
+        <div class="lg:col-span-8 space-y-8">
+
+          <!-- 1. Introducción -->
+          <section id="introduccion" class="p-6 sm:p-8 rounded-2xl bg-[#1E293B]/50 border border-slate-800 hover:border-slate-700 transition-all">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-mono font-bold text-sm">
+                01
+              </div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white">1. Introducción y Ámbito de Aplicación</h2>
+            </div>
+            
+            <div class="text-slate-300 text-sm leading-relaxed space-y-3">
+              <p>
+                Esta Política de Privacidad describe el tratamiento de datos personales realizado por <strong class="text-white">S26Digital</strong> (en adelante, "nosotros", "nuestro" o la "Empresa"), como proveedor de soluciones tecnológicas B2B, automatizaciones de procesos e integraciones con plataformas de comunicación empresarial.
+              </p>
+              <p>
+                El presente documento regula específicamente el tratamiento de datos cuando los usuarios interactúan con nuestras plataformas web y nuestras aplicaciones conectadas a la <strong class="text-cyan-400">API de WhatsApp Cloud (WhatsApp Business Platform)</strong> de <strong class="text-white">Meta Platforms, Inc.</strong>
+              </p>
+              <p>
+                Al contactarnos, suscribirte a nuestros canales informativos o interactuar con nuestros asistentes automatizados y agentes vía WhatsApp, reconoces haber leído y comprendido los términos expuestos en esta política.
+              </p>
+            </div>
+          </section>
+
+          <!-- 2. Datos que recopilamos -->
+          <section id="datos" class="p-6 sm:p-8 rounded-2xl bg-[#1E293B]/50 border border-slate-800 hover:border-slate-700 transition-all">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-mono font-bold text-sm">
+                02
+              </div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white">2. Datos que Recopilamos</h2>
+            </div>
+
+            <div class="text-slate-300 text-sm leading-relaxed space-y-4">
+              <p>
+                Recopilamos únicamente la información mínima indispensable para brindarte atención personalizada, resolver consultas y procesar solicitudes de servicios tecnológicos:
+              </p>
+
+              <div class="space-y-3 pt-1">
+                <div class="p-4 rounded-xl bg-[#0F172A] border border-slate-800">
+                  <div class="font-bold text-white mb-1 flex items-center space-x-2">
+                    <i data-lucide="phone" class="w-4 h-4 text-cyan-400"></i>
+                    <span>A. Datos suministrados en la interacción por WhatsApp</span>
+                  </div>
+                  <ul class="list-disc list-inside text-slate-300 space-y-1 text-xs sm:text-sm pl-1">
+                    <li><strong class="text-white">Número de teléfono móvil:</strong> identificador único internacional utilizado por WhatsApp para enrutar el mensaje.</li>
+                    <li><strong class="text-white">Nombre de perfil:</strong> el nombre público que hayas configurado en tu cuenta de WhatsApp.</li>
+                    <li><strong class="text-white">Contenido del mensaje:</strong> el texto, audio, imagen o documento que nos envíes voluntariamente al realizar una consulta o requerimiento.</li>
+                    <li><strong class="text-white">Metadatos de mensajería:</strong> fecha, hora de envío, identificadores técnicos (`wamid`) y estado de entrega provistos por la API de Meta.</li>
+                  </ul>
+                </div>
+
+                <div class="p-4 rounded-xl bg-[#0F172A] border border-slate-800">
+                  <div class="font-bold text-white mb-1 flex items-center space-x-2">
+                    <i data-lucide="globe" class="w-4 h-4 text-cyan-400"></i>
+                    <span>B. Datos suministrados en el portal web (Formularios de contacto)</span>
+                  </div>
+                  <p class="text-xs sm:text-sm text-slate-300">
+                    Nombre completo, correo electrónico corporativo, nombre de tu empresa y detalles técnicos del proyecto que deseas cotizar o consultar.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Important Callout: No datos sensibles -->
+              <div class="p-4 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-start space-x-3">
+                <i data-lucide="alert-circle" class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+                <div class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                  <strong class="text-white">No recopilamos datos sensibles:</strong> S26Digital no solicita ni recopila a través de WhatsApp datos financieros sensibles (como números completos de tarjetas de crédito o códigos CVV), contraseñas de acceso ni datos de categorías especiales (datos médicos, biométricos, religiosos o de orientación).
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 3. Uso de la información -->
+          <section id="uso" class="p-6 sm:p-8 rounded-2xl bg-[#1E293B]/50 border border-slate-800 hover:border-slate-700 transition-all">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-mono font-bold text-sm">
+                03
+              </div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white">3. Uso de la Información</h2>
+            </div>
+
+            <div class="text-slate-300 text-sm leading-relaxed space-y-3">
+              <p>Utilizamos la información recopilada exclusivamente para los siguientes propósitos legítimos:</p>
+
+              <ul class="space-y-2 text-xs sm:text-sm">
+                <li class="flex items-start space-x-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+                  <span><strong class="text-white">Atención al cliente y soporte:</strong> procesar y responder tus preguntas, cotizaciones, demostraciones técnicas o requerimientos de proyectos.</span>
+                </li>
+                <li class="flex items-start space-x-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+                  <span><strong class="text-white">Enrutamiento inteligente de mensajes:</strong> dirigir tu consulta con el especialista técnico o asesor comercial adecuado mediante nuestros flujos y Webhooks.</span>
+                </li>
+                <li class="flex items-start space-x-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+                  <span><strong class="text-white">Notificaciones transaccionales solicitadas:</strong> enviar confirmaciones de reuniones, diagnósticos técnicos o actualizaciones de proyectos solicitados por ti.</span>
+                </li>
+                <li class="flex items-start space-x-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+                  <span><strong class="text-white">Seguridad y auditoría técnica:</strong> verificar la autenticidad de las peticiones HTTP/Webhooks, prevenir accesos maliciosos y garantizar la estabilidad del servicio.</span>
+                </li>
+              </ul>
+
+              <!-- Zero-selling pledge -->
+              <div class="p-4 rounded-xl bg-slate-900 border border-slate-700 mt-4">
+                <div class="flex items-center space-x-2 text-cyan-400 font-bold text-xs uppercase tracking-wider mb-1">
+                  <i data-lucide="shield" class="w-4 h-4"></i>
+                  <span>Compromiso de No Comercialización</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-300">
+                  <strong class="text-white">S26Digital NUNCA vende, alquila, comercializa ni cede</strong> tus números telefónicos, direcciones de correo o datos de mensajería a terceros con propósitos publicitarios, spam ni venta a intermediarios de datos.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 4. Integración con Meta WhatsApp Cloud API -->
+          <section id="whatsapp" class="p-6 sm:p-8 rounded-2xl bg-[#1E293B]/50 border border-slate-800 hover:border-slate-700 transition-all">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-mono font-bold text-sm">
+                04
+              </div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white">4. Cumplimiento con WhatsApp Cloud API y Meta</h2>
+            </div>
+
+            <div class="text-slate-300 text-sm leading-relaxed space-y-3">
+              <p>
+                Nuestra aplicación opera como una integración oficial construida sobre la <strong class="text-white">WhatsApp Business Platform (Cloud API)</strong> provista por <strong class="text-white">Meta Platforms, Inc.</strong>
+              </p>
+              <p>
+                En cumplimiento con las directrices para desarrolladores de Meta (Meta Platform Terms & Developer Policies) y la Política de WhatsApp Business:
+              </p>
+
+              <ul class="list-disc list-inside text-xs sm:text-sm space-y-1.5 pl-1">
+                <li>Solo iniciamos conversaciones con usuarios que hayan solicitado expresamente contacto o información (mecanismo Opt-In).</li>
+                <li>Utilizamos Webhooks seguros autenticados mediante tokens de verificación estáticos y certificados SSL/TLS para la comunicación entre los servidores de Meta y nuestra infraestructura en la nube.</li>
+                <li>Respetamos en su totalidad los términos de uso y las políticas de privacidad de Meta aplicables a la transmisión y procesamiento de datos.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 5. Seguridad de los datos -->
+          <section id="seguridad" class="p-6 sm:p-8 rounded-2xl bg-[#1E293B]/50 border border-slate-800 hover:border-slate-700 transition-all">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-mono font-bold text-sm">
+                05
+              </div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white">5. Seguridad de los Datos</h2>
+            </div>
+
+            <div class="text-slate-300 text-sm leading-relaxed space-y-3">
+              <p>
+                Implementamos estándares rigurosos de ingeniería de software e infraestructura para proteger tu información contra accesos no autorizados, pérdidas o divulgación indebida:
+              </p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                <div class="p-4 rounded-xl bg-[#0F172A] border border-slate-800">
+                  <div class="text-cyan-400 font-bold text-xs uppercase font-mono mb-1 flex items-center space-x-1.5">
+                    <i data-lucide="lock" class="w-3.5 h-3.5"></i>
+                    <span>Cifrado en Tránsito</span>
+                  </div>
+                  <p class="text-xs text-slate-300">
+                    Toda la comunicación web y los Webhooks viajan bajo protocolos HTTPS / TLS 1.3 con certificados de cifrado robusto.
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-[#0F172A] border border-slate-800">
+                  <div class="text-cyan-400 font-bold text-xs uppercase font-mono mb-1 flex items-center space-x-1.5">
+                    <i data-lucide="server" class="w-3.5 h-3.5"></i>
+                    <span>Infraestructura Cloudflare Edge</span>
+                  </div>
+                  <p class="text-xs text-slate-300">
+                    Procesamiento serverless en Cloudflare Workers con protección DDoS global, sin servidores expuestos y con aislamiento estricto.
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-[#0F172A] border border-slate-800">
+                  <div class="text-cyan-400 font-bold text-xs uppercase font-mono mb-1 flex items-center space-x-1.5">
+                    <i data-lucide="key" class="w-3.5 h-3.5"></i>
+                    <span>Control de Accesos</span>
+                  </div>
+                  <p class="text-xs text-slate-300">
+                    Únicamente personal técnico autorizado y sujeto a acuerdos de estricta confidencialidad tiene acceso a las herramientas operativas.
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-[#0F172A] border border-slate-800">
+                  <div class="text-cyan-400 font-bold text-xs uppercase font-mono mb-1 flex items-center space-x-1.5">
+                    <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
+                    <span>Minimización de Datos</span>
+                  </div>
+                  <p class="text-xs text-slate-300">
+                    No conservamos copias redundantes ni innecesarias de conversaciones más allá de la gestión del servicio de soporte o cotización.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 6. Retención de datos -->
+          <section id="retencion" class="p-6 sm:p-8 rounded-2xl bg-[#1E293B]/50 border border-slate-800 hover:border-slate-700 transition-all">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-mono font-bold text-sm">
+                06
+              </div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white">6. Retención y Eliminación de Datos</h2>
+            </div>
+
+            <div class="text-slate-300 text-sm leading-relaxed space-y-3">
+              <p>
+                Conservamos los datos personales únicamente durante el tiempo que sea razonablemente necesario para:
+              </p>
+              <ul class="list-disc list-inside text-xs sm:text-sm space-y-1 pl-1">
+                <li>Responder a la solicitud de cotización o asistencia que motivó el contacto.</li>
+                <li>Mantener la relación comercial y técnica acordada con el cliente.</li>
+                <li>Cumplir con requerimientos legales, fiscales o de auditoría aplicables.</li>
+              </ul>
+              <p>
+                Una vez cumplidas estas finalidades, o al recibir una solicitud expresa del usuario, los datos son eliminados de forma segura o anonimizados de nuestros registros operativos.
+              </p>
+            </div>
+          </section>
+
+          <!-- 7. Derechos del usuario -->
+          <section id="derechos" class="p-6 sm:p-8 rounded-2xl bg-[#1E293B]/50 border border-slate-800 hover:border-slate-700 transition-all">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-mono font-bold text-sm">
+                07
+              </div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white">7. Tus Derechos como Usuario (ARCO)</h2>
+            </div>
+
+            <div class="text-slate-300 text-sm leading-relaxed space-y-3">
+              <p>
+                En cualquier momento tienes derecho a controlar tu información personal mediante el ejercicio de tus derechos de:
+              </p>
+              <ul class="list-disc list-inside text-xs sm:text-sm space-y-1.5 pl-1">
+                <li><strong class="text-white">Acceso:</strong> solicitar una confirmación sobre si tratamos tus datos y obtener una copia de ellos.</li>
+                <li><strong class="text-white">Rectificación:</strong> corregir o actualizar datos incompletos o inexactos.</li>
+                <li><strong class="text-white">Supresión / Cancelación:</strong> solicitar el borrado permanente de tu número telefónico y registros de nuestras bases de datos.</li>
+                <li><strong class="text-white">Oposición y revocación:</strong> dejar de recibir comunicaciones comerciales o transaccionales en cualquier momento.</li>
+              </ul>
+
+              <div class="p-4 rounded-xl bg-[#0F172A] border border-cyan-500/30 mt-3 text-xs sm:text-sm space-y-2">
+                <div class="font-bold text-white flex items-center space-x-2">
+                  <i data-lucide="help-circle" class="w-4 h-4 text-cyan-400"></i>
+                  <span>¿Cómo ejercer tus derechos de forma inmediata?</span>
+                </div>
+                <p>
+                  1. <strong class="text-cyan-400">Vía WhatsApp:</strong> simplemente responde con la palabra <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-white font-bold">CANCELAR</span> o <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-white font-bold">BAJA</span> en el chat y pausaremos cualquier comunicación automatizada.<br />
+                  2. <strong class="text-cyan-400">Vía Correo Electrónico:</strong> envía tu solicitud formal a <a href="mailto:s26digital.ve@gmail.com" class="text-cyan-400 underline font-mono">s26digital.ve@gmail.com</a> con el asunto <em class="text-white">"Solicitud de Privacidad / Eliminación de Datos"</em> indicando tu número de teléfono. Tramitaremos tu requerimiento en menos de 48 horas laborables.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 8. Modificaciones a la política -->
+          <section id="cambios" class="p-6 sm:p-8 rounded-2xl bg-[#1E293B]/50 border border-slate-800 hover:border-slate-700 transition-all">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-mono font-bold text-sm">
+                08
+              </div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white">8. Modificaciones a esta Política</h2>
+            </div>
+
+            <div class="text-slate-300 text-sm leading-relaxed space-y-3">
+              <p>
+                S26Digital se reserva el derecho de actualizar o modificar esta Política de Privacidad en cualquier momento para reflejar cambios normativos, actualizaciones en las políticas de la plataforma de Meta o nuevas funcionalidades de nuestros servicios.
+              </p>
+              <p>
+                Cualquier modificación será publicada en esta misma página web con la indicación de la fecha de su última revisión en la parte superior.
+              </p>
+            </div>
+          </section>
+
+          <!-- 9. Contacto -->
+          <section id="contacto" class="p-6 sm:p-8 rounded-2xl bg-[#1E293B] border border-cyan-500/30 glow-cyan-subtle">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-9 h-9 rounded-lg bg-cyan-500 flex items-center justify-center text-slate-950 font-mono font-bold text-sm">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white">9. Canal de Contacto y Soporte de Privacidad</h2>
+            </div>
+
+            <div class="text-slate-300 text-sm leading-relaxed space-y-4">
+              <p>
+                Si tienes alguna pregunta, inquietud, reclamo o solicitud relacionada con esta Política de Privacidad o el tratamiento de tus datos personales, puedes contactar de forma directa a nuestro equipo responsable:
+              </p>
+
+              <div class="p-5 rounded-xl bg-[#0F172A] border border-slate-700 space-y-3 font-mono text-xs sm:text-sm">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-slate-800 pb-2">
+                  <span class="text-slate-400">Responsable:</span>
+                  <span class="text-white font-semibold">Oficina de Privacidad y Seguridad • S26Digital</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-slate-800 pb-2">
+                  <span class="text-slate-400">Correo oficial de atención:</span>
+                  <a href="mailto:s26digital.ve@gmail.com" class="text-cyan-400 font-bold hover:underline">
+                    s26digital.ve@gmail.com
+                  </a>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-slate-800 pb-2">
+                  <span class="text-slate-400">Tiempo de respuesta habitual:</span>
+                  <span class="text-white">Menos de 24 a 48 horas laborables</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                  <span class="text-slate-400">Sitio Web:</span>
+                  <a href="https://s26digital.com" class="text-cyan-400 hover:underline">https://s26digital.com</a>
+                </div>
+              </div>
+
+              <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
+                <a href="mailto:s26digital.ve@gmail.com?subject=Consulta%20sobre%20Pol%C3%ADtica%20de%20Privacidad" class="btn-cyan w-full sm:w-auto px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2">
+                  <i data-lucide="send" class="w-4 h-4 text-slate-950"></i>
+                  <span>Enviar Correo a Soporte</span>
+                </a>
+                <a href="index.html" class="w-full sm:w-auto px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider bg-slate-800 hover:bg-slate-700 text-slate-200 text-center transition-colors">
+                  Volver a la Página Principal
+                </a>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer Navigation & Copyright -->
+  <footer class="border-t border-slate-800/80 bg-[#0B1120] py-12 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-400">
+        
+        <!-- Brand identity in footer -->
+        <div class="flex items-center space-x-3">
+          <div class="w-7 h-7 rounded-lg bg-cyan-500 flex items-center justify-center">
+            <i data-lucide="layers" class="w-4 h-4 text-slate-950 stroke-[2.5]"></i>
+          </div>
+          <span class="font-bold text-white tracking-wide">S26Digital</span>
+          <span>— Consultora B2B & Aliado Tecnológico Enterprise.</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="flex flex-wrap items-center justify-center gap-6">
+          <a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a>
+          <a href="index.html#soluciones" class="hover:text-cyan-400 transition-colors">Portafolio</a>
+          <a href="index.html#facturacion" class="hover:text-cyan-400 transition-colors">Solución Fiscal</a>
+          <a href="index.html#contacto" class="hover:text-cyan-400 transition-colors">Contacto</a>
+          <span class="text-slate-600">|</span>
+          <a href="politica-de-privacidad.html" class="text-cyan-400 font-semibold hover:underline">Política de Privacidad</a>
+          <span class="text-slate-600">|</span>
+          <span>© 2026 S26Digital. Todos los derechos reservados.</span>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Master JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
