@@ -1,45 +1,31 @@
-Contexto de la actualización:
-Vamos a simplificar la carga cognitiva del Hero Section. El objetivo es dirigirnos a dueños de medianas empresas y comercios que buscan digitalizar sus ventas y operaciones. Necesitamos textos más cortos, directos al grano y unificar las llamadas a la acción (CTAs).
+Actúa como un experto desarrollador de integraciones de Meta (WhatsApp Cloud API) y Cloudflare Workers.
 
-1. Actualización de Textos (Copywriting):
-Reemplaza los textos actuales por estas versiones más concisas y orientadas a resultados comerciales:
+Necesito que crees el código para un Cloudflare Worker en JavaScript que funcionará como el Webhook de mi aplicación de WhatsApp. El archivo debe llamarse worker.js (o el nombre estándar para mi repo) y estará ubicado en mi carpeta backend.
 
-Etiqueta superior (sobre el título):
+Requisitos técnicos del código:
 
-Cambiar a: Plataformas Web • Automatización • Facturación y E-commerce
+Debe usar la sintaxis moderna de Cloudflare Workers (ES Modules con export default { async fetch(request, env, ctx) { ... } }).
 
-Título Principal (H1):
+Debe manejar tanto peticiones GET (para la verificación inicial de Meta) como peticiones POST (para recibir los mensajes entrantes).
 
-Actual: Creamos la página web, app o sistema que tu negocio necesita para vender más y trabajar mejor.
+La ruta que debe escuchar es /webhook (o la ruta raíz /, maneja ambas por seguridad).
 
-Nuevo H1: Digitaliza tu empresa y escala tus ventas.
+El token de verificación estático será: mi_token_secreto_s26
 
-Subtítulo (Párrafo descriptivo):
+Lógica del método GET (Verificación de Meta):
 
-Actual: ¿Quieres atraer clientes por internet... (38 palabras, es muy largo).
+Extrae los parámetros de la URL: hub.mode, hub.verify_token y hub.challenge.
 
-Nuevo Párrafo: Desarrollamos tiendas online, sistemas de gestión y automatizaciones para medianas empresas. Tú operas tu negocio; nosotros gestionamos toda la infraestructura tecnológica. (Menos de la mitad del texto, impacto directo).
+Si hub.mode es igual a "subscribe" y hub.verify_token coincide con mi token estático, devuelve únicamente el valor de hub.challenge con un status 200 OK.
 
-2. Unificación de Llamados a la Acción (CTAs):
+Si el token no coincide, devuelve un status 403 Forbidden.
 
-Botón Principal (Izquierda): Cambia el texto "Cuéntanos tu proyecto ->" por "Agendar Consultoría ↗".
+Lógica del método POST (Recepción de mensajes):
 
-Motivo: Debe ser exactamente igual al botón de la barra de navegación superior (Navbar) para no confundir al usuario con dos acciones distintas.
+Lee el cuerpo de la petición en formato JSON.
 
-Botón Secundario (Gris): Mantenlo como "Explorar Soluciones", pero asegúrate de que al hacer clic haga scroll directo a la sección del portafolio.
+Imprime el JSON en consola (usando console.log) para poder revisarlo luego en los logs de Cloudflare.
 
-3. Optimización del Panel Derecho (Tarjeta "Soluciones en Acción"):
+Responde inmediatamente con un status 200 OK (y un texto como "EVENT_RECEIVED") para evitar que Meta reenvíe el mensaje múltiples veces.
 
-Instrucción de Diseño: Elimina el carrusel con flechas de navegación (< y >). Los usuarios no hacen clic en carruseles en los primeros 3 segundos.
-
-Nuevo Formato: Deja una sola tarjeta estática que muestre un Dashboard o Punto de Venta limpio.
-
-Texto de la Tarjeta:
-
-Etiqueta superior: Sistemas Listos
-
-Título: E-commerce y Cobros Digitales
-
-Subtítulo: Catálogos dinámicos, pasarelas de pago y facturación sincronizada.
-
-Insignia inferior (Checkmark verde): Simplifica el texto. Cambia "Nosotros nos encargamos. Desde la idea hasta el funcionamiento" por "Infraestructura llave en mano."
+Por favor, dame el código limpio, estructurado de modo que pueda ser guardado en la carpeta backend
