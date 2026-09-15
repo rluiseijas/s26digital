@@ -1,0 +1,47 @@
+necesitamos elevar el diseño del Footer para que coincida con el estándar de una Consultora B2B & Aliado Tecnológico Enterprise.
+
+OBJETIVO:
+Reemplazar el footer actual (de una sola línea centrada) por un diseño de cuadrícula (Grid) de 4 columnas, moderno, limpio y jerarquizado, manteniendo el tema oscuro (bg-slate-900 o el color base de la app) y los acentos en cian.
+
+ESTRUCTURA REQUERIDA (TAILWIND CSS):
+
+Contenedor Principal: Un <footer> con padding amplio (ej. py-12 px-6), dividido internamente en dos bloques: la cuadrícula principal superior y la barra de copyright inferior.
+
+Cuadrícula Principal (grid grid-cols-1 md:grid-cols-4 gap-8):
+
+Columna 1 (Marca):
+
+Renderiza el Logo de S26Digital.
+
+Debajo, un texto pequeño (text-sm text-slate-400) que diga: "Arquitectura de software y soluciones Cloud Enterprise para escalar tu operación."
+
+Debajo, un contenedor flex con 3 iconos de redes sociales (LinkedIn, GitHub, Twitter) usando Lucide React. Al hacer hover, deben iluminarse con el acento cian (hover:text-cyan-400).
+
+Columna 2 (Soluciones):
+
+Título de columna: "Servicios" (text-slate-100 font-semibold mb-4).
+
+Lista vertical de enlaces: Desarrollo a Medida, Integraciones Cloud, Automatización IA, Consultoría Técnica. (Efecto hover en cian).
+
+Columna 3 (Compañía):
+
+Título: "Compañía".
+
+Lista vertical: Metodología, Diferenciadores, Casos de Éxito, Agendar Consultoría.
+
+Columna 4 (Contacto y Sede):
+
+Título: "Contacto".
+
+Texto con icono de email: contacto@s26digital.com
+
+Texto con icono de mapa: Cagua, Aragua, Venezuela.
+
+Barra Inferior (Bottom Bar):
+
+Un contenedor con un borde superior sutil (border-t border-slate-800 mt-12 pt-8).
+
+Usa flex justify-between items-center para poner a la izquierda el copyright "© 2026 S26Digital. Todos los derechos reservados." y a la derecha un menú pequeño con "Política de Privacidad" y "Términos de Servicio".
+
+INSTRUCCIÓN DE EJECUCIÓN:
+Entrégame el código del nuevo componente <Footer/> refactorizado. Asegúrate de usar los íconos de Lucide React y mantener la consistencia con la paleta de colores del Cloud Enterprise de S26Digital.

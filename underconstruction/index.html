@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sitio en Construcción | S26Digital • Infraestructura & Software Enterprise</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Estamos construyendo una nueva plataforma digital de alto rendimiento. Próximamente disponible en S26Digital." />
+  <meta name="theme-color" content="#0F172A" />
+
+  <!-- Favicon SVG integrado autónomo -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2306B6D4'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'midnight': '#0F172A',
+            'cyan-electric': '#06B6D4',
+            'chalk-white': '#F8FAFC',
+            'slate-card': '#1E293B',
+            'slate-border': '#334155',
+            'slate-muted': '#94A3B8'
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Hoja de estilos 100% interna de underconstruction -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-[#0F172A] text-[#F8FAFC] antialiased selection:bg-cyan-500/30 selection:text-white min-h-screen flex flex-col justify-between relative overflow-x-hidden">
+
+  <!-- Canvas Interactivo de Red Cibernética (Renderizado por js/main.js) -->
+  <canvas id="cyber-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+
+  <!-- Ambient Glow & Cyber Grid Patterns -->
+  <div class="fixed inset-0 pointer-events-none z-0 bg-cyber-grid bg-radial-gradient opacity-60"></div>
+  <div class="fixed top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none z-0"></div>
+
+  <!-- Barra Superior de Notificación -->
+  <div class="relative z-10 bg-[#1E293B]/80 border-b border-slate-800 text-xs py-2 px-4 text-center text-slate-300 flex items-center justify-center space-x-2 backdrop-blur-md">
+    <span class="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse-dot"></span>
+    <span class="font-mono text-cyan-400 font-semibold">S26 Core Cloud:</span>
+    <span>Despliegue de infraestructura y calibración de arquitectura en curso</span>
+  </div>
+
+  <!-- Encabezado / Barra de Navegación -->
+  <header class="relative z-10 sticky top-0 glass-nav border-b border-slate-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo de la Marca S26Digital -->
+        <a href="../index.html" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all duration-300">
+            <i data-lucide="layers" class="w-6 h-6 text-slate-950 stroke-[2.5]"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-extrabold tracking-tight text-[#F8FAFC] font-sans">
+              S26<span class="text-[#06B6D4] glow-text-cyan">Digital</span>
+            </span>
+            <span class="text-[10px] uppercase tracking-widest text-slate-400 font-mono -mt-1">
+              Aliado Tecnológico
+            </span>
+          </div>
+        </a>
+
+        <!-- Indicador de Sección -->
+        <div class="hidden sm:flex items-center space-x-2 text-xs font-mono text-slate-400 border-l border-slate-700 pl-6 ml-2">
+          <a href="../index.html" class="hover:text-cyan-400 transition-colors">Portal Principal</a>
+          <span>/</span>
+          <span class="text-cyan-400 font-semibold">Plataforma en Construcción</span>
+        </div>
+
+        <!-- Botón de Retorno -->
+        <div>
+          <a href="../index.html" class="btn-cyan px-4 py-2.5 rounded-xl text-xs tracking-wider uppercase font-bold flex items-center space-x-2 transition-all shadow-md shadow-cyan-500/20">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5 text-slate-950"></i>
+            <span>Ir a la Web</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido Principal Central -->
+  <main class="relative z-10 flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl w-full mx-auto text-center space-y-8">
+      
+      <!-- Icono Central con Resplandor Animado -->
+      <div class="flex justify-center">
+        <div class="relative">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-[#1E293B] border border-cyan-500/40 flex items-center justify-center shadow-2xl shadow-cyan-500/20 relative z-10 group">
+            <i data-lucide="cpu" class="w-12 h-12 text-cyan-400 transition-transform duration-300 group-hover:scale-110"></i>
+          </div>
+          <div class="absolute -inset-2.5 bg-gradient-to-r from-cyan-500/30 via-teal-500/20 to-blue-500/30 rounded-3xl blur-lg animate-pulse"></div>
+        </div>
+      </div>
+
+      <!-- Insignia de Estado -->
+      <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+        <span>DESPLIEGUE EN FASE DE CALIBRACIÓN</span>
+      </div>
+
+      <!-- Título Principal & Descripción -->
+      <div class="space-y-3">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+          Estamos construyendo una <br class="hidden sm:inline" />
+          <span class="text-cyan-400 glow-text-cyan">nueva experiencia</span> digital.
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          Diseñamos soluciones tecnológicas B2B que escalan empresas. Muy pronto este módulo estará disponible con herramientas avanzadas de automatización, analítica y comercio digital.
+        </p>
+      </div>
+
+      <!-- Consola de Estado de Infraestructura -->
+      <div class="p-6 sm:p-7 rounded-2xl bg-[#1E293B]/70 border border-slate-800 backdrop-blur-xl shadow-xl max-w-2xl mx-auto text-left space-y-5">
+        
+        <!-- Encabezado de Progreso -->
+        <div class="flex items-center justify-between text-xs font-mono">
+          <span class="text-slate-300 flex items-center space-x-2">
+            <i data-lucide="terminal" class="w-4 h-4 text-cyan-400"></i>
+            <span>Estado de Implementación Cloud</span>
+          </span>
+          <span class="text-cyan-400 font-bold">88% COMPLETADO</span>
+        </div>
+
+        <!-- Barra de Progreso con Gradiente Cian -->
+        <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-slate-800">
+          <div class="h-full bg-gradient-to-r from-cyan-600 via-cyan-400 to-teal-300 rounded-full transition-all duration-1000 w-[88%] shadow-lg shadow-cyan-500/50"></div>
+        </div>
+
+        <!-- Checklist de Servicios -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 font-mono text-xs">
+          <div class="flex items-center space-x-2.5 text-slate-300 bg-[#0F172A]/70 p-3 rounded-xl border border-slate-800">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+            <span>Infraestructura Cloudflare Edge</span>
+          </div>
+          <div class="flex items-center space-x-2.5 text-slate-300 bg-[#0F172A]/70 p-3 rounded-xl border border-slate-800">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+            <span>Cifrado SSL/TLS & Seguridad B2B</span>
+          </div>
+          <div class="flex items-center space-x-2.5 text-slate-300 bg-[#0F172A]/70 p-3 rounded-xl border border-slate-800">
+            <i data-lucide="refresh-cw" class="w-4 h-4 text-cyan-400 animate-spin flex-shrink-0"></i>
+            <span>Integraciones WhatsApp Cloud API</span>
+          </div>
+          <div class="flex items-center space-x-2.5 text-slate-300 bg-[#0F172A]/70 p-3 rounded-xl border border-slate-800">
+            <i data-lucide="refresh-cw" class="w-4 h-4 text-cyan-400 animate-spin flex-shrink-0"></i>
+            <span>Auditoría de Carga & Rendimiento</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Temporizador de Cuenta Regresiva -->
+      <div class="max-w-xl mx-auto pt-2">
+        <div class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-3">
+          Tiempo estimado para el lanzamiento:
+        </div>
+        <div class="grid grid-cols-4 gap-3 text-center">
+          <div class="p-3 sm:p-4 rounded-xl bg-[#1E293B]/90 border border-slate-800">
+            <div id="cd-days" class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">05</div>
+            <div class="text-[10px] text-slate-400 uppercase tracking-wider mt-1">Días</div>
+          </div>
+          <div class="p-3 sm:p-4 rounded-xl bg-[#1E293B]/90 border border-slate-800">
+            <div id="cd-hours" class="text-2xl sm:text-3xl font-extrabold text-white font-mono">12</div>
+            <div class="text-[10px] text-slate-400 uppercase tracking-wider mt-1">Horas</div>
+          </div>
+          <div class="p-3 sm:p-4 rounded-xl bg-[#1E293B]/90 border border-slate-800">
+            <div id="cd-minutes" class="text-2xl sm:text-3xl font-extrabold text-white font-mono">40</div>
+            <div class="text-[10px] text-slate-400 uppercase tracking-wider mt-1">Minutos</div>
+          </div>
+          <div class="p-3 sm:p-4 rounded-xl bg-[#1E293B]/90 border border-slate-800">
+            <div id="cd-seconds" class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">18</div>
+            <div class="text-[10px] text-slate-400 uppercase tracking-wider mt-1">Segundos</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulario de Notificación por Correo -->
+      <div class="max-w-md mx-auto pt-2">
+        <form id="notify-form" class="space-y-3">
+          <div class="flex flex-col sm:flex-row gap-2">
+            <input 
+              type="email" 
+              required 
+              placeholder="tu.correo@empresa.com" 
+              class="custom-input flex-grow px-4 py-3 rounded-xl text-xs sm:text-sm" 
+            />
+            <button 
+              type="submit" 
+              class="btn-cyan px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider whitespace-nowrap shadow-lg shadow-cyan-500/20"
+            >
+              Notificarme
+            </button>
+          </div>
+          <div id="notify-feedback" class="hidden text-xs text-slate-300 p-2.5 rounded-lg bg-[#1E293B] border border-cyan-500/30"></div>
+          <p class="text-[11px] text-slate-500">
+            🔒 Sin spam. Solo te avisaremos el día de la puesta en marcha.
+          </p>
+        </form>
+      </div>
+
+      <!-- Botones de Acción Rápida -->
+      <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+        <a href="../index.html" class="btn-cyan w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/20">
+          <i data-lucide="compass" class="w-4 h-4 text-slate-950"></i>
+          <span>Explorar Soluciones Activas</span>
+        </a>
+        <a href="mailto:s26digital.ve@gmail.com?subject=Consulta%20sobre%20Nueva%20Plataforma" class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-[#1E293B] hover:bg-slate-800 text-slate-200 border border-slate-700 flex items-center justify-center space-x-2 transition-colors">
+          <i data-lucide="mail" class="w-4 h-4 text-cyan-400"></i>
+          <span>Contactar a un Asesor</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="relative z-10 border-t border-slate-800/80 bg-[#0B1120] py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        
+        <div class="flex items-center space-x-3">
+          <div class="w-7 h-7 rounded-lg bg-cyan-500 flex items-center justify-center">
+            <i data-lucide="layers" class="w-4 h-4 text-slate-950 stroke-[2.5]"></i>
+          </div>
+          <span class="font-bold text-white tracking-wide">S26Digital</span>
+          <span>— Consultora B2B & Aliado Tecnológico Enterprise.</span>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-5">
+          <a href="../index.html" class="hover:text-cyan-400 transition-colors">Inicio</a>
+          <a href="../index.html#soluciones" class="hover:text-cyan-400 transition-colors">Portafolio</a>
+          <a href="../index.html#contacto" class="hover:text-cyan-400 transition-colors">Contacto</a>
+          <span class="text-slate-600">|</span>
+          <a href="../politica-de-privacidad.html" class="hover:text-cyan-400 transition-colors">Privacidad</a>
+          <span class="text-slate-600">|</span>
+          <span>© 2026 S26Digital. Todos los derechos reservados.</span>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script JavaScript 100% interno de underconstruction -->
+  <script src="js/main.js"></script>
+</body>
+</html>

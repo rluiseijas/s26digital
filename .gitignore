@@ -18,6 +18,8 @@ dist/
 *.dev.vars
 backend/tap.txt
 tap.txt
+backend/token.txt
+token.txt
 
 # Logs
 logs

@@ -52,14 +52,6 @@
 
 <body class="bg-[#0F172A] text-[#F8FAFC] antialiased selection:bg-cyan-500/30 selection:text-white relative">
 
-  <!-- =========================================================================
-       TOP NOTIFICATION BAR (Enterprise Uptime & Status)
-       ========================================================================= -->
-  <div class="bg-[#1E293B]/70 border-b border-slate-800 text-xs py-1.5 px-4 text-center text-slate-300 flex items-center justify-center space-x-2">
-    <span class="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse-dot"></span>
-    <span class="font-mono text-cyan-400 font-semibold">S26 Core Cloud:</span>
-    <span>Sistemas y clústeres 100% operativos • SLA Enterprise 99.99%</span>
-  </div>
 
   <!-- =========================================================================
        NAVIGATION BAR (Fixed Glassmorphism)
@@ -241,19 +233,13 @@
 
           <div class="relative bg-[#1E293B] border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden glass-panel group" id="hero-card-container">
             
-            <!-- Window Titlebar with live badge -->
+            <!-- Window Titlebar -->
             <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between z-20 relative">
               <div class="flex items-center space-x-2">
                 <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
                 <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
                 <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
                 <span class="text-xs font-mono text-slate-300 ml-2 font-medium">Soluciones en Acción</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-cyan-950 text-cyan-300 border border-cyan-500/40">
-                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse mr-1.5"></span>
-                  Sistemas Listos
-                </span>
               </div>
             </div>
 
@@ -264,20 +250,8 @@
               <!-- Subtle dark gradient overlay for optimal text contrast -->
               <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/75 to-[#0F172A]/25 pointer-events-none"></div>
 
-              <!-- Top live badge inside mockup -->
-              <div class="absolute top-4 right-4 flex items-center space-x-2 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-700/80 shadow-lg pointer-events-none">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span class="text-[11px] font-mono text-emerald-400 font-semibold">POS Operativo 24/7</span>
-              </div>
-
               <!-- Static Card Core Text (Required in INSTRUCCIONES.txt) -->
               <div class="absolute bottom-0 inset-x-0 p-5 sm:p-6 space-y-2 pointer-events-none">
-                <div>
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[10px] font-mono uppercase tracking-wider font-semibold">
-                    Sistemas Listos
-                  </span>
-                </div>
-
                 <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug">
                   E-commerce y Cobros Digitales
                 </h3>
@@ -313,16 +287,6 @@
               <span class="text-[11px] font-mono text-cyan-400 font-semibold">S26Digital</span>
             </div>
 
-          </div>
-
-          <!-- Insignia inferior (Checkmark verde) -->
-          <div class="hidden sm:flex absolute -bottom-5 -left-5 bg-[#1E293B] border border-emerald-500/30 p-3.5 rounded-xl shadow-xl items-center space-x-3 backdrop-blur-md z-30">
-            <div class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400"></i>
-            </div>
-            <div>
-              <div class="text-xs font-bold text-white">Infraestructura llave en mano.</div>
-            </div>
           </div>
         </div>
 
@@ -1011,13 +975,13 @@
   </section>
 
   <!-- =========================================================================
-       SECCIÓN 6: FOOTER Y CAPTACIÓN (Formulario de Diagnóstico Tecnológico)
+       SECCIÓN 6: CAPTACIÓN Y CONTACTO (Formulario de Diagnóstico Tecnológico)
        ========================================================================= -->
-  <footer id="contacto" class="pt-20 pb-12 bg-[#0F172A] relative border-t border-slate-800">
+  <section id="contacto" class="pt-20 pb-16 bg-[#0F172A] relative border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Lead Capture Card (Dark Mode Container #1E293B) -->
-      <div class="bg-[#1E293B] border border-slate-700/80 rounded-3xl p-8 sm:p-12 lg:p-16 mb-20 shadow-2xl relative overflow-hidden">
+      <div class="bg-[#1E293B] border border-slate-700/80 rounded-3xl p-8 sm:p-12 lg:p-16 shadow-2xl relative overflow-hidden">
         
         <!-- Subtle Glow inside Card -->
         <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-cyan-500/10 blur-3xl rounded-full pointer-events-none"></div>
@@ -1076,81 +1040,91 @@
                   <label for="form-name" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
                     Nombre Completo <span class="text-cyan-400">*</span>
                   </label>
-                  <input 
-                    type="text" 
-                    id="form-name" 
-                    name="nombre" 
-                    required 
-                    placeholder="Ej. Carlos Mendoza" 
-                    class="custom-input w-full px-4 py-3 rounded-xl text-sm"
-                  />
+                  <div class="relative">
+                    <input 
+                      type="text" 
+                      id="form-name" 
+                      name="nombre" 
+                      required 
+                      placeholder="Ej. Carlos Mendoza" 
+                      class="custom-input w-full pl-10 pr-4 py-3 rounded-xl text-sm"
+                    />
+                    <i data-lucide="user" class="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                  </div>
                 </div>
 
                 <!-- Field: Empresa -->
                 <div class="space-y-1.5">
                   <label for="form-company" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
-                    Empresa <span class="text-cyan-400">*</span>
+                    Empresa / Organización <span class="text-cyan-400">*</span>
                   </label>
-                  <input 
-                    type="text" 
-                    id="form-company" 
-                    name="empresa" 
-                    required 
-                    placeholder="Ej. Logística Global S.A." 
-                    class="custom-input w-full px-4 py-3 rounded-xl text-sm"
-                  />
+                  <div class="relative">
+                    <input 
+                      type="text" 
+                      id="form-company" 
+                      name="empresa" 
+                      required 
+                      placeholder="Ej. Distribuidora del Centro C.A." 
+                      class="custom-input w-full pl-10 pr-4 py-3 rounded-xl text-sm"
+                    />
+                    <i data-lucide="building" class="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                  </div>
                 </div>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <!-- Field: Correo -->
+                <!-- Field: Correo Corporativo -->
                 <div class="space-y-1.5">
                   <label for="form-email" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
                     Correo Corporativo <span class="text-cyan-400">*</span>
                   </label>
-                  <input 
-                    type="email" 
-                    id="form-email" 
-                    name="correo" 
-                    required 
-                    placeholder="carlos@empresa.com" 
-                    class="custom-input w-full px-4 py-3 rounded-xl text-sm"
-                  />
+                  <div class="relative">
+                    <input 
+                      type="email" 
+                      id="form-email" 
+                      name="correo" 
+                      required 
+                      placeholder="carlos@empresa.com" 
+                      class="custom-input w-full pl-10 pr-4 py-3 rounded-xl text-sm"
+                    />
+                    <i data-lucide="mail" class="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                  </div>
                 </div>
 
-                <!-- Field: Selector de Servicio (Web, Datos, Automatización, E-commerce) -->
+                <!-- Field: Teléfono / WhatsApp -->
                 <div class="space-y-1.5">
-                  <label for="form-service" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
-                    Selector de Servicio <span class="text-cyan-400">*</span>
+                  <label for="form-phone" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                    Teléfono / WhatsApp <span class="text-cyan-400">*</span>
                   </label>
-                  <select 
-                    id="form-service" 
-                    name="servicio" 
-                    required 
-                    class="custom-input w-full px-4 py-3 rounded-xl text-sm cursor-pointer"
-                  >
-                    <option value="" disabled selected>Selecciona una solución...</option>
-                    <option value="facturacion">Facturación B2B & Cumplimiento Fiscal (Nueva)</option>
-                    <option value="web">Desarrollo Web y Apps</option>
-                    <option value="datos">Datos y Estadística</option>
-                    <option value="automatizacion">Automatización</option>
-                    <option value="ecommerce">Comercio Electrónico</option>
-                  </select>
+                  <div class="relative">
+                    <input 
+                      type="tel" 
+                      id="form-phone" 
+                      name="telefono" 
+                      required 
+                      placeholder="+58 412 123 4567" 
+                      class="custom-input w-full pl-10 pr-4 py-3 rounded-xl text-sm font-mono"
+                    />
+                    <i data-lucide="phone" class="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                  </div>
                 </div>
               </div>
 
-              <!-- Field: Mensaje / Detalles -->
+              <!-- Field: Desafío Principal -->
               <div class="space-y-1.5">
-                <label for="form-notes" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
-                  Breve descripción del reto o proyecto (Opcional)
+                <label for="form-challenge" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
+                  ¿Cuál es el principal reto o requerimiento tecnológico? <span class="text-cyan-400">*</span>
                 </label>
-                <textarea 
-                  id="form-notes" 
-                  name="mensaje" 
-                  rows="3" 
-                  placeholder="Cuéntanos brevemente qué buscas optimizar, escalar o construir..."
-                  class="custom-input w-full px-4 py-3 rounded-xl text-sm resize-none"
-                ></textarea>
+                <div class="relative">
+                  <textarea 
+                    id="form-challenge" 
+                    name="mensaje" 
+                    rows="3" 
+                    required 
+                    placeholder="Describe brevemente lo que necesitas: tienda virtual, sistema a medida, automatizar reportes, migración de infraestructura, etc." 
+                    class="custom-input w-full p-4 rounded-xl text-sm resize-none"
+                  ></textarea>
+                </div>
               </div>
 
               <!-- Botón Final: [Solicitar Diagnóstico Tecnológico] (Color #06B6D4) -->
@@ -1174,26 +1148,110 @@
         </div>
       </div>
 
-      <!-- Footer Navigation & Copyright Links -->
-      <div class="border-t border-slate-800/80 pt-10 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-400">
-        <div class="flex items-center space-x-3">
-          <div class="w-7 h-7 rounded-lg bg-cyan-500 flex items-center justify-center">
-            <i data-lucide="layers" class="w-4 h-4 text-slate-950 stroke-[2.5]"></i>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER: ARQUITECTURA CLOUD & RED DE ENLACES ENTERPRISE (Cuadrícula 4 Columnas)
+       ========================================================================= -->
+  <footer class="bg-slate-900 border-t border-slate-800 py-12 px-6 lg:px-8 text-slate-400">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Cuadrícula Principal (4 Columnas) -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Columna 1 (Marca) -->
+        <div class="space-y-4">
+          <a href="#hero" class="flex items-center space-x-3 group">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center shadow-md shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all duration-300">
+              <i data-lucide="layers" class="w-5 h-5 text-slate-950 stroke-[2.5]"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-lg font-extrabold tracking-tight text-[#F8FAFC] font-sans">
+                S26<span class="text-[#06B6D4] glow-text-cyan">Digital</span>
+              </span>
+              <span class="text-[9px] uppercase tracking-widest text-slate-400 font-mono -mt-0.5">
+                Aliado Tecnológico
+              </span>
+            </div>
+          </a>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Arquitectura de software y soluciones Cloud Enterprise para escalar tu operación.
+          </p>
+          <div class="flex items-center space-x-3 pt-1">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors p-2 rounded-lg bg-slate-800/60 hover:bg-slate-800" aria-label="LinkedIn">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors p-2 rounded-lg bg-slate-800/60 hover:bg-slate-800" aria-label="GitHub">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors p-2 rounded-lg bg-slate-800/60 hover:bg-slate-800" aria-label="Twitter">
+              <i data-lucide="twitter" class="w-4 h-4"></i>
+            </a>
           </div>
-          <span class="font-bold text-white tracking-wide">S26Digital</span>
-          <span>— Consultora B2B & Aliado Tecnológico Enterprise.</span>
         </div>
 
-        <div class="flex flex-wrap items-center gap-6">
-          <a href="#hero" class="hover:text-cyan-400 transition-colors">Inicio</a>
-          <a href="#soluciones" class="hover:text-cyan-400 transition-colors">Soluciones</a>
-          <a href="#diferenciadores" class="hover:text-cyan-400 transition-colors">Diferenciadores</a>
-          <a href="#proceso" class="hover:text-cyan-400 transition-colors">Metodología</a>
-          <a href="#contacto" class="hover:text-cyan-400 transition-colors">Contacto</a>
-          <span class="text-slate-600">|</span>
-          <a href="politica-de-privacidad.html" class="hover:text-cyan-400 transition-colors">Privacidad</a>
-          <span class="text-slate-600">|</span>
-          <span>© 2026 S26Digital. Todos los derechos reservados.</span>
+        <!-- Columna 2 (Soluciones / Servicios) -->
+        <div class="space-y-4">
+          <h4 class="text-slate-100 font-semibold mb-4 text-sm tracking-wide">Servicios</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li>
+              <a href="#soluciones" class="hover:text-cyan-400 transition-colors">Desarrollo a Medida</a>
+            </li>
+            <li>
+              <a href="#soluciones" class="hover:text-cyan-400 transition-colors">Integraciones Cloud</a>
+            </li>
+            <li>
+              <a href="automatizacion.html" class="hover:text-cyan-400 transition-colors">Automatización IA</a>
+            </li>
+            <li>
+              <a href="#contacto" class="hover:text-cyan-400 transition-colors">Consultoría Técnica</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna 3 (Compañía) -->
+        <div class="space-y-4">
+          <h4 class="text-slate-100 font-semibold mb-4 text-sm tracking-wide">Compañía</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li>
+              <a href="#proceso" class="hover:text-cyan-400 transition-colors">Metodología</a>
+            </li>
+            <li>
+              <a href="#diferenciadores" class="hover:text-cyan-400 transition-colors">Diferenciadores</a>
+            </li>
+            <li>
+              <a href="#soluciones" class="hover:text-cyan-400 transition-colors">Casos de Éxito</a>
+            </li>
+            <li>
+              <a href="#consultation-modal" class="open-consultation-btn hover:text-cyan-400 transition-colors cursor-pointer">Agendar Consultoría</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna 4 (Contacto y Sede) -->
+        <div class="space-y-4">
+          <h4 class="text-slate-100 font-semibold mb-4 text-sm tracking-wide">Contacto</h4>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center space-x-3">
+              <i data-lucide="mail" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+              <a href="mailto:contacto@s26digital.com" class="hover:text-cyan-400 transition-colors">contacto@s26digital.com</a>
+            </div>
+            <div class="flex items-start space-x-3">
+              <i data-lucide="map-pin" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+              <span>Cagua, Aragua, Venezuela.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra Inferior (Bottom Bar) -->
+      <div class="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+        <p>© 2026 S26Digital. Todos los derechos reservados.</p>
+        <div class="flex items-center space-x-6">
+          <a href="politica-de-privacidad.html" class="hover:text-cyan-400 transition-colors">Política de Privacidad</a>
+          <a href="politica-de-privacidad.html" class="hover:text-cyan-400 transition-colors">Términos de Servicio</a>
         </div>
       </div>
 
