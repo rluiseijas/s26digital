@@ -1,0 +1,51 @@
+Actúa como un desarrollador Frontend experto. Necesito refactorizar dos secciones de mi página principal (la sección Hero y el Footer) para lograr un diseño más limpio, minimalista y desaturado. Mantén la coherencia con mi framework de estilos actual (Tailwind CSS o el que esté implementado).
+
+Aquí tienes los requerimientos exactos:
+
+1. Sección Hero - Limpieza de Estadísticas (Columna Izquierda):
+
+Objetivo: Desaturar el área de contadores debajo de los botones de llamada a la acción.
+
+Acción: Elimina los dos últimos contadores: "100% Always Online" y "100% Turnkey Delivery".
+
+Resultado esperado: Solo deben quedar tres métricas (+226 Completed Projects, +133 Satisfied Clients, < 3 Sem Fast Delivery). Ajusta el grid/flexbox para que estos tres elementos ocupen el espacio de forma balanceada.
+
+2. Sección Hero - Nuevo Carrusel Minimalista (Columna Derecha):
+
+Objetivo: Reemplazar la tarjeta estática actual por un carrusel dinámico de 4 slides (el actual + 3 de relleno) priorizando el espacio para la imagen.
+
+Limpieza de UI de la tarjeta:
+
+Elimina completamente el header de la tarjeta (los 3 puntos de colores estilo macOS y el texto "Solutions in Action").
+
+Elimina completamente el footer de la tarjeta (el texto "Turnkey solution ready to operate" y "S26Digital").
+
+Estructura del Slide: Cada slide del carrusel debe contener únicamente la imagen (maximizando su área visible) y una frase/título corto descriptivo superpuesto o en la parte inferior (como el actual "E-commerce & Digital Payments").
+
+Funcionalidad: Implementa la lógica del carrusel (puedes usar CSS puro o un estado simple si es React/Vue) para que tenga transiciones suaves. Agrega 3 slides adicionales con placeholders (imágenes y textos de ejemplo) que yo reemplazaré después.
+
+3. Footer - Actualización de Redes Sociales:
+
+Objetivo: Renovar la sección de enlaces sociales.
+
+Acción: Reemplaza los íconos actuales por logos SVG vectorizados y limpios de color blanco (fill="currentColor" o text-white).
+
+Enlaces a inyectar:
+
+Facebook: [https://www.facebook.com/profile.php?id=61594435409965](https://www.facebook.com/profile.php?id=61594435409965)
+
+Instagram: [https://instagram.com/s26.digital](https://instagram.com/s26.digital)
+
+X (Twitter): [https://x.com](https://x.com) (Usa el logo de la 'X', no el pájaro de Twitter).
+
+4. Footer - Ubicaciones (Locations):
+
+Objetivo: Actualizar la presencia geográfica.
+
+Acción: Modifica el texto de las ubicaciones para que muestre exactamente estas dos localidades:
+
+Aragua, Venezuela
+
+Miami, US
+
+Por favor, genera el código actualizado para estos componentes (Hero y Footer). Asegúrate de que el carrusel sea responsivo (mobile-friendly) y que el código sea modular para que pueda insertarlo fácilmente en mi proyecto.

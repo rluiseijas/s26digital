@@ -211,8 +211,8 @@
             </a>
           </div>
 
-          <!-- Metric Highlights under Hero (Animated Number Counters) -->
-          <div class="pt-6 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 max-w-3xl mx-auto lg:mx-0">
+          <!-- Metric Highlights under Hero (Animated Number Counters - 3 Balanced Metrics) -->
+          <div class="pt-6 border-t border-slate-800/80 grid grid-cols-3 gap-4 sm:gap-8 max-w-xl mx-auto lg:mx-0">
             <!-- Counter 1: Proyectos Completados -->
             <div class="space-y-0.5">
               <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono flex items-baseline">
@@ -236,84 +236,80 @@
               </div>
               <div data-i18n="hero.stat_time" class="text-xs text-slate-400 leading-tight">Entrega Rápida (MVP)</div>
             </div>
-
-            <!-- Counter 4: Disponibilidad / Uptime -->
-            <div class="space-y-0.5">
-              <div class="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] font-mono flex items-baseline">
-                <span class="counter-number" data-target="100" data-start="1">1</span><span>%</span>
-              </div>
-              <div data-i18n="hero.stat_uptime" class="text-xs text-slate-400 leading-tight">Siempre Disponible</div>
-            </div>
-
-            <!-- Metric 5: Llave en Mano -->
-            <div class="space-y-0.5 col-span-2 sm:col-span-1">
-              <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">
-                100%
-              </div>
-              <div data-i18n="hero.stat_turnkey" class="text-xs text-slate-400 leading-tight">Llave en Mano</div>
-            </div>
           </div>
         </div>
 
-        <!-- Right Hero Visual: Tarjeta Estática Dashboard / Punto de Venta (Soluciones en Acción) -->
+        <!-- Right Hero Visual: Carrusel Dinámico Minimalista de 4 Slides (Área de Imagen Maximizada) -->
         <div class="lg:col-span-5 relative">
-          <!-- Ambient Glow behind Card -->
+          <!-- Ambient Glow behind Carousel -->
           <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 to-blue-600/30 rounded-2xl blur-xl opacity-75"></div>
 
-          <div class="relative bg-[#1E293B] border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden glass-panel group" id="hero-card-container">
+          <!-- Minimalist Card Container (Sin Header macOS ni Footer) -->
+          <div class="relative bg-[#1E293B] border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden glass-panel group" id="hero-carousel-container">
             
-            <!-- Window Titlebar -->
-            <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between z-20 relative">
-              <div class="flex items-center space-x-2">
-                <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
-                <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
-                <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
-                <span data-i18n="hero.card_window_title" class="text-xs font-mono text-slate-300 ml-2 font-medium">Soluciones en Acción</span>
-              </div>
-            </div>
-
-            <!-- Single Static Dashboard / Punto de Venta Display -->
-            <div class="relative h-[360px] sm:h-[400px] w-full overflow-hidden bg-slate-950">
-              <img src="assets/hero/slide-4-ecommerce.jpg" alt="E-commerce y Cobros Digitales - Dashboard y Punto de Venta" class="w-full h-full object-cover object-center pointer-events-none" />
+            <!-- Slides Track (Maximizando el área visible de la imagen) -->
+            <div id="carousel-track" class="relative h-[380px] sm:h-[420px] lg:h-[450px] w-full overflow-hidden bg-slate-950 cursor-pointer select-none">
               
-              <!-- Subtle dark gradient overlay for optimal text contrast -->
-              <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/75 to-[#0F172A]/25 pointer-events-none"></div>
-
-              <!-- Static Card Core Text (Required in INSTRUCCIONES.txt) -->
-              <div class="absolute bottom-0 inset-x-0 p-5 sm:p-6 space-y-2 pointer-events-none">
-                <h3 data-i18n="hero.card_title" class="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug">
-                  E-commerce y Cobros Digitales
-                </h3>
-
-                <p data-i18n="hero.card_desc" class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-md">
-                  Catálogos dinámicos, pasarelas de pago y facturación sincronizada.
-                </p>
-
-                <!-- Dashboard & POS Quick-Status Strip -->
-                <div class="pt-2 grid grid-cols-3 gap-2 border-t border-slate-800/80 mt-2 text-center">
-                  <div class="bg-slate-900/85 rounded-lg p-2 border border-slate-800 backdrop-blur-sm">
-                    <div data-i18n="hero.card_gateways" class="text-[9px] text-slate-400 font-mono uppercase">Pasarelas</div>
-                    <div data-i18n="hero.card_gateways_val" class="text-xs font-bold text-white">Stripe • Card</div>
-                  </div>
-                  <div class="bg-slate-900/85 rounded-lg p-2 border border-slate-800 backdrop-blur-sm">
-                    <div data-i18n="hero.card_billing" class="text-[9px] text-slate-400 font-mono uppercase">Facturación</div>
-                    <div data-i18n="hero.card_billing_val" class="text-xs font-bold text-cyan-400">Automática</div>
-                  </div>
-                  <div class="bg-slate-900/85 rounded-lg p-2 border border-slate-800 backdrop-blur-sm">
-                    <div data-i18n="hero.card_inventory" class="text-[9px] text-slate-400 font-mono uppercase">Inventario</div>
-                    <div data-i18n="hero.card_inventory_val" class="text-xs font-bold text-emerald-400">Sincronizado</div>
-                  </div>
+              <!-- Slide 1: E-commerce y Cobros Digitales (Actual) -->
+              <div class="hero-slide active" data-slide="0">
+                <img src="assets/hero/slide-4-ecommerce.jpg" alt="E-commerce y Cobros Digitales" class="w-full h-full object-cover object-center pointer-events-none" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0B1329]/90 via-[#0B1329]/25 to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-0 inset-x-0 p-6 pointer-events-none pr-32">
+                  <h3 data-i18n="hero.slide1_title" class="text-xl sm:text-2xl font-bold text-white tracking-tight drop-shadow-md">
+                    E-commerce y Cobros Digitales
+                  </h3>
                 </div>
               </div>
-            </div>
 
-            <!-- Subfooter under Card -->
-            <div class="p-3.5 bg-slate-900/90 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-300">
-              <span class="flex items-center space-x-1.5">
-                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-cyan-400"></i>
-                <span data-i18n="hero.card_footer" class="font-medium text-[11px] sm:text-xs">Solución llave en mano lista para operar</span>
-              </span>
-              <span class="text-[11px] font-mono text-cyan-400 font-semibold">S26Digital</span>
+              <!-- Slide 2: Plataformas Web y Portales (Placeholder 1) -->
+              <div class="hero-slide" data-slide="1">
+                <img src="assets/hero/slide-1-web.jpg" alt="Plataformas Web y Portales" class="w-full h-full object-cover object-center pointer-events-none" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0B1329]/90 via-[#0B1329]/25 to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-0 inset-x-0 p-6 pointer-events-none pr-32">
+                  <h3 data-i18n="hero.slide2_title" class="text-xl sm:text-2xl font-bold text-white tracking-tight drop-shadow-md">
+                    Plataformas Web y Portales
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Slide 3: Aplicaciones Cloud y Paneles (Placeholder 2) -->
+              <div class="hero-slide" data-slide="2">
+                <img src="assets/hero/slide-2-apps.jpg" alt="Aplicaciones Cloud y Paneles" class="w-full h-full object-cover object-center pointer-events-none" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0B1329]/90 via-[#0B1329]/25 to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-0 inset-x-0 p-6 pointer-events-none pr-32">
+                  <h3 data-i18n="hero.slide3_title" class="text-xl sm:text-2xl font-bold text-white tracking-tight drop-shadow-md">
+                    Aplicaciones Cloud y Paneles
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Slide 4: Automatización de Procesos (Placeholder 3) -->
+              <div class="hero-slide" data-slide="3">
+                <img src="assets/hero/slide-3-automatizacion.jpg" alt="Automatización de Procesos" class="w-full h-full object-cover object-center pointer-events-none" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0B1329]/90 via-[#0B1329]/25 to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-0 inset-x-0 p-6 pointer-events-none pr-32">
+                  <h3 data-i18n="hero.slide4_title" class="text-xl sm:text-2xl font-bold text-white tracking-tight drop-shadow-md">
+                    Automatización de Procesos
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Navigation Controls: Discreet Minimalist Overlay -->
+              <div class="absolute bottom-5 right-5 z-20 flex items-center space-x-2 bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-slate-700/70 shadow-lg">
+                <button id="carousel-prev" type="button" aria-label="Anterior slide" class="text-slate-400 hover:text-cyan-400 transition-colors p-0.5 cursor-pointer">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <div class="flex items-center space-x-1.5 px-0.5">
+                  <button type="button" aria-label="Slide 1" class="carousel-dot h-2.5 w-6 rounded-full bg-cyan-400 transition-all cursor-pointer"></button>
+                  <button type="button" aria-label="Slide 2" class="carousel-dot h-2.5 w-2.5 rounded-full bg-slate-600 hover:bg-slate-400 transition-all cursor-pointer"></button>
+                  <button type="button" aria-label="Slide 3" class="carousel-dot h-2.5 w-2.5 rounded-full bg-slate-600 hover:bg-slate-400 transition-all cursor-pointer"></button>
+                  <button type="button" aria-label="Slide 4" class="carousel-dot h-2.5 w-2.5 rounded-full bg-slate-600 hover:bg-slate-400 transition-all cursor-pointer"></button>
+                </div>
+                <button id="carousel-next" type="button" aria-label="Siguiente slide" class="text-slate-400 hover:text-cyan-400 transition-colors p-0.5 cursor-pointer">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+
             </div>
 
           </div>
@@ -1213,14 +1209,23 @@
             Arquitectura de software y soluciones Cloud Enterprise para escalar tu operación.
           </p>
           <div class="flex items-center space-x-3 pt-1">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors p-2 rounded-lg bg-slate-800/60 hover:bg-slate-800" aria-label="LinkedIn">
-              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/profile.php?id=61594435409965" target="_blank" rel="noopener noreferrer" class="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg bg-slate-800/60 hover:bg-slate-800 flex items-center justify-center" aria-label="Facebook">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/>
+              </svg>
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors p-2 rounded-lg bg-slate-800/60 hover:bg-slate-800" aria-label="GitHub">
-              <i data-lucide="github" class="w-4 h-4"></i>
+            <!-- Instagram -->
+            <a href="https://instagram.com/s26.digital" target="_blank" rel="noopener noreferrer" class="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg bg-slate-800/60 hover:bg-slate-800 flex items-center justify-center" aria-label="Instagram">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"/>
+              </svg>
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors p-2 rounded-lg bg-slate-800/60 hover:bg-slate-800" aria-label="Twitter">
-              <i data-lucide="twitter" class="w-4 h-4"></i>
+            <!-- X (Twitter) -->
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg bg-slate-800/60 hover:bg-slate-800 flex items-center justify-center" aria-label="X">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
             </a>
           </div>
         </div>
@@ -1273,7 +1278,10 @@
             </div>
             <div class="flex items-start space-x-3">
               <i data-lucide="map-pin" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
-              <span data-i18n="footer.location">Cagua, Aragua, Venezuela.</span>
+              <div class="space-y-0.5 leading-snug">
+                <span class="block" data-i18n="footer.location_aragua">Aragua, Venezuela</span>
+                <span class="block" data-i18n="footer.location_miami">Miami, US</span>
+              </div>
             </div>
           </div>
         </div>
