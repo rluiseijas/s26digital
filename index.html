@@ -48,6 +48,9 @@
 
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/styles.css?v=2.3" />
+
+  <!-- i18n & Geoblocking Engine -->
+  <script src="js/i18n.js?v=1.0"></script>
 </head>
 
 <body class="bg-[#0F172A] text-[#F8FAFC] antialiased selection:bg-cyan-500/30 selection:text-white relative">
@@ -69,7 +72,7 @@
             <span class="text-xl font-extrabold tracking-tight text-[#F8FAFC] font-sans">
               S26<span class="text-[#06B6D4] glow-text-cyan">Digital</span>
             </span>
-            <span class="text-[10px] uppercase tracking-widest text-slate-400 font-mono -mt-1">
+            <span data-i18n="nav.brand_sub" class="text-[10px] uppercase tracking-widest text-slate-400 font-mono -mt-1">
               Aliado Tecnológico
             </span>
           </div>
@@ -77,37 +80,63 @@
 
         <!-- Desktop Navigation Links -->
         <nav class="hidden md:flex items-center space-x-7 text-sm font-medium">
-          <a href="#soluciones" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200">
+          <a href="#soluciones" data-i18n="nav.solutions" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200">
             Soluciones
           </a>
-          <a href="#diferenciadores" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200">
+          <a href="#diferenciadores" data-i18n="nav.why_us" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200">
             Diferenciadores
           </a>
           <a href="#facturacion" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200 flex items-center space-x-1.5">
-            <span>Facturación</span>
-            <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">Nuevo</span>
+            <span data-i18n="nav.billing">Facturación</span>
+            <span data-i18n="nav.billing_badge" class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">Nuevo</span>
           </a>
-          <a href="#stack" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200">
+          <a href="#stack" data-i18n="nav.stack" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200">
             Stack
           </a>
-          <a href="#proceso" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200">
+          <a href="#proceso" data-i18n="nav.process" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200">
             Metodología
           </a>
-          <a href="#contacto" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200">
+          <a href="#contacto" data-i18n="nav.contact" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200">
             Contacto
           </a>
         </nav>
 
-        <!-- CTA Header Button -->
+        <!-- CTA Header Button & Language Selector -->
         <div class="hidden md:flex items-center space-x-4">
+          <!-- Language Selector -->
+          <div class="flex items-center bg-slate-900/90 border border-slate-700/80 rounded-xl p-1 text-xs font-mono shadow-sm" role="group" aria-label="Selector de idioma">
+            <button 
+              type="button" 
+              data-lang-btn="es" 
+              class="px-2.5 py-1 rounded-lg transition-all font-semibold cursor-pointer"
+              title="Español"
+            >
+              ES
+            </button>
+            <span class="text-slate-600 px-0.5 select-none">|</span>
+            <button 
+              type="button" 
+              data-lang-btn="en" 
+              class="px-2.5 py-1 rounded-lg transition-all font-semibold cursor-pointer"
+              title="English"
+            >
+              EN
+            </button>
+          </div>
+
           <a href="#contacto" class="btn-cyan px-5 py-2.5 rounded-lg text-xs tracking-wider uppercase flex items-center space-x-2 font-bold transition-all">
-            <span>Agendar Consultoría</span>
+            <span data-i18n="nav.cta">Agendar Consultoría</span>
             <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
           </a>
         </div>
 
-        <!-- Mobile Menu Trigger -->
-        <div class="flex md:hidden">
+        <!-- Mobile Controls (Language Toggle + Menu Trigger) -->
+        <div class="flex items-center space-x-2 md:hidden">
+          <div class="flex items-center bg-slate-900 border border-slate-700/80 rounded-lg p-0.5 text-xs font-mono">
+            <button type="button" data-lang-btn="es" class="px-2 py-0.5 rounded text-[11px] font-semibold">ES</button>
+            <span class="text-slate-600 px-0.5">|</span>
+            <button type="button" data-lang-btn="en" class="px-2 py-0.5 rounded text-[11px] font-semibold">EN</button>
+          </div>
           <button id="mobile-menu-btn" type="button" aria-expanded="false" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-[#1E293B] focus:outline-none" aria-label="Menú principal">
             <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
@@ -117,17 +146,17 @@
 
     <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-[#0F172A]/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3 backdrop-blur-xl">
-      <a href="#soluciones" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Soluciones</a>
-      <a href="#diferenciadores" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Diferenciadores</a>
+      <a href="#soluciones" data-i18n="nav.solutions" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Soluciones</a>
+      <a href="#diferenciadores" data-i18n="nav.why_us" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Diferenciadores</a>
       <a href="#facturacion" class="mobile-nav-link flex items-center justify-between px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">
-        <span>Facturación B2B & Fiscal</span>
-        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">Nuevo 2026</span>
+        <span data-i18n="nav.billing">Facturación B2B & Fiscal</span>
+        <span data-i18n="nav.billing_badge_mobile" class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">Nuevo 2026</span>
       </a>
-      <a href="#stack" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Stack Tecnológico</a>
-      <a href="#proceso" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Nuestro Proceso</a>
-      <a href="#contacto" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Contacto</a>
+      <a href="#stack" data-i18n="nav.stack_mobile" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Stack Tecnológico</a>
+      <a href="#proceso" data-i18n="nav.process_mobile" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Nuestro Proceso</a>
+      <a href="#contacto" data-i18n="nav.contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Contacto</a>
       <div class="pt-2">
-        <a href="#contacto" class="mobile-nav-link btn-cyan w-full text-center block py-3 rounded-lg text-xs font-bold uppercase tracking-wider">
+        <a href="#contacto" data-i18n="nav.cta_mobile" class="mobile-nav-link btn-cyan w-full text-center block py-3 rounded-lg text-xs font-bold uppercase tracking-wider">
           Agendar Consultoría Estratégica
         </a>
       </div>
@@ -154,16 +183,16 @@
           <!-- Pill Badge: Soluciones Claras para Empresas -->
           <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#1E293B]/90 border border-cyan-500/30 text-cyan-400 text-xs font-mono tracking-wide shadow-sm shadow-cyan-500/10 backdrop-blur-md">
             <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-            <span>Plataformas Web • Automatización • Facturación y E-commerce</span>
+            <span data-i18n="hero.badge">Plataformas Web • Automatización • Facturación y E-commerce</span>
           </div>
 
           <!-- Master Headline: Mensaje directo y orientado a resultados comerciales -->
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#F8FAFC] leading-[1.14]">
+          <h1 data-i18n-html="hero.headline" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#F8FAFC] leading-[1.14]">
             Digitaliza tu empresa y <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400 glow-text-cyan">escala tus ventas.</span>
           </h1>
 
           <!-- Master Subtitle: Directo al grano -->
-          <p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl leading-relaxed">
+          <p data-i18n="hero.subtitle" class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl leading-relaxed">
             Desarrollamos tiendas online, sistemas de gestión y automatizaciones para medianas empresas. Tú operas tu negocio; nosotros gestionamos toda la infraestructura tecnológica.
           </p>
 
@@ -171,14 +200,14 @@
           <div class="pt-3 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
             <!-- Main CTA Button (Exact match with Navbar) -->
             <a href="#contacto" class="btn-cyan w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold tracking-wide uppercase flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/50">
-              <span>Agendar Consultoría</span>
+              <span data-i18n="hero.cta_primary">Agendar Consultoría</span>
               <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-950 stroke-[2.5]"></i>
             </a>
 
             <!-- Secondary Action (Scroll directo a soluciones) -->
             <a href="#soluciones" class="btn-outline-dark w-full sm:w-auto px-7 py-4 rounded-xl text-sm font-medium flex items-center justify-center space-x-2">
               <i data-lucide="layout-grid" class="w-4 h-4 text-cyan-400"></i>
-              <span>Explorar Soluciones</span>
+              <span data-i18n="hero.cta_secondary">Explorar Soluciones</span>
             </a>
           </div>
 
@@ -189,7 +218,7 @@
               <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono flex items-baseline">
                 <span>+</span><span class="counter-number" data-target="226" data-start="1">1</span>
               </div>
-              <div class="text-xs text-slate-400 leading-tight">Proyectos Completados</div>
+              <div data-i18n="hero.stat_projects" class="text-xs text-slate-400 leading-tight">Proyectos Completados</div>
             </div>
 
             <!-- Counter 2: Clientes Satisfechos -->
@@ -197,7 +226,7 @@
               <div class="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] font-mono flex items-baseline">
                 <span>+</span><span class="counter-number" data-target="133" data-start="1">1</span>
               </div>
-              <div class="text-xs text-slate-400 leading-tight">Clientes Satisfechos</div>
+              <div data-i18n="hero.stat_clients" class="text-xs text-slate-400 leading-tight">Clientes Satisfechos</div>
             </div>
 
             <!-- Counter 3: Tiempo de Entrega (MVP) -->
@@ -205,7 +234,7 @@
               <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono flex items-baseline">
                 <span>&lt;&nbsp;</span><span class="counter-number" data-target="3" data-start="1">1</span><span class="text-base sm:text-lg font-sans ml-1 text-slate-300">Sem</span>
               </div>
-              <div class="text-xs text-slate-400 leading-tight">Entrega Rápida (MVP)</div>
+              <div data-i18n="hero.stat_time" class="text-xs text-slate-400 leading-tight">Entrega Rápida (MVP)</div>
             </div>
 
             <!-- Counter 4: Disponibilidad / Uptime -->
@@ -213,7 +242,7 @@
               <div class="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] font-mono flex items-baseline">
                 <span class="counter-number" data-target="100" data-start="1">1</span><span>%</span>
               </div>
-              <div class="text-xs text-slate-400 leading-tight">Siempre Disponible</div>
+              <div data-i18n="hero.stat_uptime" class="text-xs text-slate-400 leading-tight">Siempre Disponible</div>
             </div>
 
             <!-- Metric 5: Llave en Mano -->
@@ -221,7 +250,7 @@
               <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">
                 100%
               </div>
-              <div class="text-xs text-slate-400 leading-tight">Llave en Mano</div>
+              <div data-i18n="hero.stat_turnkey" class="text-xs text-slate-400 leading-tight">Llave en Mano</div>
             </div>
           </div>
         </div>
@@ -239,7 +268,7 @@
                 <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
                 <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
                 <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
-                <span class="text-xs font-mono text-slate-300 ml-2 font-medium">Soluciones en Acción</span>
+                <span data-i18n="hero.card_window_title" class="text-xs font-mono text-slate-300 ml-2 font-medium">Soluciones en Acción</span>
               </div>
             </div>
 
@@ -252,27 +281,27 @@
 
               <!-- Static Card Core Text (Required in INSTRUCCIONES.txt) -->
               <div class="absolute bottom-0 inset-x-0 p-5 sm:p-6 space-y-2 pointer-events-none">
-                <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug">
+                <h3 data-i18n="hero.card_title" class="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug">
                   E-commerce y Cobros Digitales
                 </h3>
 
-                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-md">
+                <p data-i18n="hero.card_desc" class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-md">
                   Catálogos dinámicos, pasarelas de pago y facturación sincronizada.
                 </p>
 
                 <!-- Dashboard & POS Quick-Status Strip -->
                 <div class="pt-2 grid grid-cols-3 gap-2 border-t border-slate-800/80 mt-2 text-center">
                   <div class="bg-slate-900/85 rounded-lg p-2 border border-slate-800 backdrop-blur-sm">
-                    <div class="text-[9px] text-slate-400 font-mono uppercase">Pasarelas</div>
-                    <div class="text-xs font-bold text-white">Stripe • Card</div>
+                    <div data-i18n="hero.card_gateways" class="text-[9px] text-slate-400 font-mono uppercase">Pasarelas</div>
+                    <div data-i18n="hero.card_gateways_val" class="text-xs font-bold text-white">Stripe • Card</div>
                   </div>
                   <div class="bg-slate-900/85 rounded-lg p-2 border border-slate-800 backdrop-blur-sm">
-                    <div class="text-[9px] text-slate-400 font-mono uppercase">Facturación</div>
-                    <div class="text-xs font-bold text-cyan-400">Automática</div>
+                    <div data-i18n="hero.card_billing" class="text-[9px] text-slate-400 font-mono uppercase">Facturación</div>
+                    <div data-i18n="hero.card_billing_val" class="text-xs font-bold text-cyan-400">Automática</div>
                   </div>
                   <div class="bg-slate-900/85 rounded-lg p-2 border border-slate-800 backdrop-blur-sm">
-                    <div class="text-[9px] text-slate-400 font-mono uppercase">Inventario</div>
-                    <div class="text-xs font-bold text-emerald-400">Sincronizado</div>
+                    <div data-i18n="hero.card_inventory" class="text-[9px] text-slate-400 font-mono uppercase">Inventario</div>
+                    <div data-i18n="hero.card_inventory_val" class="text-xs font-bold text-emerald-400">Sincronizado</div>
                   </div>
                 </div>
               </div>
@@ -282,7 +311,7 @@
             <div class="p-3.5 bg-slate-900/90 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-300">
               <span class="flex items-center space-x-1.5">
                 <i data-lucide="shield-check" class="w-3.5 h-3.5 text-cyan-400"></i>
-                <span class="font-medium text-[11px] sm:text-xs">Solución llave en mano lista para operar</span>
+                <span data-i18n="hero.card_footer" class="font-medium text-[11px] sm:text-xs">Solución llave en mano lista para operar</span>
               </span>
               <span class="text-[11px] font-mono text-cyan-400 font-semibold">S26Digital</span>
             </div>
@@ -304,12 +333,12 @@
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
         <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
           <i data-lucide="layers" class="w-3.5 h-3.5"></i>
-          <span>Servicios y Especialidades</span>
+          <span data-i18n="solutions.badge">Servicios y Especialidades</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
+        <h2 data-i18n="solutions.title" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
           Portafolio de Soluciones
         </h2>
-        <p class="text-slate-300 text-base sm:text-lg">
+        <p data-i18n="solutions.subtitle" class="text-slate-300 text-base sm:text-lg">
           Desarrollo web, aplicaciones, automatización de procesos y tiendas online para resolver los retos de tu negocio y acelerar tus ventas.
         </p>
       </div>
@@ -328,27 +357,27 @@
             </div>
 
             <h3 class="text-xl font-bold text-[#F8FAFC]">
-              <a href="desarrollo-web.html" class="hover:text-cyan-400 transition-colors">
+              <a href="desarrollo-web.html" data-i18n="solutions.card1_title" class="hover:text-cyan-400 transition-colors">
                 Desarrollo Web y Apps
               </a>
             </h3>
 
-            <p class="text-cyan-400/90 text-xs font-mono">
+            <p data-i18n="solutions.card1_subtitle" class="text-cyan-400/90 text-xs font-mono">
               Presencia online moderna y aplicaciones que enamoran a tus clientes.
             </p>
 
-            <p class="text-slate-300 text-xs leading-relaxed">
+            <p data-i18n="solutions.card1_desc" class="text-slate-300 text-xs leading-relaxed">
               Diseño y programación de sitios web atractivos, rápidos y optimizados para celulares, portales de clientes y aplicaciones web a la medida de tus necesidades comerciales.
             </p>
           </div>
 
           <div class="pt-6 mt-6 border-t border-slate-800/80 space-y-2">
             <a href="desarrollo-web.html" class="w-full py-2.5 px-3 rounded-lg bg-cyan-500/10 hover:bg-cyan-500 text-cyan-300 hover:text-slate-950 border border-cyan-500/40 hover:border-cyan-400 text-xs font-bold flex items-center justify-center space-x-1.5 transition-all shadow-sm shadow-cyan-500/10 group-btn">
-              <span>Ver detalles del servicio</span>
+              <span data-i18n="solutions.view_details">Ver detalles del servicio</span>
               <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
             </a>
             <button type="button" data-service-val="web" class="select-service-btn w-full py-1.5 px-2 text-slate-400 hover:text-cyan-400 text-[11px] font-mono flex items-center justify-center space-x-1 transition-colors cursor-pointer">
-              <span>Cotizar de inmediato</span>
+              <span data-i18n="solutions.instant_quote">Cotizar de inmediato</span>
               <i data-lucide="arrow-down" class="w-3 h-3"></i>
             </button>
           </div>
@@ -364,27 +393,27 @@
             </div>
 
             <h3 class="text-xl font-bold text-[#F8FAFC]">
-              <a href="datos-estadistica.html" class="hover:text-cyan-400 transition-colors">
+              <a href="datos-estadistica.html" data-i18n="solutions.card2_title" class="hover:text-cyan-400 transition-colors">
                 Datos y Estadística
               </a>
             </h3>
 
-            <p class="text-cyan-400/90 text-xs font-mono">
+            <p data-i18n="solutions.card2_subtitle" class="text-cyan-400/90 text-xs font-mono">
               Información organizada y tableros claros para tomar mejores decisiones.
             </p>
 
-            <p class="text-slate-300 text-xs leading-relaxed">
+            <p data-i18n="solutions.card2_desc" class="text-slate-300 text-xs leading-relaxed">
               Consolidamos tus datos dispersos, ordenamos tus registros comerciales y creamos paneles visuales en tiempo real para que conozcas las métricas y el rendimiento exacto de tu negocio.
             </p>
           </div>
 
           <div class="pt-6 mt-6 border-t border-slate-800/80 space-y-2">
             <a href="datos-estadistica.html" class="w-full py-2.5 px-3 rounded-lg bg-cyan-500/10 hover:bg-cyan-500 text-cyan-300 hover:text-slate-950 border border-cyan-500/40 hover:border-cyan-400 text-xs font-bold flex items-center justify-center space-x-1.5 transition-all shadow-sm shadow-cyan-500/10 group-btn">
-              <span>Ver detalles del servicio</span>
+              <span data-i18n="solutions.view_details">Ver detalles del servicio</span>
               <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
             </a>
             <button type="button" data-service-val="datos" class="select-service-btn w-full py-1.5 px-2 text-slate-400 hover:text-cyan-400 text-[11px] font-mono flex items-center justify-center space-x-1 transition-colors cursor-pointer">
-              <span>Cotizar de inmediato</span>
+              <span data-i18n="solutions.instant_quote">Cotizar de inmediato</span>
               <i data-lucide="arrow-down" class="w-3 h-3"></i>
             </button>
           </div>
@@ -400,27 +429,27 @@
             </div>
 
             <h3 class="text-xl font-bold text-[#F8FAFC]">
-              <a href="automatizacion.html" class="hover:text-cyan-400 transition-colors">
+              <a href="automatizacion.html" data-i18n="solutions.card3_title" class="hover:text-cyan-400 transition-colors">
                 Automatización
               </a>
             </h3>
 
-            <p class="text-cyan-400/90 text-xs font-mono">
+            <p data-i18n="solutions.card3_subtitle" class="text-cyan-400/90 text-xs font-mono">
               Ahorra tiempo y elimina tareas manuales repetitivas en tu día a día.
             </p>
 
-            <p class="text-slate-300 text-xs leading-relaxed">
+            <p data-i18n="solutions.card3_desc" class="text-slate-300 text-xs leading-relaxed">
               Conectamos tus sistemas de ventas, facturación, correo y WhatsApp para que las tareas rutinarias se realicen automáticamente, eliminando errores y liberando a tu equipo.
             </p>
           </div>
 
           <div class="pt-6 mt-6 border-t border-slate-800/80 space-y-2">
             <a href="automatizacion.html" class="w-full py-2.5 px-3 rounded-lg bg-cyan-500/10 hover:bg-cyan-500 text-cyan-300 hover:text-slate-950 border border-cyan-500/40 hover:border-cyan-400 text-xs font-bold flex items-center justify-center space-x-1.5 transition-all shadow-sm shadow-cyan-500/10 group-btn">
-              <span>Ver detalles del servicio</span>
+              <span data-i18n="solutions.view_details">Ver detalles del servicio</span>
               <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
             </a>
             <button type="button" data-service-val="automatizacion" class="select-service-btn w-full py-1.5 px-2 text-slate-400 hover:text-cyan-400 text-[11px] font-mono flex items-center justify-center space-x-1 transition-colors cursor-pointer">
-              <span>Cotizar de inmediato</span>
+              <span data-i18n="solutions.instant_quote">Cotizar de inmediato</span>
               <i data-lucide="arrow-down" class="w-3 h-3"></i>
             </button>
           </div>
@@ -436,27 +465,27 @@
             </div>
 
             <h3 class="text-xl font-bold text-[#F8FAFC]">
-              <a href="comercio-electronico.html" class="hover:text-cyan-400 transition-colors">
+              <a href="comercio-electronico.html" data-i18n="solutions.card4_title" class="hover:text-cyan-400 transition-colors">
                 Comercio Electrónico
               </a>
             </h3>
 
-            <p class="text-cyan-400/90 text-xs font-mono">
+            <p data-i18n="solutions.card4_subtitle" class="text-cyan-400/90 text-xs font-mono">
               Tiendas virtuales, cobros digitales y atención las 24 horas del día.
             </p>
 
-            <p class="text-slate-300 text-xs leading-relaxed">
+            <p data-i18n="solutions.card4_desc" class="text-slate-300 text-xs leading-relaxed">
               Montamos tu tienda online completa: catálogo fácil de administrar, cobros con tarjeta y medios digitales, cálculo de envíos y asistentes virtuales que atienden pedidos 24/7.
             </p>
           </div>
 
           <div class="pt-6 mt-6 border-t border-slate-800/80 space-y-2">
             <a href="comercio-electronico.html" class="w-full py-2.5 px-3 rounded-lg bg-cyan-500/10 hover:bg-cyan-500 text-cyan-300 hover:text-slate-950 border border-cyan-500/40 hover:border-cyan-400 text-xs font-bold flex items-center justify-center space-x-1.5 transition-all shadow-sm shadow-cyan-500/10 group-btn">
-              <span>Ver detalles del servicio</span>
+              <span data-i18n="solutions.view_details">Ver detalles del servicio</span>
               <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
             </a>
             <button type="button" data-service-val="ecommerce" class="select-service-btn w-full py-1.5 px-2 text-slate-400 hover:text-cyan-400 text-[11px] font-mono flex items-center justify-center space-x-1 transition-colors cursor-pointer">
-              <span>Cotizar de inmediato</span>
+              <span data-i18n="solutions.instant_quote">Cotizar de inmediato</span>
               <i data-lucide="arrow-down" class="w-3 h-3"></i>
             </button>
           </div>
@@ -476,12 +505,12 @@
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
         <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
           <i data-lucide="award" class="w-3.5 h-3.5"></i>
-          <span>Por qué elegir a S26Digital</span>
+          <span data-i18n="why_us.badge">Por qué elegir a S26Digital</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
+        <h2 data-i18n="why_us.title" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
           Más que líneas de código, entregamos valor estratégico.
         </h2>
-        <p class="text-slate-300 text-base sm:text-lg">
+        <p data-i18n="why_us.subtitle" class="text-slate-300 text-base sm:text-lg">
           No somos simples ejecutores de tareas: operamos como tu departamento de ingeniería de élite, alineando cada desarrollo con los objetivos comerciales de tu empresa.
         </p>
       </div>
@@ -497,33 +526,33 @@
             </div>
             
             <div class="space-y-2">
-              <span class="text-xs font-mono uppercase tracking-widest text-cyan-400">01 • Ecosistema Integral</span>
-              <h3 class="text-2xl font-bold text-[#F8FAFC]">Soluciones Llave en Mano</h3>
+              <span data-i18n="why_us.card1_badge" class="text-xs font-mono uppercase tracking-widest text-cyan-400">01 • Ecosistema Integral</span>
+              <h3 data-i18n="why_us.card1_title" class="text-2xl font-bold text-[#F8FAFC]">Soluciones Llave en Mano</h3>
             </div>
             
-            <p class="text-slate-300 text-sm leading-relaxed">
+            <p data-i18n="why_us.card1_desc" class="text-slate-300 text-sm leading-relaxed">
               Nos encargamos de todo el ecosistema (hosting, bases de datos, seguridad). Tú te concentras en hacer crecer tu negocio mientras nosotros administramos la arquitectura tecnológica completa.
             </p>
 
             <ul class="space-y-2.5 text-xs text-slate-300 pt-2 border-t border-slate-700/60">
               <li class="flex items-center space-x-2">
                 <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
-                <span>Configuración de Servidores & Cloud</span>
+                <span data-i18n="why_us.card1_item1">Configuración de Servidores & Cloud</span>
               </li>
               <li class="flex items-center space-x-2">
                 <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
-                <span>Copias de seguridad automáticas y cifrado</span>
+                <span data-i18n="why_us.card1_item2">Copias de seguridad automáticas y cifrado</span>
               </li>
               <li class="flex items-center space-x-2">
                 <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
-                <span>Mantenimiento y actualizaciones sin caídas</span>
+                <span data-i18n="why_us.card1_item3">Mantenimiento y actualizaciones sin caídas</span>
               </li>
             </ul>
           </div>
 
           <div class="pt-6 mt-6 border-t border-slate-800">
             <span class="text-xs font-mono text-cyan-400 flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
-              <span>Cero fricción de infraestructura</span>
+              <span data-i18n="why_us.card1_footer">Cero fricción de infraestructura</span>
               <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
             </span>
           </div>
@@ -537,33 +566,33 @@
             </div>
             
             <div class="space-y-2">
-              <span class="text-xs font-mono uppercase tracking-widest text-cyan-400">02 • Velocidad de Ejecución</span>
-              <h3 class="text-2xl font-bold text-[#F8FAFC]">Agilidad y Prototipado</h3>
+              <span data-i18n="why_us.card2_badge" class="text-xs font-mono uppercase tracking-widest text-cyan-400">02 • Velocidad de Ejecución</span>
+              <h3 data-i18n="why_us.card2_title" class="text-2xl font-bold text-[#F8FAFC]">Agilidad y Prototipado</h3>
             </div>
             
-            <p class="text-slate-300 text-sm leading-relaxed">
+            <p data-i18n="why_us.card2_desc" class="text-slate-300 text-sm leading-relaxed">
               Construimos en iteraciones rápidas para resultados en semanas. Implementamos metodologías ágiles enfocadas en Producto Mínimo Viable (MVP) para validar rápido en el mercado real.
             </p>
 
             <ul class="space-y-2.5 text-xs text-slate-300 pt-2 border-t border-slate-700/60">
               <li class="flex items-center space-x-2">
                 <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
-                <span>Sprints de entrega cada 14 días</span>
+                <span data-i18n="why_us.card2_item1">Sprints de entrega cada 14 días</span>
               </li>
               <li class="flex items-center space-x-2">
                 <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
-                <span>Prototipos interactivos antes del código</span>
+                <span data-i18n="why_us.card2_item2">Prototipos interactivos antes del código</span>
               </li>
               <li class="flex items-center space-x-2">
                 <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
-                <span>Adaptabilidad inmediata al feedback</span>
+                <span data-i18n="why_us.card2_item3">Adaptabilidad inmediata al feedback</span>
               </li>
             </ul>
           </div>
 
           <div class="pt-6 mt-6 border-t border-slate-800">
             <span class="text-xs font-mono text-cyan-400 flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
-              <span>Validación y retorno acelerado</span>
+              <span data-i18n="why_us.card2_footer">Validación y retorno acelerado</span>
               <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
             </span>
           </div>
@@ -577,33 +606,33 @@
             </div>
             
             <div class="space-y-2">
-              <span class="text-xs font-mono uppercase tracking-widest text-cyan-400">03 • Escalabilidad Sostenida</span>
-              <h3 class="text-2xl font-bold text-[#F8FAFC]">Acompañamiento Continuo</h3>
+              <span data-i18n="why_us.card3_badge" class="text-xs font-mono uppercase tracking-widest text-cyan-400">03 • Escalabilidad Sostenida</span>
+              <h3 data-i18n="why_us.card3_title" class="text-2xl font-bold text-[#F8FAFC]">Acompañamiento Continuo</h3>
             </div>
             
-            <p class="text-slate-300 text-sm leading-relaxed">
+            <p data-i18n="why_us.card3_desc" class="text-slate-300 text-sm leading-relaxed">
               Escalamos tu infraestructura junto al crecimiento de tu negocio. No te entregamos un software y desaparecemos: somos tu aliado técnico de largo plazo para auditorías, optimización y nuevas fases.
             </p>
 
             <ul class="space-y-2.5 text-xs text-slate-300 pt-2 border-t border-slate-700/60">
               <li class="flex items-center space-x-2">
                 <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
-                <span>Monitoreo 24/7 de rendimiento y salud</span>
+                <span data-i18n="why_us.card3_item1">Monitoreo 24/7 de rendimiento y salud</span>
               </li>
               <li class="flex items-center space-x-2">
                 <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
-                <span>Escalamiento vertical y horizontal bajo demanda</span>
+                <span data-i18n="why_us.card3_item2">Escalamiento vertical y horizontal bajo demanda</span>
               </li>
               <li class="flex items-center space-x-2">
                 <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
-                <span>Consultoría estratégica periódica de roadmap</span>
+                <span data-i18n="why_us.card3_item3">Consultoría estratégica periódica de roadmap</span>
               </li>
             </ul>
           </div>
 
           <div class="pt-6 mt-6 border-t border-slate-800">
             <span class="text-xs font-mono text-cyan-400 flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
-              <span>Alianza B2B de largo plazo</span>
+              <span data-i18n="why_us.card3_footer">Alianza B2B de largo plazo</span>
               <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
             </span>
           </div>
@@ -623,12 +652,12 @@
       <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
         <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
           <i data-lucide="terminal-square" class="w-3.5 h-3.5"></i>
-          <span>Modern Enterprise Stack</span>
+          <span data-i18n="stack.badge">Modern Enterprise Stack</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#F8FAFC] tracking-tight">
+        <h2 data-i18n="stack.title" class="text-3xl sm:text-4xl font-extrabold text-[#F8FAFC] tracking-tight">
           Potenciados por tecnología de vanguardia.
         </h2>
-        <p class="text-slate-300 text-sm sm:text-base">
+        <p data-i18n="stack.subtitle" class="text-slate-300 text-sm sm:text-base">
           Utilizamos tecnologías robustas, estandarizadas y de alto rendimiento que aseguran interoperabilidad, seguridad y escalabilidad continua.
         </p>
       </div>
@@ -714,12 +743,12 @@
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
         <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#1E293B] border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
           <i data-lucide="git-commit" class="w-3.5 h-3.5"></i>
-          <span>Metodología S26 Agile</span>
+          <span data-i18n="process.badge">Metodología S26 Agile</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
+        <h2 data-i18n="process.title" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight">
           Nuestro Proceso
         </h2>
-        <p class="text-slate-300 text-base sm:text-lg">
+        <p data-i18n="process.subtitle" class="text-slate-300 text-base sm:text-lg">
           Flujo de trabajo estructurado y transparente para garantizar predictibilidad, calidad de código y entrega a tiempo.
         </p>
       </div>
@@ -734,16 +763,16 @@
               01
             </div>
             <div>
-              <h3 class="text-lg font-bold text-[#F8FAFC]">Diagnóstico gratuito</h3>
-              <p class="text-xs font-mono text-cyan-400 mt-0.5">Auditoría y Alcance</p>
+              <h3 data-i18n="process.step1_title" class="text-lg font-bold text-[#F8FAFC]">Diagnóstico gratuito</h3>
+              <p data-i18n="process.step1_sub" class="text-xs font-mono text-cyan-400 mt-0.5">Auditoría y Alcance</p>
             </div>
-            <p class="text-slate-300 text-xs leading-relaxed">
+            <p data-i18n="process.step1_desc" class="text-slate-300 text-xs leading-relaxed">
               Evaluamos tu infraestructura actual, identificamos cuellos de botella y definimos la hoja de ruta óptima sin compromiso ni costo inicial.
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-slate-800 text-[11px] text-slate-400 flex items-center space-x-1.5">
             <i data-lucide="clock" class="w-3.5 h-3.5 text-cyan-400"></i>
-            <span>Duración: 48 - 72 hrs</span>
+            <span data-i18n="process.step1_tag">Duración: 48 - 72 hrs</span>
           </div>
         </div>
 
@@ -754,16 +783,16 @@
               02
             </div>
             <div>
-              <h3 class="text-lg font-bold text-[#F8FAFC]">Diseño de arquitectura</h3>
-              <p class="text-xs font-mono text-cyan-400 mt-0.5">Blueprints & UX/UI</p>
+              <h3 data-i18n="process.step2_title" class="text-lg font-bold text-[#F8FAFC]">Diseño de arquitectura</h3>
+              <p data-i18n="process.step2_sub" class="text-xs font-mono text-cyan-400 mt-0.5">Blueprints & UX/UI</p>
             </div>
-            <p class="text-slate-300 text-xs leading-relaxed">
+            <p data-i18n="process.step2_desc" class="text-slate-300 text-xs leading-relaxed">
               Modelamos bases de datos, diagramas de microservicios en la nube, protocolos de seguridad y prototipos visuales de alta fidelidad.
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-slate-800 text-[11px] text-slate-400 flex items-center space-x-1.5">
             <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400"></i>
-            <span>Aprobación de Blueprint</span>
+            <span data-i18n="process.step2_tag">Aprobación de Blueprint</span>
           </div>
         </div>
 
@@ -774,16 +803,16 @@
               03
             </div>
             <div>
-              <h3 class="text-lg font-bold text-[#F8FAFC]">Desarrollo ágil (MVP)</h3>
-              <p class="text-xs font-mono text-cyan-400 mt-0.5">Sprints Iterativos</p>
+              <h3 data-i18n="process.step3_title" class="text-lg font-bold text-[#F8FAFC]">Desarrollo ágil (MVP)</h3>
+              <p data-i18n="process.step3_sub" class="text-xs font-mono text-cyan-400 mt-0.5">Sprints Iterativos</p>
             </div>
-            <p class="text-slate-300 text-xs leading-relaxed">
+            <p data-i18n="process.step3_desc" class="text-slate-300 text-xs leading-relaxed">
               Construcción en iteraciones de 2 semanas con entregables funcionales continuos, pruebas unitarias automatizadas y control de calidad.
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-slate-800 text-[11px] text-slate-400 flex items-center space-x-1.5">
             <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-cyan-400"></i>
-            <span>Demos cada 14 días</span>
+            <span data-i18n="process.step3_tag">Demos cada 14 días</span>
           </div>
         </div>
 
@@ -794,16 +823,16 @@
               04
             </div>
             <div>
-              <h3 class="text-lg font-bold text-[#F8FAFC]">Despliegue y soporte continuo</h3>
-              <p class="text-xs font-mono text-cyan-400 mt-0.5">Producción 24/7</p>
+              <h3 data-i18n="process.step4_title" class="text-lg font-bold text-[#F8FAFC]">Despliegue y soporte continuo</h3>
+              <p data-i18n="process.step4_sub" class="text-xs font-mono text-cyan-400 mt-0.5">Producción 24/7</p>
             </div>
-            <p class="text-slate-300 text-xs leading-relaxed">
+            <p data-i18n="process.step4_desc" class="text-slate-300 text-xs leading-relaxed">
               Lanzamiento a producción con pipelines CI/CD de cero tiempo de inactividad, monitoreo continuo y acompañamiento para escalar.
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-slate-800 text-[11px] text-slate-400 flex items-center space-x-1.5">
             <i data-lucide="shield" class="w-3.5 h-3.5 text-emerald-400"></i>
-            <span>Soporte Enterprise Activo</span>
+            <span data-i18n="process.step4_tag">Soporte Enterprise Activo</span>
           </div>
         </div>
 
@@ -827,16 +856,16 @@
         <!-- Badge llamativo de lanzamiento -->
         <div class="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-950/90 via-[#1E293B] to-cyan-950/90 border border-cyan-400/50 text-cyan-300 text-xs sm:text-sm font-mono font-bold tracking-wide shadow-lg shadow-cyan-500/20 backdrop-blur-md">
           <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></span>
-          <span>✨ NUEVA SOLUCIÓN FISCAL 2026</span>
+          <span data-i18n="facturacion.badge">✨ NUEVA SOLUCIÓN FISCAL 2026</span>
         </div>
 
         <!-- Título Principal -->
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight leading-[1.18]">
+        <h2 data-i18n-html="facturacion.title" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight leading-[1.18]">
           Olvídate de sistemas obsoletos. <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400 glow-text-cyan">Tu facturación B2B, libre y 100% legal.</span>
         </h2>
 
         <!-- Subtítulo / Introducción -->
-        <p class="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
+        <p data-i18n="facturacion.subtitle" class="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
           Con la derogación de la homologación obligatoria del SENIAT (Gaceta Oficial Nº 43.435), tu empresa ya no está atada a un listado cerrado de software. Implementamos sistemas de facturación y ERPs modernos, rápidos y adaptados estrictamente a la Providencia 0071.
         </p>
 
@@ -844,15 +873,15 @@
         <div class="pt-2 flex flex-wrap items-center justify-center gap-2.5 text-xs text-slate-300 font-mono">
           <span class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-lg bg-[#1E293B]/80 border border-slate-700/80">
             <i data-lucide="file-check-2" class="w-3.5 h-3.5 text-cyan-400"></i>
-            <span>Providencia SNAT/2026/00084</span>
+            <span data-i18n="facturacion.badge_prov">Providencia SNAT/2026/00084</span>
           </span>
           <span class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-lg bg-[#1E293B]/80 border border-slate-700/80">
             <i data-lucide="scale" class="w-3.5 h-3.5 text-cyan-400"></i>
-            <span>Gaceta Oficial Nº 43.435</span>
+            <span data-i18n="facturacion.badge_gaceta">Gaceta Oficial Nº 43.435</span>
           </span>
           <span class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-lg bg-[#1E293B]/80 border border-slate-700/80">
             <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i>
-            <span>Providencia 0071</span>
+            <span data-i18n="facturacion.badge_p0071">Providencia 0071</span>
           </span>
         </div>
       </div>
@@ -867,16 +896,16 @@
               <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-105 group-hover:border-cyan-400 transition-all duration-300 shadow-lg shadow-cyan-500/10">
                 <i data-lucide="cloud-lightning" class="w-7 h-7"></i>
               </div>
-              <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-[#0F172A] text-cyan-300 border border-cyan-500/30">
+              <span data-i18n="facturacion.b1_badge" class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-[#0F172A] text-cyan-300 border border-cyan-500/30">
                 01 • Modern Cloud
               </span>
             </div>
 
             <div class="space-y-2">
-              <h3 class="text-xl sm:text-2xl font-bold text-[#F8FAFC] group-hover:text-cyan-300 transition-colors">
+              <h3 data-i18n="facturacion.b1_title" class="text-xl sm:text-2xl font-bold text-[#F8FAFC] group-hover:text-cyan-300 transition-colors">
                 Libertad y Modernidad
               </h3>
-              <p class="text-slate-300 text-sm leading-relaxed">
+              <p data-i18n="facturacion.b1_desc" class="text-slate-300 text-sm leading-relaxed">
                 Migramos tu negocio desde sistemas lentos o antiguos hacia plataformas en la nube o soluciones a la medida sin trabas burocráticas.
               </p>
             </div>
@@ -884,7 +913,7 @@
 
           <div class="pt-5 mt-6 border-t border-slate-800/80 flex items-center space-x-2 text-xs text-slate-400 font-mono">
             <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
-            <span>Cero ataduras a software legado</span>
+            <span data-i18n="facturacion.b1_check">Cero ataduras a software legado</span>
           </div>
         </div>
 
@@ -895,16 +924,16 @@
               <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-105 group-hover:border-emerald-400 transition-all duration-300 shadow-lg shadow-emerald-500/10">
                 <i data-lucide="shield-check" class="w-7 h-7"></i>
               </div>
-              <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-[#0F172A] text-emerald-300 border border-emerald-500/30">
+              <span data-i18n="facturacion.b2_badge" class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-[#0F172A] text-emerald-300 border border-emerald-500/30">
                 02 • 100% Legal
               </span>
             </div>
 
             <div class="space-y-2">
-              <h3 class="text-xl sm:text-2xl font-bold text-[#F8FAFC] group-hover:text-emerald-300 transition-colors">
+              <h3 data-i18n="facturacion.b2_title" class="text-xl sm:text-2xl font-bold text-[#F8FAFC] group-hover:text-emerald-300 transition-colors">
                 Cumplimiento Fiscal Estricto
               </h3>
-              <p class="text-slate-300 text-sm leading-relaxed">
+              <p data-i18n="facturacion.b2_desc" class="text-slate-300 text-sm leading-relaxed">
                 Automatizamos la emisión de facturas, cálculo de IVA, IGTF y reportes obligatorios bajo la normativa vigente.
               </p>
             </div>
@@ -912,7 +941,7 @@
 
           <div class="pt-5 mt-6 border-t border-slate-800/80 flex items-center space-x-2 text-xs text-slate-400 font-mono">
             <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
-            <span>Cálculo automático IVA + IGTF</span>
+            <span data-i18n="facturacion.b2_check">Cálculo automático IVA + IGTF</span>
           </div>
         </div>
 
@@ -923,16 +952,16 @@
               <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-105 group-hover:border-cyan-400 transition-all duration-300 shadow-lg shadow-cyan-500/10">
                 <i data-lucide="plug-zap" class="w-7 h-7"></i>
               </div>
-              <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-[#0F172A] text-cyan-300 border border-cyan-500/30">
+              <span data-i18n="facturacion.b3_badge" class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-[#0F172A] text-cyan-300 border border-cyan-500/30">
                 03 • API & Hardware
               </span>
             </div>
 
             <div class="space-y-2">
-              <h3 class="text-xl sm:text-2xl font-bold text-[#F8FAFC] group-hover:text-cyan-300 transition-colors">
+              <h3 data-i18n="facturacion.b3_title" class="text-xl sm:text-2xl font-bold text-[#F8FAFC] group-hover:text-cyan-300 transition-colors">
                 Integración Total
               </h3>
-              <p class="text-slate-300 text-sm leading-relaxed">
+              <p data-i18n="facturacion.b3_desc" class="text-slate-300 text-sm leading-relaxed">
                 Conectamos tus sistemas actuales (e-commerce, CRM, ERP internacionales) con impresoras fiscales y formatos de formas libres.
               </p>
             </div>
@@ -940,7 +969,7 @@
 
           <div class="pt-5 mt-6 border-t border-slate-800/80 flex items-center space-x-2 text-xs text-slate-400 font-mono">
             <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
-            <span>Sincronización de impresoras y software</span>
+            <span data-i18n="facturacion.b3_check">Sincronización de impresoras y software</span>
           </div>
         </div>
 
@@ -951,10 +980,10 @@
         <div class="absolute inset-0 bg-radial-glow pointer-events-none"></div>
         <div class="relative z-10 max-w-2xl mx-auto space-y-6">
           <div class="space-y-2">
-            <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            <h3 data-i18n="facturacion.cta_title" class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
               ¿Listo para dar el salto a una facturación ágil y sin límites?
             </h3>
-            <p class="text-slate-300 text-sm sm:text-base">
+            <p data-i18n="facturacion.cta_subtitle" class="text-slate-300 text-sm sm:text-base">
               Agenda un diagnóstico técnico sin costo. Analizamos tus flujos transaccionales y diseñamos tu nueva arquitectura fiscal B2B.
             </p>
           </div>
@@ -964,7 +993,7 @@
               data-service-val="facturacion" 
               class="btn-cyan select-service-btn inline-flex items-center justify-center space-x-3 px-8 py-4 rounded-xl text-sm font-bold tracking-wide uppercase shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/50 transition-all group"
             >
-              <span>Modernizar mi Facturación Ahora</span>
+              <span data-i18n="facturacion.cta_btn">Modernizar mi Facturación Ahora</span>
               <i data-lucide="arrow-down" class="w-4 h-4 text-slate-950 stroke-[2.5] group-hover:translate-y-1 transition-transform"></i>
             </a>
           </div>
@@ -992,14 +1021,14 @@
           <div class="lg:col-span-5 space-y-6">
             <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#0F172A] border border-cyan-500/40 text-cyan-400 text-xs font-mono uppercase tracking-wider">
               <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
-              <span>Cupos de Consultoría Disponibles</span>
+              <span data-i18n="contact.badge">Cupos de Consultoría Disponibles</span>
             </div>
 
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight leading-tight">
+            <h2 data-i18n="contact.title" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight leading-tight">
               ¿Listo para modernizar y escalar tu operación?
             </h2>
 
-            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            <p data-i18n="contact.subtitle" class="text-slate-300 text-sm sm:text-base leading-relaxed">
               Completa el formulario para solicitar tu sesión de diagnóstico tecnológico sin costo. Analizaremos tu arquitectura y te presentaremos un plan de acción estratégico en menos de 24 horas.
             </p>
 
@@ -1007,15 +1036,15 @@
             <div class="space-y-3 pt-2">
               <div class="flex items-center space-x-3 text-xs text-slate-300">
                 <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
-                <span>Diagnóstico 100% confidencial (NDA incluido)</span>
+                <span data-i18n="contact.guarantee1">Diagnóstico 100% confidencial (NDA incluido)</span>
               </div>
               <div class="flex items-center space-x-3 text-xs text-slate-300">
                 <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
-                <span>Respuesta garantizada por un Arquitecto Senior</span>
+                <span data-i18n="contact.guarantee2">Respuesta garantizada por un Arquitecto Senior</span>
               </div>
               <div class="flex items-center space-x-3 text-xs text-slate-300">
                 <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
-                <span>Sin compromisos de contratación posterior</span>
+                <span data-i18n="contact.guarantee3">Sin compromisos de contratación posterior</span>
               </div>
             </div>
           </div>
@@ -1027,8 +1056,8 @@
             <div id="form-success-alert" class="hidden mb-6 p-4 rounded-xl bg-cyan-950/80 border border-cyan-500/50 text-cyan-200 text-sm flex items-start space-x-3">
               <i data-lucide="check-circle-2" class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5"></i>
               <div>
-                <strong class="block font-bold text-white">¡Diagnóstico Solicitado con Éxito!</strong>
-                <span>Hemos recibido tu solicitud. Nuestro equipo de arquitectura tecnológica se contactará contigo a la brevedad.</span>
+                <strong data-i18n="contact.alert_success_title" class="block font-bold text-white">¡Diagnóstico Solicitado con Éxito!</strong>
+                <span data-i18n="contact.alert_success_msg">Hemos recibido tu solicitud. Nuestro equipo de arquitectura tecnológica se contactará contigo a la brevedad.</span>
               </div>
             </div>
 
@@ -1038,7 +1067,7 @@
                 <!-- Field: Nombre -->
                 <div class="space-y-1.5">
                   <label for="form-name" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
-                    Nombre Completo <span class="text-cyan-400">*</span>
+                    <span data-i18n="contact.form_name">Nombre Completo</span> <span class="text-cyan-400">*</span>
                   </label>
                   <div class="relative">
                     <input 
@@ -1046,6 +1075,7 @@
                       id="form-name" 
                       name="nombre" 
                       required 
+                      data-i18n-placeholder="contact.form_name_ph"
                       placeholder="Ej. Carlos Mendoza" 
                       class="custom-input w-full pl-10 pr-4 py-3 rounded-xl text-sm"
                     />
@@ -1056,7 +1086,7 @@
                 <!-- Field: Empresa -->
                 <div class="space-y-1.5">
                   <label for="form-company" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
-                    Empresa / Organización <span class="text-cyan-400">*</span>
+                    <span data-i18n="contact.form_company">Empresa / Organización</span> <span class="text-cyan-400">*</span>
                   </label>
                   <div class="relative">
                     <input 
@@ -1064,6 +1094,7 @@
                       id="form-company" 
                       name="empresa" 
                       required 
+                      data-i18n-placeholder="contact.form_company_ph"
                       placeholder="Ej. Distribuidora del Centro C.A." 
                       class="custom-input w-full pl-10 pr-4 py-3 rounded-xl text-sm"
                     />
@@ -1076,7 +1107,7 @@
                 <!-- Field: Correo Corporativo -->
                 <div class="space-y-1.5">
                   <label for="form-email" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
-                    Correo Corporativo <span class="text-cyan-400">*</span>
+                    <span data-i18n="contact.form_email">Correo Corporativo</span> <span class="text-cyan-400">*</span>
                   </label>
                   <div class="relative">
                     <input 
@@ -1084,6 +1115,7 @@
                       id="form-email" 
                       name="correo" 
                       required 
+                      data-i18n-placeholder="contact.form_email_ph"
                       placeholder="carlos@empresa.com" 
                       class="custom-input w-full pl-10 pr-4 py-3 rounded-xl text-sm"
                     />
@@ -1094,7 +1126,7 @@
                 <!-- Field: Teléfono / WhatsApp -->
                 <div class="space-y-1.5">
                   <label for="form-phone" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
-                    Teléfono / WhatsApp <span class="text-cyan-400">*</span>
+                    <span data-i18n="contact.form_phone">Teléfono / WhatsApp</span> <span class="text-cyan-400">*</span>
                   </label>
                   <div class="relative">
                     <input 
@@ -1102,6 +1134,7 @@
                       id="form-phone" 
                       name="telefono" 
                       required 
+                      data-i18n-placeholder="contact.form_phone_ph"
                       placeholder="+58 412 123 4567" 
                       class="custom-input w-full pl-10 pr-4 py-3 rounded-xl text-sm font-mono"
                     />
@@ -1113,7 +1146,7 @@
               <!-- Field: Desafío Principal -->
               <div class="space-y-1.5">
                 <label for="form-challenge" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
-                  ¿Cuál es el principal reto o requerimiento tecnológico? <span class="text-cyan-400">*</span>
+                  <span data-i18n="contact.form_challenge">¿Cuál es el principal reto o requerimiento tecnológico?</span> <span class="text-cyan-400">*</span>
                 </label>
                 <div class="relative">
                   <textarea 
@@ -1121,6 +1154,7 @@
                     name="mensaje" 
                     rows="3" 
                     required 
+                    data-i18n-placeholder="contact.form_challenge_ph"
                     placeholder="Describe brevemente lo que necesitas: tienda virtual, sistema a medida, automatizar reportes, migración de infraestructura, etc." 
                     class="custom-input w-full p-4 rounded-xl text-sm resize-none"
                   ></textarea>
@@ -1134,11 +1168,11 @@
                   class="btn-cyan w-full py-4 px-6 rounded-xl text-sm font-bold tracking-wider uppercase flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/50 cursor-pointer"
                 >
                   <i data-lucide="send" class="w-4 h-4 text-slate-950"></i>
-                  <span>Solicitar Diagnóstico Tecnológico</span>
+                  <span data-i18n="contact.submit_btn">Solicitar Diagnóstico Tecnológico</span>
                 </button>
               </div>
 
-              <div class="text-center text-[11px] text-slate-500 font-mono">
+              <div data-i18n="contact.privacy_note" class="text-center text-[11px] text-slate-500 font-mono">
                 🔒 Tus datos están protegidos bajo protocolos de privacidad y cifrado.
               </div>
 
@@ -1175,7 +1209,7 @@
               </span>
             </div>
           </a>
-          <p class="text-sm text-slate-400 leading-relaxed">
+          <p data-i18n="footer.brand_desc" class="text-sm text-slate-400 leading-relaxed">
             Arquitectura de software y soluciones Cloud Enterprise para escalar tu operación.
           </p>
           <div class="flex items-center space-x-3 pt-1">
@@ -1193,45 +1227,45 @@
 
         <!-- Columna 2 (Soluciones / Servicios) -->
         <div class="space-y-4">
-          <h4 class="text-slate-100 font-semibold mb-4 text-sm tracking-wide">Servicios</h4>
+          <h4 data-i18n="footer.services_title" class="text-slate-100 font-semibold mb-4 text-sm tracking-wide">Servicios</h4>
           <ul class="space-y-2.5 text-sm">
             <li>
-              <a href="#soluciones" class="hover:text-cyan-400 transition-colors">Desarrollo a Medida</a>
+              <a href="#soluciones" data-i18n="footer.s1" class="hover:text-cyan-400 transition-colors">Desarrollo a Medida</a>
             </li>
             <li>
-              <a href="#soluciones" class="hover:text-cyan-400 transition-colors">Integraciones Cloud</a>
+              <a href="#soluciones" data-i18n="footer.s2" class="hover:text-cyan-400 transition-colors">Integraciones Cloud</a>
             </li>
             <li>
-              <a href="automatizacion.html" class="hover:text-cyan-400 transition-colors">Automatización IA</a>
+              <a href="automatizacion.html" data-i18n="footer.s3" class="hover:text-cyan-400 transition-colors">Automatización IA</a>
             </li>
             <li>
-              <a href="#contacto" class="hover:text-cyan-400 transition-colors">Consultoría Técnica</a>
+              <a href="#contacto" data-i18n="footer.s4" class="hover:text-cyan-400 transition-colors">Consultoría Técnica</a>
             </li>
           </ul>
         </div>
 
         <!-- Columna 3 (Compañía) -->
         <div class="space-y-4">
-          <h4 class="text-slate-100 font-semibold mb-4 text-sm tracking-wide">Compañía</h4>
+          <h4 data-i18n="footer.company_title" class="text-slate-100 font-semibold mb-4 text-sm tracking-wide">Compañía</h4>
           <ul class="space-y-2.5 text-sm">
             <li>
-              <a href="#proceso" class="hover:text-cyan-400 transition-colors">Metodología</a>
+              <a href="#proceso" data-i18n="footer.c1" class="hover:text-cyan-400 transition-colors">Metodología</a>
             </li>
             <li>
-              <a href="#diferenciadores" class="hover:text-cyan-400 transition-colors">Diferenciadores</a>
+              <a href="#diferenciadores" data-i18n="footer.c2" class="hover:text-cyan-400 transition-colors">Diferenciadores</a>
             </li>
             <li>
-              <a href="#soluciones" class="hover:text-cyan-400 transition-colors">Casos de Éxito</a>
+              <a href="#soluciones" data-i18n="footer.c3" class="hover:text-cyan-400 transition-colors">Casos de Éxito</a>
             </li>
             <li>
-              <a href="#consultation-modal" class="open-consultation-btn hover:text-cyan-400 transition-colors cursor-pointer">Agendar Consultoría</a>
+              <a href="#consultation-modal" data-i18n="footer.c4" class="open-consultation-btn hover:text-cyan-400 transition-colors cursor-pointer">Agendar Consultoría</a>
             </li>
           </ul>
         </div>
 
         <!-- Columna 4 (Contacto y Sede) -->
         <div class="space-y-4">
-          <h4 class="text-slate-100 font-semibold mb-4 text-sm tracking-wide">Contacto</h4>
+          <h4 data-i18n="footer.contact_title" class="text-slate-100 font-semibold mb-4 text-sm tracking-wide">Contacto</h4>
           <div class="space-y-3 text-sm">
             <div class="flex items-center space-x-3">
               <i data-lucide="mail" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
@@ -1239,7 +1273,7 @@
             </div>
             <div class="flex items-start space-x-3">
               <i data-lucide="map-pin" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
-              <span>Cagua, Aragua, Venezuela.</span>
+              <span data-i18n="footer.location">Cagua, Aragua, Venezuela.</span>
             </div>
           </div>
         </div>
@@ -1248,10 +1282,15 @@
 
       <!-- Barra Inferior (Bottom Bar) -->
       <div class="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-        <p>© 2026 S26Digital. Todos los derechos reservados.</p>
+        <p data-i18n="footer.copyright">© 2026 S26Digital. Todos los derechos reservados.</p>
         <div class="flex items-center space-x-6">
-          <a href="politica-de-privacidad.html" class="hover:text-cyan-400 transition-colors">Política de Privacidad</a>
-          <a href="politica-de-privacidad.html" class="hover:text-cyan-400 transition-colors">Términos de Servicio</a>
+          <div class="flex items-center bg-slate-900 border border-slate-700/80 rounded-lg p-0.5 text-xs font-mono">
+            <button type="button" data-lang-btn="es" class="px-2 py-0.5 rounded text-[11px] font-semibold cursor-pointer">ES</button>
+            <span class="text-slate-600 px-0.5 select-none">|</span>
+            <button type="button" data-lang-btn="en" class="px-2 py-0.5 rounded text-[11px] font-semibold cursor-pointer">EN</button>
+          </div>
+          <a href="politica-de-privacidad.html" data-i18n="footer.privacy_policy" data-i18n-href="footer.privacy_policy_url" class="hover:text-cyan-400 transition-colors">Política de Privacidad</a>
+          <a href="politica-de-privacidad.html" data-i18n="footer.terms_of_service" class="hover:text-cyan-400 transition-colors">Términos de Servicio</a>
         </div>
       </div>
 
@@ -1272,39 +1311,39 @@
       <div class="space-y-4 mb-6">
         <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#0F172A] border border-cyan-500/30 text-cyan-400 text-xs font-mono">
           <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
-          <span>Sesión de 30 Minutos con Arquitecto Lead</span>
+          <span data-i18n="modal.badge">Sesión de 30 Minutos con Arquitecto Lead</span>
         </div>
-        <h3 class="text-2xl font-bold text-white">Agendar Consultoría Estratégica</h3>
-        <p class="text-slate-300 text-xs">
+        <h3 data-i18n="modal.title" class="text-2xl font-bold text-white">Agendar Consultoría Estratégica</h3>
+        <p data-i18n="modal.subtitle" class="text-slate-300 text-xs">
           Selecciona tus datos de contacto para coordinar la llamada de diagnóstico directamente en tu calendario.
         </p>
       </div>
 
       <form id="modal-consultation-form" class="space-y-4">
         <div class="space-y-1">
-          <label class="block text-xs font-mono text-slate-300">Nombre Completo</label>
-          <input type="text" required placeholder="Tu nombre" class="custom-input w-full px-3.5 py-2.5 rounded-lg text-sm" />
+          <label data-i18n="modal.name_label" class="block text-xs font-mono text-slate-300">Nombre Completo</label>
+          <input type="text" required data-i18n-placeholder="modal.name_ph" placeholder="Tu nombre" class="custom-input w-full px-3.5 py-2.5 rounded-lg text-sm" />
         </div>
 
         <div class="space-y-1">
-          <label class="block text-xs font-mono text-slate-300">Correo Corporativo</label>
-          <input type="email" required placeholder="correo@empresa.com" class="custom-input w-full px-3.5 py-2.5 rounded-lg text-sm" />
+          <label data-i18n="modal.email_label" class="block text-xs font-mono text-slate-300">Correo Corporativo</label>
+          <input type="email" required data-i18n-placeholder="modal.email_ph" placeholder="correo@empresa.com" class="custom-input w-full px-3.5 py-2.5 rounded-lg text-sm" />
         </div>
 
         <div class="space-y-1">
-          <label class="block text-xs font-mono text-slate-300">Área de Interés</label>
+          <label data-i18n="modal.interest_label" class="block text-xs font-mono text-slate-300">Área de Interés</label>
           <select required class="custom-input w-full px-3.5 py-2.5 rounded-lg text-sm">
-            <option value="facturacion">Facturación B2B & Cumplimiento Fiscal (Nueva)</option>
-            <option value="web">Desarrollo Web y Apps</option>
-            <option value="datos">Datos y Estadística</option>
-            <option value="automatizacion">Automatización</option>
-            <option value="ecommerce">Comercio Electrónico</option>
+            <option value="facturacion" data-i18n="modal.opt_billing">Facturación B2B & Cumplimiento Fiscal (Nueva)</option>
+            <option value="web" data-i18n="modal.opt_web">Desarrollo Web y Apps</option>
+            <option value="datos" data-i18n="modal.opt_data">Datos y Estadística</option>
+            <option value="automatizacion" data-i18n="modal.opt_auto">Automatización</option>
+            <option value="ecommerce" data-i18n="modal.opt_ecom">Comercio Electrónico</option>
           </select>
         </div>
 
         <div class="pt-2">
           <button type="submit" class="btn-cyan w-full py-3 rounded-lg text-xs font-bold uppercase tracking-wider">
-            Confirmar Reserva de Consultoría
+            <span data-i18n="modal.submit_btn">Confirmar Reserva de Consultoría</span>
           </button>
         </div>
       </form>
