@@ -1,0 +1,49 @@
+Actúa como un desarrollador Frontend experto. Necesito refactorizar una sección específica de mi landing page actual. Actualmente, tengo una sección con el ID <section id="facturacion"> dedicada a un solo producto. Quiero transformarla en una sección general de "Nuevas Soluciones" utilizando un diseño de cuadrícula (Grid) de 3 columnas.
+
+Mantén el estilo de mi framework actual (Tailwind CSS) y conserva las clases base del contenedor principal, incluyendo el fondo oscuro (bg-[#0F172A]), los bordes (border-t border-slate-800/80) y los efectos de brillo ambiental (ambient radial glow) que ya existen en el código original.
+
+Requerimientos de Diseño y Estructura:
+
+Encabezado de la Sección: Cambia el título principal a algo como "Nuevas Soluciones 2026" o "Explora nuestros nuevos servicios", manteniendo la tipografía y los gradientes actuales.
+
+Estructura del Grid: Implementa un contenedor de cuadrícula que sea responsivo: 1 columna en móvil, y 3 columnas en pantallas grandes (grid-cols-1 lg:grid-cols-3 gap-8).
+
+Diseño de las Tarjetas (Cards): Cada columna será una tarjeta individual que debe contener, de arriba hacia abajo:
+
+Un espacio para una imagen referencial (usa un div con un color de fondo sutil o un tag <img> con una imagen placeholder genérica que luego reemplazaré).
+
+Un título (H3).
+
+Una descripción rápida (2 o 3 líneas).
+
+Un enlace de texto simple (ej. "Ver más detalles ->") que apuntará a una página independiente.
+
+Un botón principal (CTA) en la parte inferior de la tarjeta.
+
+Contenido de las 3 Columnas (ESTRICTAMENTE EN ESTE ORDEN):
+
+Columna 1: Chatbot Inteligente para WhatsApp
+
+Enfoque: IA conversacional avanzada.
+
+Descripción: Elimina las conversaciones monótonas. Implementa un asistente virtual con un tono natural y fluido diseñado específicamente para atraer clientes y cerrar ventas, no solo para responder FAQs.
+
+CTA: "Automatizar Ventas".
+
+Columna 2: Pantallas Digitales Publicitarias (Digital Signage)
+
+Enfoque: Servicio por suscripción B2B.
+
+Descripción: Convierte SmartTVs en menús y carteleras dinámicas. Solución ideal para comerciantes y sector de comida rápida que necesitan actualizar precios y ofertas en tiempo real.
+
+CTA: "Digitalizar mi Local".
+
+Columna 3: Facturación B2B (Sistema actual)
+
+Enfoque: Cumplimiento fiscal y sistemas Cloud.
+
+Descripción: Olvida los sistemas legacy. Tu facturación B2B 100% cloud, sin fricciones y estrictamente apegada a la nueva normativa fiscal y Providencia 0071.
+
+CTA: "Modernizar Facturación".
+
+Por favor, genera el código HTML/Tailwind completo para esta sección refactorizada. Asegúrate de que las tarjetas tengan la misma altura (height stretch) y que el diseño se vea premium y alineado con una agencia tecnológica B2B. Asegurate de remover el link de invoicing que esta en el menu para todas las paginas.

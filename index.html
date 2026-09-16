@@ -86,10 +86,6 @@
           <a href="#diferenciadores" data-i18n="nav.why_us" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200">
             Diferenciadores
           </a>
-          <a href="#facturacion" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200 flex items-center space-x-1.5">
-            <span data-i18n="nav.billing">Facturación</span>
-            <span data-i18n="nav.billing_badge" class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">Nuevo</span>
-          </a>
           <a href="#stack" data-i18n="nav.stack" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors duration-200">
             Stack
           </a>
@@ -148,10 +144,6 @@
     <div id="mobile-menu" class="hidden md:hidden bg-[#0F172A]/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3 backdrop-blur-xl">
       <a href="#soluciones" data-i18n="nav.solutions" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Soluciones</a>
       <a href="#diferenciadores" data-i18n="nav.why_us" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Diferenciadores</a>
-      <a href="#facturacion" class="mobile-nav-link flex items-center justify-between px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">
-        <span data-i18n="nav.billing">Facturación B2B & Fiscal</span>
-        <span data-i18n="nav.billing_badge_mobile" class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">Nuevo 2026</span>
-      </a>
       <a href="#stack" data-i18n="nav.stack_mobile" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Stack Tecnológico</a>
       <a href="#proceso" data-i18n="nav.process_mobile" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Nuestro Proceso</a>
       <a href="#contacto" data-i18n="nav.contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-[#06B6D4] hover:bg-[#1E293B]">Contacto</a>
@@ -837,9 +829,12 @@
   </section>
 
   <!-- =========================================================================
-       SECCIÓN: NUEVA SOLUCIÓN FISCAL 2026 (Facturación B2B Libre y Legal)
+       SECCIÓN: NUEVAS SOLUCIONES 2026 (Chatbot WhatsApp, Digital Signage & Facturación B2B)
        ========================================================================= -->
-  <section id="facturacion" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80 overflow-hidden bg-cyber-grid">
+  <section id="nuevas-soluciones" class="py-24 bg-[#0F172A] relative border-t border-slate-800/80 overflow-hidden bg-cyber-grid">
+    <!-- Anchor retrocompatible para enlaces antiguos a facturacion -->
+    <div id="facturacion" class="absolute -top-24 opacity-0 pointer-events-none"></div>
+
     <!-- Ambient Radial Glow Effects for Product Launch Contrast -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[550px] bg-gradient-to-tr from-cyan-500/15 via-blue-600/10 to-teal-500/15 blur-[140px] rounded-full pointer-events-none"></div>
     <div class="absolute top-0 right-1/4 w-80 h-80 bg-cyan-400/10 blur-[120px] rounded-full pointer-events-none"></div>
@@ -852,148 +847,215 @@
         <!-- Badge llamativo de lanzamiento -->
         <div class="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-950/90 via-[#1E293B] to-cyan-950/90 border border-cyan-400/50 text-cyan-300 text-xs sm:text-sm font-mono font-bold tracking-wide shadow-lg shadow-cyan-500/20 backdrop-blur-md">
           <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></span>
-          <span data-i18n="facturacion.badge">✨ NUEVA SOLUCIÓN FISCAL 2026</span>
+          <span data-i18n="solutions2026.badge">✨ NUEVAS SOLUCIONES 2026</span>
         </div>
 
         <!-- Título Principal -->
-        <h2 data-i18n-html="facturacion.title" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight leading-[1.18]">
-          Olvídate de sistemas obsoletos. <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400 glow-text-cyan">Tu facturación B2B, libre y 100% legal.</span>
+        <h2 data-i18n-html="solutions2026.title" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8FAFC] tracking-tight leading-[1.18]">
+          Nuevas Soluciones 2026. <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400 glow-text-cyan">Explora nuestros nuevos servicios.</span>
         </h2>
 
         <!-- Subtítulo / Introducción -->
-        <p data-i18n="facturacion.subtitle" class="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
-          Con la derogación de la homologación obligatoria del SENIAT (Gaceta Oficial Nº 43.435), tu empresa ya no está atada a un listado cerrado de software. Implementamos sistemas de facturación y ERPs modernos, rápidos y adaptados estrictamente a la Providencia 0071.
+        <p data-i18n="solutions2026.subtitle" class="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
+          Infraestructura digital y herramientas interactivas diseñadas para escalar ventas, modernizar espacios comerciales y automatizar operaciones con estándares enterprise.
         </p>
-
-        <!-- Compliance & Regulatory Indicators -->
-        <div class="pt-2 flex flex-wrap items-center justify-center gap-2.5 text-xs text-slate-300 font-mono">
-          <span class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-lg bg-[#1E293B]/80 border border-slate-700/80">
-            <i data-lucide="file-check-2" class="w-3.5 h-3.5 text-cyan-400"></i>
-            <span data-i18n="facturacion.badge_prov">Providencia SNAT/2026/00084</span>
-          </span>
-          <span class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-lg bg-[#1E293B]/80 border border-slate-700/80">
-            <i data-lucide="scale" class="w-3.5 h-3.5 text-cyan-400"></i>
-            <span data-i18n="facturacion.badge_gaceta">Gaceta Oficial Nº 43.435</span>
-          </span>
-          <span class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-lg bg-[#1E293B]/80 border border-slate-700/80">
-            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i>
-            <span data-i18n="facturacion.badge_p0071">Providencia 0071</span>
-          </span>
-        </div>
       </div>
 
-      <!-- Cuadrícula de Beneficios (Grid de 3 Columnas con Iconos Modernos) -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-14">
+      <!-- Cuadrícula Responsiva de 3 Columnas (1 col en móvil, 3 col en desktop) -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
         
-        <!-- Beneficio 1: Libertad y Modernidad -->
-        <div class="enterprise-card rounded-2xl p-7 sm:p-8 flex flex-col justify-between group hover:border-cyan-400/60 transition-all duration-300 bg-[#1E293B]/90 backdrop-blur-sm">
-          <div class="space-y-5">
-            <div class="flex items-center justify-between">
-              <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-105 group-hover:border-cyan-400 transition-all duration-300 shadow-lg shadow-cyan-500/10">
-                <i data-lucide="cloud-lightning" class="w-7 h-7"></i>
+        <!-- Columna 1: Chatbot Inteligente para WhatsApp -->
+        <div class="enterprise-card bg-[#1E293B]/90 border border-slate-700/70 hover:border-cyan-400/60 rounded-2xl p-6 sm:p-7 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10 group h-full">
+          <div class="flex-1 flex flex-col">
+            <!-- Espacio para imagen referencial -->
+            <div class="w-full h-48 sm:h-52 rounded-xl bg-slate-900/90 border border-slate-800/80 overflow-hidden relative mb-5 flex items-center justify-center group-hover:border-cyan-500/40 transition-all duration-300">
+              <img 
+                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" 
+                alt="Chatbot Inteligente para WhatsApp" 
+                class="w-full h-full object-cover opacity-65 group-hover:opacity-85 group-hover:scale-105 transition-all duration-500"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#1E293B] via-slate-950/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 z-10">
+                <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-[#0F172A]/90 text-cyan-300 border border-cyan-500/40 backdrop-blur-md flex items-center space-x-1.5">
+                  <i data-lucide="bot" class="w-3 h-3 text-cyan-400"></i>
+                  <span>01 • WhatsApp AI</span>
+                </span>
               </div>
-              <span data-i18n="facturacion.b1_badge" class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-[#0F172A] text-cyan-300 border border-cyan-500/30">
-                01 • Modern Cloud
-              </span>
-            </div>
-
-            <div class="space-y-2">
-              <h3 data-i18n="facturacion.b1_title" class="text-xl sm:text-2xl font-bold text-[#F8FAFC] group-hover:text-cyan-300 transition-colors">
-                Libertad y Modernidad
-              </h3>
-              <p data-i18n="facturacion.b1_desc" class="text-slate-300 text-sm leading-relaxed">
-                Migramos tu negocio desde sistemas lentos o antiguos hacia plataformas en la nube o soluciones a la medida sin trabas burocráticas.
-              </p>
-            </div>
-          </div>
-
-          <div class="pt-5 mt-6 border-t border-slate-800/80 flex items-center space-x-2 text-xs text-slate-400 font-mono">
-            <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
-            <span data-i18n="facturacion.b1_check">Cero ataduras a software legado</span>
-          </div>
-        </div>
-
-        <!-- Beneficio 2: Cumplimiento Fiscal Estricto -->
-        <div class="enterprise-card rounded-2xl p-7 sm:p-8 flex flex-col justify-between group hover:border-emerald-400/60 transition-all duration-300 bg-[#1E293B]/90 backdrop-blur-sm">
-          <div class="space-y-5">
-            <div class="flex items-center justify-between">
-              <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-105 group-hover:border-emerald-400 transition-all duration-300 shadow-lg shadow-emerald-500/10">
-                <i data-lucide="shield-check" class="w-7 h-7"></i>
+              <div class="absolute bottom-2.5 right-3 z-10 flex items-center space-x-1.5 text-[10px] font-mono text-slate-400 bg-slate-900/85 px-2 py-0.5 rounded border border-slate-700/50">
+                <i data-lucide="image" class="w-3 h-3 text-cyan-400"></i>
+                <span>Placeholder</span>
               </div>
-              <span data-i18n="facturacion.b2_badge" class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-[#0F172A] text-emerald-300 border border-emerald-500/30">
-                02 • 100% Legal
-              </span>
             </div>
 
-            <div class="space-y-2">
-              <h3 data-i18n="facturacion.b2_title" class="text-xl sm:text-2xl font-bold text-[#F8FAFC] group-hover:text-emerald-300 transition-colors">
-                Cumplimiento Fiscal Estricto
-              </h3>
-              <p data-i18n="facturacion.b2_desc" class="text-slate-300 text-sm leading-relaxed">
-                Automatizamos la emisión de facturas, cálculo de IVA, IGTF y reportes obligatorios bajo la normativa vigente.
-              </p>
-            </div>
-          </div>
-
-          <div class="pt-5 mt-6 border-t border-slate-800/80 flex items-center space-x-2 text-xs text-slate-400 font-mono">
-            <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
-            <span data-i18n="facturacion.b2_check">Cálculo automático IVA + IGTF</span>
-          </div>
-        </div>
-
-        <!-- Beneficio 3: Integración Total -->
-        <div class="enterprise-card rounded-2xl p-7 sm:p-8 flex flex-col justify-between group hover:border-cyan-400/60 transition-all duration-300 bg-[#1E293B]/90 backdrop-blur-sm">
-          <div class="space-y-5">
-            <div class="flex items-center justify-between">
-              <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-105 group-hover:border-cyan-400 transition-all duration-300 shadow-lg shadow-cyan-500/10">
-                <i data-lucide="plug-zap" class="w-7 h-7"></i>
-              </div>
-              <span data-i18n="facturacion.b3_badge" class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-[#0F172A] text-cyan-300 border border-cyan-500/30">
-                03 • API & Hardware
-              </span>
+            <!-- Enfoque -->
+            <div class="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-md bg-[#0F172A] border border-cyan-500/30 text-cyan-300 text-xs font-mono mb-3 w-fit">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+              <span data-i18n="solutions2026.c1_focus">Enfoque: IA conversacional avanzada</span>
             </div>
 
-            <div class="space-y-2">
-              <h3 data-i18n="facturacion.b3_title" class="text-xl sm:text-2xl font-bold text-[#F8FAFC] group-hover:text-cyan-300 transition-colors">
-                Integración Total
-              </h3>
-              <p data-i18n="facturacion.b3_desc" class="text-slate-300 text-sm leading-relaxed">
-                Conectamos tus sistemas actuales (e-commerce, CRM, ERP internacionales) con impresoras fiscales y formatos de formas libres.
-              </p>
-            </div>
-          </div>
-
-          <div class="pt-5 mt-6 border-t border-slate-800/80 flex items-center space-x-2 text-xs text-slate-400 font-mono">
-            <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
-            <span data-i18n="facturacion.b3_check">Sincronización de impresoras y software</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Action Card & CTA Button -->
-      <div class="bg-gradient-to-r from-[#1E293B] via-slate-900 to-[#1E293B] border border-cyan-500/40 rounded-3xl p-8 sm:p-10 text-center relative overflow-hidden shadow-2xl">
-        <div class="absolute inset-0 bg-radial-glow pointer-events-none"></div>
-        <div class="relative z-10 max-w-2xl mx-auto space-y-6">
-          <div class="space-y-2">
-            <h3 data-i18n="facturacion.cta_title" class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              ¿Listo para dar el salto a una facturación ágil y sin límites?
+            <!-- Título H3 -->
+            <h3 data-i18n="solutions2026.c1_title" class="text-xl sm:text-2xl font-bold text-[#F8FAFC] group-hover:text-cyan-300 transition-colors mb-3">
+              Chatbot Inteligente para WhatsApp
             </h3>
-            <p data-i18n="facturacion.cta_subtitle" class="text-slate-300 text-sm sm:text-base">
-              Agenda un diagnóstico técnico sin costo. Analizamos tus flujos transaccionales y diseñamos tu nueva arquitectura fiscal B2B.
+
+            <!-- Descripción rápida (2-3 líneas) -->
+            <p data-i18n="solutions2026.c1_desc" class="text-slate-300 text-sm leading-relaxed mb-4">
+              Elimina las conversaciones monótonas. Implementa un asistente virtual con un tono natural y fluido diseñado específicamente para atraer clientes y cerrar ventas, no solo para responder FAQs.
             </p>
+
+            <!-- Enlace de texto simple hacia página independiente -->
+            <div class="mb-6">
+              <a href="automatizacion.html" data-i18n="solutions2026.c1_link" class="inline-flex items-center space-x-1.5 text-xs font-mono font-semibold text-cyan-400 hover:text-cyan-300 transition-colors group/link">
+                <span>Ver más detalles</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform"></i>
+              </a>
+            </div>
           </div>
-          <div>
+
+          <!-- Botón principal (CTA) en la parte inferior de la tarjeta -->
+          <div class="pt-4 border-t border-slate-800/80 mt-auto">
             <a 
               href="#contacto" 
-              data-service-val="facturacion" 
-              class="btn-cyan select-service-btn inline-flex items-center justify-center space-x-3 px-8 py-4 rounded-xl text-sm font-bold tracking-wide uppercase shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/50 transition-all group"
+              data-service-val="automatizacion"
+              class="btn-cyan select-service-btn w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-400/40 transition-all"
             >
-              <span data-i18n="facturacion.cta_btn">Modernizar mi Facturación Ahora</span>
-              <i data-lucide="arrow-down" class="w-4 h-4 text-slate-950 stroke-[2.5] group-hover:translate-y-1 transition-transform"></i>
+              <i data-lucide="message-square" class="w-4 h-4 text-slate-950"></i>
+              <span data-i18n="solutions2026.c1_cta">Automatizar Ventas</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-slate-950"></i>
             </a>
           </div>
         </div>
+
+        <!-- Columna 2: Pantallas Digitales Publicitarias (Digital Signage) -->
+        <div class="enterprise-card bg-[#1E293B]/90 border border-slate-700/70 hover:border-cyan-400/60 rounded-2xl p-6 sm:p-7 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10 group h-full">
+          <div class="flex-1 flex flex-col">
+            <!-- Espacio para imagen referencial -->
+            <div class="w-full h-48 sm:h-52 rounded-xl bg-slate-900/90 border border-slate-800/80 overflow-hidden relative mb-5 flex items-center justify-center group-hover:border-cyan-500/40 transition-all duration-300">
+              <img 
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" 
+                alt="Pantallas Digitales Publicitarias" 
+                class="w-full h-full object-cover opacity-65 group-hover:opacity-85 group-hover:scale-105 transition-all duration-500"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#1E293B] via-slate-950/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 z-10">
+                <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-[#0F172A]/90 text-cyan-300 border border-cyan-500/40 backdrop-blur-md flex items-center space-x-1.5">
+                  <i data-lucide="tv" class="w-3 h-3 text-cyan-400"></i>
+                  <span>02 • Digital Signage</span>
+                </span>
+              </div>
+              <div class="absolute bottom-2.5 right-3 z-10 flex items-center space-x-1.5 text-[10px] font-mono text-slate-400 bg-slate-900/85 px-2 py-0.5 rounded border border-slate-700/50">
+                <i data-lucide="image" class="w-3 h-3 text-cyan-400"></i>
+                <span>Placeholder</span>
+              </div>
+            </div>
+
+            <!-- Enfoque -->
+            <div class="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-md bg-[#0F172A] border border-cyan-500/30 text-cyan-300 text-xs font-mono mb-3 w-fit">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+              <span data-i18n="solutions2026.c2_focus">Enfoque: Servicio por suscripción B2B</span>
+            </div>
+
+            <!-- Título H3 -->
+            <h3 data-i18n="solutions2026.c2_title" class="text-xl sm:text-2xl font-bold text-[#F8FAFC] group-hover:text-cyan-300 transition-colors mb-3">
+              Pantallas Digitales Publicitarias (Digital Signage)
+            </h3>
+
+            <!-- Descripción rápida (2-3 líneas) -->
+            <p data-i18n="solutions2026.c2_desc" class="text-slate-300 text-sm leading-relaxed mb-4">
+              Convierte SmartTVs en menús y carteleras dinámicas. Solución ideal para comerciantes y sector de comida rápida que necesitan actualizar precios y ofertas en tiempo real.
+            </p>
+
+            <!-- Enlace de texto simple hacia página independiente -->
+            <div class="mb-6">
+              <a href="#contacto" data-i18n="solutions2026.c2_link" class="inline-flex items-center space-x-1.5 text-xs font-mono font-semibold text-cyan-400 hover:text-cyan-300 transition-colors group/link">
+                <span>Ver más detalles</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Botón principal (CTA) en la parte inferior de la tarjeta -->
+          <div class="pt-4 border-t border-slate-800/80 mt-auto">
+            <a 
+              href="#contacto" 
+              data-service-val="digital-signage"
+              class="btn-cyan select-service-btn w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-400/40 transition-all"
+            >
+              <i data-lucide="monitor" class="w-4 h-4 text-slate-950"></i>
+              <span data-i18n="solutions2026.c2_cta">Digitalizar mi Local</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-slate-950"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna 3: Facturación B2B (Sistema actual) -->
+        <div class="enterprise-card bg-[#1E293B]/90 border border-slate-700/70 hover:border-emerald-400/60 rounded-2xl p-6 sm:p-7 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/10 group h-full">
+          <div class="flex-1 flex flex-col">
+            <!-- Espacio para imagen referencial -->
+            <div class="w-full h-48 sm:h-52 rounded-xl bg-slate-900/90 border border-slate-800/80 overflow-hidden relative mb-5 flex items-center justify-center group-hover:border-emerald-500/40 transition-all duration-300">
+              <img 
+                src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80" 
+                alt="Facturación B2B y Sistemas Cloud" 
+                class="w-full h-full object-cover opacity-65 group-hover:opacity-85 group-hover:scale-105 transition-all duration-500"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#1E293B] via-slate-950/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 z-10">
+                <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-[#0F172A]/90 text-emerald-300 border border-emerald-500/40 backdrop-blur-md flex items-center space-x-1.5">
+                  <i data-lucide="receipt" class="w-3 h-3 text-emerald-400"></i>
+                  <span>03 • Cloud ERP</span>
+                </span>
+              </div>
+              <div class="absolute bottom-2.5 right-3 z-10 flex items-center space-x-1.5 text-[10px] font-mono text-slate-400 bg-slate-900/85 px-2 py-0.5 rounded border border-slate-700/50">
+                <i data-lucide="image" class="w-3 h-3 text-emerald-400"></i>
+                <span>Placeholder</span>
+              </div>
+            </div>
+
+            <!-- Enfoque -->
+            <div class="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-md bg-[#0F172A] border border-emerald-500/30 text-emerald-300 text-xs font-mono mb-3 w-fit">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span data-i18n="solutions2026.c3_focus">Enfoque: Cumplimiento fiscal y sistemas Cloud</span>
+            </div>
+
+            <!-- Título H3 -->
+            <h3 data-i18n="solutions2026.c3_title" class="text-xl sm:text-2xl font-bold text-[#F8FAFC] group-hover:text-emerald-300 transition-colors mb-3">
+              Facturación B2B (Sistema actual)
+            </h3>
+
+            <!-- Descripción rápida (2-3 líneas) -->
+            <p data-i18n="solutions2026.c3_desc" class="text-slate-300 text-sm leading-relaxed mb-4">
+              Olvida los sistemas legacy. Tu facturación B2B 100% cloud, sin fricciones y estrictamente apegada a la nueva normativa fiscal y Providencia 0071.
+            </p>
+
+            <!-- Enlace de texto simple hacia página independiente -->
+            <div class="mb-6">
+              <a href="#contacto" data-i18n="solutions2026.c3_link" class="inline-flex items-center space-x-1.5 text-xs font-mono font-semibold text-emerald-400 hover:text-emerald-300 transition-colors group/link">
+                <span>Ver más detalles</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Botón principal (CTA) en la parte inferior de la tarjeta -->
+          <div class="pt-4 border-t border-slate-800/80 mt-auto">
+            <a 
+              href="#contacto" 
+              data-service-val="facturacion"
+              class="btn-cyan select-service-btn w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-400/40 transition-all"
+            >
+              <i data-lucide="shield-check" class="w-4 h-4 text-slate-950"></i>
+              <span data-i18n="solutions2026.c3_cta">Modernizar Facturación</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-slate-950"></i>
+            </a>
+          </div>
+        </div>
+
       </div>
 
     </div>

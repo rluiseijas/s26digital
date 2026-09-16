@@ -153,6 +153,26 @@
         cta_subtitle: 'Agenda un diagnóstico técnico sin costo. Analizamos tus flujos transaccionales y diseñamos tu nueva arquitectura fiscal B2B.',
         cta_btn: 'Modernizar mi Facturación Ahora'
       },
+      solutions2026: {
+        badge: '✨ NUEVAS SOLUCIONES 2026',
+        title: 'Nuevas Soluciones 2026. <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400 glow-text-cyan">Explora nuestros nuevos servicios.</span>',
+        subtitle: 'Infraestructura digital y herramientas interactivas diseñadas para escalar ventas, modernizar espacios comerciales y automatizar operaciones con estándares enterprise.',
+        c1_focus: 'Enfoque: IA conversacional avanzada',
+        c1_title: 'Chatbot Inteligente para WhatsApp',
+        c1_desc: 'Elimina las conversaciones monótonas. Implementa un asistente virtual con un tono natural y fluido diseñado específicamente para atraer clientes y cerrar ventas, no solo para responder FAQs.',
+        c1_link: 'Ver más detalles',
+        c1_cta: 'Automatizar Ventas',
+        c2_focus: 'Enfoque: Servicio por suscripción B2B',
+        c2_title: 'Pantallas Digitales Publicitarias (Digital Signage)',
+        c2_desc: 'Convierte SmartTVs en menús y carteleras dinámicas. Solución ideal para comerciantes y sector de comida rápida que necesitan actualizar precios y ofertas en tiempo real.',
+        c2_link: 'Ver más detalles',
+        c2_cta: 'Digitalizar mi Local',
+        c3_focus: 'Enfoque: Cumplimiento fiscal y sistemas Cloud',
+        c3_title: 'Facturación B2B (Sistema actual)',
+        c3_desc: 'Olvida los sistemas legacy. Tu facturación B2B 100% cloud, sin fricciones y estrictamente apegada a la nueva normativa fiscal y Providencia 0071.',
+        c3_link: 'Ver más detalles',
+        c3_cta: 'Modernizar Facturación'
+      },
       contact: {
         badge: 'Cupos de Consultoría Disponibles',
         title: '¿Listo para modernizar y escalar tu operación?',
@@ -352,6 +372,26 @@
         cta_title: 'Ready to modernize your invoicing with zero bottlenecks?',
         cta_subtitle: 'Book a complimentary technical discovery session. We evaluate your transaction volume and architect your new B2B billing engine.',
         cta_btn: 'Modernize Invoicing Now'
+      },
+      solutions2026: {
+        badge: '✨ NEW 2026 SOLUTIONS',
+        title: 'New 2026 Solutions. <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400 glow-text-cyan">Explore our newest services.</span>',
+        subtitle: 'High-performance digital infrastructure and interactive tools engineered to scale sales, modernize physical spaces, and automate operations with enterprise standards.',
+        c1_focus: 'Focus: Advanced Conversational AI',
+        c1_title: 'Smart AI Chatbot for WhatsApp',
+        c1_desc: 'Eliminate robotic conversations. Deploy a virtual assistant with natural and fluid tonality designed specifically to acquire leads and close deals, not just answer FAQs.',
+        c1_link: 'View details',
+        c1_cta: 'Automate Sales',
+        c2_focus: 'Focus: B2B Subscription Service',
+        c2_title: 'Digital Signage & Advertising Screens',
+        c2_desc: 'Turn SmartTVs into dynamic menus and digital billboards. The ideal solution for retail and food service needing real-time price and promo updates.',
+        c2_link: 'View details',
+        c2_cta: 'Digitize My Store',
+        c3_focus: 'Focus: Tax Compliance & Cloud Systems',
+        c3_title: 'B2B Invoicing (Current System)',
+        c3_desc: 'Leave legacy software behind. Your 100% cloud B2B invoicing, frictionless and strictly compliant with new tax regulations and Administrative Order 0071.',
+        c3_link: 'View details',
+        c3_cta: 'Modernize Invoicing'
       },
       contact: {
         badge: 'Consulting Slots Open',
