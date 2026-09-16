@@ -163,12 +163,12 @@
         c1_link: 'Ver más detalles',
         c1_cta: 'Automatizar Ventas',
         c2_focus: 'Enfoque: Servicio por suscripción B2B',
-        c2_title: 'Pantallas Digitales Publicitarias (Digital Signage)',
+        c2_title: 'Pantallas Digitales Publicitarias',
         c2_desc: 'Convierte SmartTVs en menús y carteleras dinámicas. Solución ideal para comerciantes y sector de comida rápida que necesitan actualizar precios y ofertas en tiempo real.',
         c2_link: 'Ver más detalles',
         c2_cta: 'Digitalizar mi Local',
         c3_focus: 'Enfoque: Cumplimiento fiscal y sistemas Cloud',
-        c3_title: 'Facturación B2B (Sistema actual)',
+        c3_title: 'Facturación B2B',
         c3_desc: 'Olvida los sistemas legacy. Tu facturación B2B 100% cloud, sin fricciones y estrictamente apegada a la nueva normativa fiscal y Providencia 0071.',
         c3_link: 'Ver más detalles',
         c3_cta: 'Modernizar Facturación'
@@ -388,7 +388,7 @@
         c2_link: 'View details',
         c2_cta: 'Digitize My Store',
         c3_focus: 'Focus: Tax Compliance & Cloud Systems',
-        c3_title: 'B2B Invoicing (Current System)',
+        c3_title: 'B2B Invoicing',
         c3_desc: 'Leave legacy software behind. Your 100% cloud B2B invoicing, frictionless and strictly compliant with new tax regulations and Administrative Order 0071.',
         c3_link: 'View details',
         c3_cta: 'Modernize Invoicing'

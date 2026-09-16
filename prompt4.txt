@@ -1,0 +1,31 @@
+Actúa como un desarrollador Frontend experto. Necesito limpiar el diseño (UI) de las 3 tarjetas de la sección "Nuevas Soluciones" para lograr un aspecto más minimalista, y además enlazar las imágenes definitivas.
+
+Basado en el código actual de esa sección, aplica estrictamente las siguientes modificaciones:
+
+1. Limpieza de elementos superpuestos en las imágenes (Badges):
+
+Elimina completamente el div/badge que flota en la esquina superior izquierda sobre cada imagen (el que contiene textos como "01 - WhatsApp AI", "02 - Digital Signage", etc.).
+
+Elimina completamente el div/badge que flota en la esquina inferior derecha sobre cada imagen (el que dice "Placeholder").
+
+2. Eliminación de metadatos:
+
+Elimina por completo el elemento de texto/párrafo que se encuentra justo arriba del título principal de cada tarjeta (la línea que dice "Enfoque: IA conversacional avanzada", "Enfoque: Servicio por suscripción B2B", etc.).
+
+3. Edición de Títulos (H3):
+
+En la tarjeta 2, recorta el título para que pase de "Pantallas Digitales Publicitarias (Digital Signage)" a ser únicamente: Pantallas Digitales Publicitarias
+
+En la tarjeta 3, recorta el título para que pase de "Facturación B2B (Sistema actual)" a ser únicamente: Facturación B2B
+
+4. Inserción de imágenes definitivas:
+
+Actualiza el atributo src de las imágenes de cada tarjeta para que apunten a los nuevos archivos. Asumiendo que están en la carpeta principal de recursos, usa estas rutas (ajústalas según mi configuración de enrutamiento estático si es necesario):
+
+Tarjeta 1: ./assets/img/whatsapp-chatbox.jpg
+
+Tarjeta 2: ./assets/img/led-screen-for-restaurant.jpg
+
+Tarjeta 3: ./assets/img/facturacion_b2b.jpg
+
+Devuélveme el código HTML/Tailwind limpio de esta sección ya refactorizada. Asegúrate de no alterar los gradientes, botones (CTAs), descripciones ni el layout de 3 columnas, solo aplica las remociones solicitadas.
