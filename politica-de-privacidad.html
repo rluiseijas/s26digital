@@ -47,6 +47,9 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
+  <!-- Internationalization System -->
+  <script src="js/i18n.js?v=2.6"></script>
+
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -67,16 +70,18 @@
         
         <!-- Brand Logo -->
         <a href="index.html" class="flex items-center space-x-3 group">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all duration-300">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 group-hover:scale-105 transition-all duration-300">
             <i data-lucide="layers" class="w-6 h-6 text-slate-950 stroke-[2.5]"></i>
           </div>
-          <div class="flex flex-col">
-            <span class="text-xl font-extrabold tracking-tight text-[#F8FAFC] font-sans">
-              S26<span class="text-[#06B6D4] glow-text-cyan">Digital</span>
-            </span>
-            <span class="text-[10px] uppercase tracking-widest text-slate-400 font-mono -mt-1">
-              Aliado Tecnológico
-            </span>
+          <div class="flex flex-col justify-center">
+            <svg class="h-9 w-[130px] overflow-visible select-none" viewBox="0 0 130 38" aria-label="S26Digital">
+              <text x="0" y="21" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-size="26" font-weight="800" letter-spacing="-0.025em">
+                <tspan fill="#F8FAFC">S26</tspan><tspan fill="#06B6D4" class="glow-text-cyan">Digital</tspan>
+              </text>
+              <text data-i18n="nav.brand_sub" x="0" y="34" font-family="'JetBrains Mono', monospace" font-size="6.8" font-weight="700" fill="#94A3B8" textLength="124" lengthAdjust="spacing">
+                ALIADO TECNOLÓGICO
+              </text>
+            </svg>
           </div>
         </a>
 
@@ -96,14 +101,46 @@
           <a href="#uso" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Uso</a>
           <a href="#seguridad" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Seguridad</a>
           <a href="#contacto" class="desktop-nav-link text-slate-300 hover:text-[#06B6D4] transition-colors">Contacto</a>
+        </nav>
+
+        <!-- CTA Header Button & Language Selector -->
+        <div class="hidden md:flex items-center space-x-4">
+          <!-- Language Selector -->
+          <div class="flex items-center bg-slate-900/90 border border-slate-700/80 rounded-xl p-1 text-xs font-mono shadow-sm" role="group" aria-label="Selector de idioma">
+            <button 
+              type="button" 
+              data-lang-btn="es" 
+              class="px-2.5 py-1 rounded-lg transition-all font-semibold cursor-pointer bg-cyan-500/20 text-cyan-300 border-cyan-500/40"
+              title="Español"
+              aria-pressed="true"
+            >
+              ES
+            </button>
+            <span class="text-slate-600 px-0.5 select-none">|</span>
+            <button 
+              type="button" 
+              data-lang-btn="en" 
+              class="px-2.5 py-1 rounded-lg transition-all font-semibold cursor-pointer text-slate-400 hover:text-white"
+              title="English"
+              aria-pressed="false"
+            >
+              EN
+            </button>
+          </div>
+
           <a href="index.html" class="btn-cyan px-4 py-2 rounded-lg text-xs tracking-wider uppercase font-bold flex items-center space-x-1.5 transition-all">
             <span>Volver al Inicio</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </a>
-        </nav>
+        </div>
 
-        <!-- Mobile Menu Trigger -->
-        <div class="flex md:hidden">
+        <!-- Mobile Controls (Language Toggle + Menu Trigger) -->
+        <div class="flex items-center space-x-2 md:hidden">
+          <div class="flex items-center bg-slate-900 border border-slate-700/80 rounded-lg p-0.5 text-xs font-mono">
+            <button type="button" data-lang-btn="es" class="px-2 py-0.5 rounded text-[11px] font-semibold bg-cyan-500/20 text-cyan-300">ES</button>
+            <span class="text-slate-600 px-0.5">|</span>
+            <button type="button" data-lang-btn="en" class="px-2 py-0.5 rounded text-[11px] font-semibold text-slate-400">EN</button>
+          </div>
           <button id="mobile-menu-btn" type="button" aria-expanded="false" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-[#1E293B] focus:outline-none" aria-label="Menú principal">
             <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
@@ -122,7 +159,7 @@
       <a href="#derechos" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">6. Tus derechos</a>
       <a href="#contacto" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-[#1E293B]">7. Contacto</a>
       <div class="pt-2">
-        <a href="mailto:s26digital.ve@gmail.com" class="btn-cyan w-full text-center block py-3 rounded-lg text-xs font-bold uppercase tracking-wider">
+        <a href="mailto:contact@s26digital.com" class="btn-cyan w-full text-center block py-3 rounded-lg text-xs font-bold uppercase tracking-wider">
           Escribir a Soporte
         </a>
       </div>
@@ -179,8 +216,8 @@
             <i data-lucide="mail" class="w-3.5 h-3.5 text-cyan-400"></i>
             <span>Correo de privacidad:</span>
           </div>
-          <a href="mailto:s26digital.ve@gmail.com" class="text-cyan-400 hover:underline truncate block">
-            s26digital.ve@gmail.com
+          <a href="mailto:contact@s26digital.com" class="text-cyan-400 hover:underline truncate block">
+            contact@s26digital.com
           </a>
         </div>
       </div>
@@ -215,7 +252,7 @@
 
             <div class="mt-6 pt-6 border-t border-slate-800">
               <div class="text-[11px] text-slate-400 leading-relaxed">
-                ¿Tienes dudas sobre cómo tratamos tus datos o deseas solicitar su eliminación? Escríbenos directamente a <a href="mailto:s26digital.ve@gmail.com" class="text-cyan-400 underline">s26digital.ve@gmail.com</a>.
+                ¿Tienes dudas sobre cómo tratamos tus datos o deseas solicitar su eliminación? Escríbenos directamente a <a href="mailto:contact@s26digital.com" class="text-cyan-400 underline">contact@s26digital.com</a>.
               </div>
             </div>
           </div>
@@ -473,7 +510,7 @@
                 </div>
                 <p>
                   1. <strong class="text-cyan-400">Vía WhatsApp:</strong> simplemente responde con la palabra <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-white font-bold">CANCELAR</span> o <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-white font-bold">BAJA</span> en el chat y pausaremos cualquier comunicación automatizada.<br />
-                  2. <strong class="text-cyan-400">Vía Correo Electrónico:</strong> envía tu solicitud formal a <a href="mailto:s26digital.ve@gmail.com" class="text-cyan-400 underline font-mono">s26digital.ve@gmail.com</a> con el asunto <em class="text-white">"Solicitud de Privacidad / Eliminación de Datos"</em> indicando tu número de teléfono. Tramitaremos tu requerimiento en menos de 48 horas laborables.
+                  2. <strong class="text-cyan-400">Vía Correo Electrónico:</strong> envía tu solicitud formal a <a href="mailto:contact@s26digital.com" class="text-cyan-400 underline font-mono">contact@s26digital.com</a> con el asunto <em class="text-white">"Solicitud de Privacidad / Eliminación de Datos"</em> indicando tu número de teléfono. Tramitaremos tu requerimiento en menos de 48 horas laborables.
                 </p>
               </div>
             </div>
@@ -519,8 +556,8 @@
                 </div>
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-slate-800 pb-2">
                   <span class="text-slate-400">Correo oficial de atención:</span>
-                  <a href="mailto:s26digital.ve@gmail.com" class="text-cyan-400 font-bold hover:underline">
-                    s26digital.ve@gmail.com
+                  <a href="mailto:contact@s26digital.com" class="text-cyan-400 font-bold hover:underline">
+                    contact@s26digital.com
                   </a>
                 </div>
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-slate-800 pb-2">
@@ -534,7 +571,7 @@
               </div>
 
               <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
-                <a href="mailto:s26digital.ve@gmail.com?subject=Consulta%20sobre%20Pol%C3%ADtica%20de%20Privacidad" class="btn-cyan w-full sm:w-auto px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2">
+                <a href="mailto:contact@s26digital.com?subject=Consulta%20sobre%20Pol%C3%ADtica%20de%20Privacidad" class="btn-cyan w-full sm:w-auto px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2">
                   <i data-lucide="send" class="w-4 h-4 text-slate-950"></i>
                   <span>Enviar Correo a Soporte</span>
                 </a>

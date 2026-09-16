@@ -15,13 +15,15 @@ export const Footer = () => {
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center shadow-md shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all duration-300">
                 <Layers className="w-5 h-5 text-slate-950 stroke-[2.5]" />
               </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-extrabold tracking-tight text-[#F8FAFC] font-sans">
-                  S26<span className="text-[#06B6D4]">Digital</span>
-                </span>
-                <span className="text-[9px] uppercase tracking-widest text-slate-400 font-mono -mt-0.5">
-                  Aliado Tecnológico
-                </span>
+              <div className="flex flex-col justify-center">
+                <svg className="h-8 w-[116px] overflow-visible select-none" viewBox="0 0 130 38" aria-label="S26Digital">
+                  <text x="0" y="21" fontFamily="'Plus Jakarta Sans', 'Inter', sans-serif" fontSize="26" fontWeight="800" letterSpacing="-0.025em">
+                    <tspan fill="#F8FAFC">S26</tspan><tspan fill="#06B6D4">Digital</tspan>
+                  </text>
+                  <text x="0" y="34" fontFamily="'JetBrains Mono', monospace" fontSize="6.8" fontWeight="700" fill="#94A3B8" textLength="124" lengthAdjust="spacing">
+                    ALIADO TECNOLÓGICO
+                  </text>
+                </svg>
               </div>
             </a>
 

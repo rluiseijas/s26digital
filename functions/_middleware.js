@@ -118,13 +118,15 @@ function renderBlockedHtml(countryCode, rayId) {
           <polyline points="2 12 12 17 22 12"></polyline>
         </svg>
       </div>
-      <div class="flex flex-col text-left">
-        <span class="text-xl font-extrabold tracking-tight text-[#F8FAFC]">
-          S26<span class="text-[#06B6D4]">Digital</span>
-        </span>
-        <span class="text-[9px] uppercase tracking-widest text-slate-400 font-mono -mt-1">
-          Aliado Tecnológico
-        </span>
+      <div class="flex flex-col justify-center">
+        <svg class="h-9 w-[130px] overflow-visible select-none" viewBox="0 0 130 38" aria-label="S26Digital">
+          <text x="0" y="21" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-size="26" font-weight="800" letter-spacing="-0.025em">
+            <tspan fill="#F8FAFC">S26</tspan><tspan fill="#06B6D4">Digital</tspan>
+          </text>
+          <text x="0" y="34" font-family="'JetBrains Mono', monospace" font-size="6.8" font-weight="700" fill="#94A3B8" textLength="124" lengthAdjust="spacing">
+            ALIADO TECNOLÓGICO
+          </text>
+        </svg>
       </div>
     </div>
 

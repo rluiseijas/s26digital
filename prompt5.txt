@@ -1,0 +1,22 @@
+Actúa como un Diseñador Gráfico UI/UX experto. Necesito que generes una imagen en formato JPG con una resolución exacta de 1640x856 píxeles para ser utilizada como foto de portada corporativa en Facebook.
+
+El diseño debe ser una extensión exacta de mi landing page actual. Sigue estas directrices estrictas de marca:
+
+1. Paleta de Colores y Fondo: la misma actual
+
+
+2. Elementos Visuales:
+
+Incluye un patrón de fondo muy tenue, abstracto y minimalista relacionado con infraestructura Cloud, automatización o código (por ejemplo, líneas de conexión muy finas, nodos o una cuadrícula de puntos sutil). No debe competir con el texto.
+
+3. Texto y Disposición (Zona Segura Central):
+
+Título Principal: En el centro absoluto de la imagen, escribe "S26Digital" utilizando una tipografía sans-serif moderna, geométrica, de peso audaz (bold) y color blanco puro.
+
+Subtítulo: Justo debajo, en un tamaño más pequeño y en color cyan o gris claro, escribe: "Consultoría Tecnológica B2B & Cloud Solutions".
+
+Importante: Todo el texto debe estar agrupado estrictamente en el centro de la imagen para evitar que los recortes automáticos de la versión móvil o de escritorio oculten información vital.
+
+El resultado debe transmitir la autoridad de una agencia Enterprise B2B, luciendo limpio, moderno, sin elementos saturados y 100% libre de distracciones visuales pesadas.
+
+4. Guarda este baner en assets/img/static

@@ -19,7 +19,7 @@
         description: 'Desarrollamos tiendas online, plataformas web y automatizaciones empresariales para medianas empresas. Infraestructura tecnológica llave en mano.'
       },
       nav: {
-        brand_sub: 'Aliado Tecnológico',
+        brand_sub: 'ALIADO TECNOLÓGICO',
         solutions: 'Soluciones',
         why_us: 'Diferenciadores',
         billing: 'Facturación',
@@ -238,7 +238,7 @@
         description: 'We engineer e-commerce platforms, web applications, and enterprise automations for growing companies. Turnkey cloud technology infrastructure.'
       },
       nav: {
-        brand_sub: 'Technology Partner',
+        brand_sub: 'TECHNOLOGY PARTNER',
         solutions: 'Solutions',
         why_us: 'Why Us',
         billing: 'Invoicing',
@@ -653,6 +653,12 @@
         const selectedLang = btn.getAttribute('data-lang-btn');
         if (selectedLang) {
           setLanguage(selectedLang);
+          const pathname = window.location.pathname;
+          if (selectedLang === 'en' && pathname.includes('politica-de-privacidad.html')) {
+            window.location.href = 'privacy-policy.html';
+          } else if (selectedLang === 'es' && pathname.includes('privacy-policy.html')) {
+            window.location.href = 'politica-de-privacidad.html';
+          }
         }
       });
     });
