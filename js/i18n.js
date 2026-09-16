@@ -192,8 +192,7 @@
         form_phone_ph: '+58 412 123 4567',
         form_challenge: '¿Cuál es el principal reto o requerimiento tecnológico?',
         form_challenge_ph: 'Describe brevemente lo que necesitas: tienda virtual, sistema a medida, automatizar reportes, migración de infraestructura, etc.',
-        submit_btn: 'Solicitar Diagnóstico Tecnológico',
-        privacy_note: '🔒 Tus datos están protegidos bajo protocolos de privacidad y cifrado.'
+        submit_btn: 'Solicitar Diagnóstico Tecnológico'
       },
       footer: {
         brand_desc: 'Arquitectura de software y soluciones Cloud Enterprise para escalar tu operación.',
@@ -412,8 +411,7 @@
         form_phone_ph: '+1 (555) 019-2834',
         form_challenge: 'What is your primary technological challenge or requirement?',
         form_challenge_ph: 'Briefly outline your needs: custom e-commerce, custom ERP/CRM, workflow automation, cloud infrastructure migration, etc.',
-        submit_btn: 'Request Technical Discovery',
-        privacy_note: '🔒 Your data is strictly encrypted and protected under enterprise privacy protocols.'
+        submit_btn: 'Request Technical Discovery'
       },
       footer: {
         brand_desc: 'Software architecture and Cloud Enterprise solutions to scale your business operations.',
@@ -543,7 +541,21 @@
       const key = el.getAttribute('data-i18n');
       const val = getNestedTranslation(dict, key);
       if (val !== null) {
-        el.textContent = val;
+        // If element contains child icons or spans, update text node or child span without destroying icons
+        const icon = el.querySelector('i, svg');
+        if (icon) {
+          const innerSpan = el.querySelector('span:not([data-lucide])');
+          if (innerSpan) {
+            innerSpan.textContent = val;
+          } else {
+            // Replace text node while keeping icon
+            const cloneIcon = icon.cloneNode(true);
+            el.textContent = val + ' ';
+            el.appendChild(cloneIcon);
+          }
+        } else {
+          el.textContent = val;
+        }
       }
     });
 
@@ -581,6 +593,15 @@
       if (val !== null) {
         el.setAttribute('title', val);
         el.setAttribute('aria-label', val);
+      }
+    });
+
+    // 6. Image Alt attributes: data-i18n-alt
+    document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+      const key = el.getAttribute('data-i18n-alt');
+      const val = getNestedTranslation(dict, key);
+      if (val !== null) {
+        el.setAttribute('alt', val);
       }
     });
 

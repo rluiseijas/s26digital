@@ -167,7 +167,7 @@ function renderBlockedHtml(countryCode, rayId) {
     <!-- Contact support -->
     <div class="pt-2 text-xs text-slate-400">
       ¿Crees que se trata de un error? Contáctanos a 
-      <a href="mailto:contacto@s26digital.com" class="text-cyan-400 hover:underline font-mono">contacto@s26digital.com</a>
+      <a href="mailto:contact@s26digital.com" class="text-cyan-400 hover:underline font-mono">contact@s26digital.com</a>
     </div>
 
   </main>

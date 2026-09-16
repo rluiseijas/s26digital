@@ -135,8 +135,8 @@ export const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <a href="mailto:contacto@s26digital.com" className="hover:text-cyan-400 transition-colors">
-                  contacto@s26digital.com
+                <a href="mailto:contact@s26digital.com" className="hover:text-cyan-400 transition-colors">
+                  contact@s26digital.com
                 </a>
               </div>
               <div className="flex items-start space-x-3">
