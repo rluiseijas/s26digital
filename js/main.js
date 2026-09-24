@@ -527,14 +527,27 @@ function initConsultationModal() {
       const originalText = submitBtn.innerHTML;
       
       submitBtn.disabled = true;
+      const loadingMsg = (window.s26I18n && typeof window.s26I18n.t === 'function')
+        ? window.s26I18n.t('system.modal_loading')
+        : 'Procesando Solicitud...';
       submitBtn.innerHTML = `
         <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-slate-900 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-        </svg> Procesando Solicitud...
+        </svg> ${loadingMsg}
       `;
 
       setTimeout(() => {
+        const titleMsg = (window.s26I18n && typeof window.s26I18n.t === 'function')
+          ? window.s26I18n.t('system.modal_success_title')
+          : '¡Consultoría Agendada con Éxito!';
+        const descMsg = (window.s26I18n && typeof window.s26I18n.t === 'function')
+          ? window.s26I18n.t('system.modal_success_desc')
+          : 'Nuestro equipo de arquitectos de soluciones de S26Digital se comunicará contigo en menos de 24 horas hábiles.';
+        const closeMsg = (window.s26I18n && typeof window.s26I18n.t === 'function')
+          ? window.s26I18n.t('system.modal_close')
+          : 'Cerrar';
+
         modalForm.innerHTML = `
           <div class="text-center py-8">
             <div class="w-16 h-16 bg-cyan-500/20 text-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4 border border-cyan-500/40">
@@ -542,9 +555,9 @@ function initConsultationModal() {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h4 class="text-xl font-bold text-white mb-2">¡Consultoría Agendada con Éxito!</h4>
-            <p class="text-slate-300 text-sm mb-6">Nuestro equipo de arquitectos de soluciones de S26Digital se comunicará contigo en menos de 24 horas hábiles.</p>
-            <button type="button" class="btn-cyan px-6 py-2.5 rounded-lg text-sm close-modal-btn w-full font-bold">Cerrar</button>
+            <h4 class="text-xl font-bold text-white mb-2">${titleMsg}</h4>
+            <p class="text-slate-300 text-sm mb-6">${descMsg}</p>
+            <button type="button" class="btn-cyan px-6 py-2.5 rounded-lg text-sm close-modal-btn w-full font-bold">${closeMsg}</button>
           </div>
         `;
         
@@ -575,12 +588,18 @@ function initContactForm() {
 
     // Validation
     if (!name.value.trim() || !company.value.trim() || !email.value.trim() || !service.value) {
-      showToast('Por favor completa todos los campos obligatorios.', 'error');
+      const errMsg = (window.s26I18n && typeof window.s26I18n.t === 'function')
+        ? window.s26I18n.t('system.req_fields')
+        : 'Por favor completa todos los campos obligatorios.';
+      showToast(errMsg, 'error');
       return;
     }
 
     if (!validateEmail(email.value.trim())) {
-      showToast('Por favor ingresa un correo corporativo válido.', 'error');
+      const emailErrMsg = (window.s26I18n && typeof window.s26I18n.t === 'function')
+        ? window.s26I18n.t('system.valid_email')
+        : 'Por favor ingresa un correo corporativo válido.';
+      showToast(emailErrMsg, 'error');
       email.focus();
       return;
     }
@@ -588,13 +607,16 @@ function initContactForm() {
     // Submission animation
     const originalContent = submitBtn.innerHTML;
     submitBtn.disabled = true;
+    const sendingMsg = (window.s26I18n && typeof window.s26I18n.t === 'function')
+      ? window.s26I18n.t('system.sending')
+      : 'Generando Diagnóstico Estratégico...';
     submitBtn.innerHTML = `
       <span class="inline-flex items-center">
         <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-slate-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
         </svg>
-        Generando Diagnóstico Estratégico...
+        ${sendingMsg}
       </span>
     `;
 
@@ -610,7 +632,10 @@ function initContactForm() {
         formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
 
-      showToast('¡Diagnóstico solicitado! Te contactaremos a la brevedad.', 'success');
+      const toastSuccessMsg = (window.s26I18n && typeof window.s26I18n.t === 'function')
+        ? window.s26I18n.t('system.sent_toast')
+        : '¡Diagnóstico solicitado! Te contactaremos a la brevedad.';
+      showToast(toastSuccessMsg, 'success');
     }, 1400);
   });
 }

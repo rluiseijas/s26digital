@@ -158,10 +158,10 @@ function initNotifyForm() {
 
     if (email) {
       feedback.classList.remove('hidden');
-      feedback.innerHTML = `
-        <span class="text-cyan-400 font-semibold">✓ ¡Suscripción confirmada!</span>
-        Te notificaremos en <span class="text-white">${email}</span> tan pronto la plataforma esté disponible.
-      `;
+      const msgTpl = (window.s26I18n && typeof window.s26I18n.t === 'function')
+        ? window.s26I18n.t('underconstruction.confirmed_msg')
+        : '✓ ¡Suscripción confirmada! Te notificaremos en {email} tan pronto la plataforma esté disponible.';
+      feedback.innerHTML = msgTpl.replace('{email}', `<span class="text-white">${email}</span>`);
       form.reset();
 
       setTimeout(() => {
