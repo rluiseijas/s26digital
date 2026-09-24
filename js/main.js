@@ -697,7 +697,7 @@ function showToast(message, type = 'info') {
    ========================================================================== */
 function initScrollSpy() {
   const navbar = document.getElementById('main-navbar');
-  const sections = document.querySelectorAll('section[id]');
+  const sections = document.querySelectorAll('section[id], footer[id]');
   const navLinks = document.querySelectorAll('.desktop-nav-link');
 
   window.addEventListener('scroll', () => {
@@ -745,7 +745,7 @@ function initSolutionHighlights() {
         serviceSelect.value = serviceValue;
       }
       
-      const contactSec = document.getElementById('contacto');
+      const contactSec = document.getElementById('contact');
       if (contactSec) {
         contactSec.scrollIntoView({ behavior: 'smooth' });
         
