@@ -1,0 +1,23 @@
+Actúa como un Diseñador UI/UX experto. Necesito que generes una imagen que contenga un set de 4 íconos minimalistas diseñados específicamente para usarse como portadas de Historias Destacadas (Story Highlights) de Instagram para una agencia tecnológica B2B.
+
+Instrucciones de Estilo (Obligatorio para los 4 íconos):
+
+Fondo: Cada ícono debe estar centrado sobre un fondo circular de color azul pizarra muy oscuro (estilo Hex #0F172A).
+
+Estilo del Ícono: Arte lineal (line-art) moderno, simétrico, con un grosor de línea uniforme (stroke) estilizado con el diseño de S26Digital.
+
+Color del Ícono: Azules de S26Digital con un levísimo efecto de brillo (glow) para dar un aspecto de neón tecnológico.
+
+Limpieza: NO incluyas ningún texto, letras ni números en la imagen. Solo los íconos puros.
+
+Conceptos para cada uno de los 4 íconos:
+
+Nuevas Soluciones: Un ícono de un cubo isométrico brillante o un microchip moderno que represente IA y automatización.
+
+Proyectos (Casos de Éxito): Un ícono de un cohete despegando o una gráfica de barras ascendente que represente escalabilidad y ventas.
+
+Stack (Arquitectura de Software): Un ícono de tres capas horizontales apiladas (tipo servidor o base de datos) o nodos conectados que representen desarrollo web y contenedores.
+
+Contacto: Un ícono de un auricular moderno de servicio al cliente (headset) o un pin de ubicación digital sutil.
+
+Genera los 4 íconos en una sola imagen (en formato de cuadrícula 2x2) para mantener la consistencia visual absoluta. Guarda esos iconos en assets/img/icons e identificalos al final con la terminacion -instagram

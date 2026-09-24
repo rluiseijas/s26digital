@@ -126,6 +126,16 @@ export const Footer = () => {
                   Agendar Consultoría
                 </a>
               </li>
+              <li>
+                <a href="/politica-de-privacidad.html" className="hover:text-cyan-400 transition-colors block">
+                  Política de Privacidad
+                </a>
+              </li>
+              <li>
+                <a href="/terminos-de-servicio.html" className="hover:text-cyan-400 transition-colors block">
+                  Términos de Servicio
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -144,7 +154,7 @@ export const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
                 <div className="space-y-0.5 leading-snug">
-                  <span className="block">Aragua, Venezuela</span>
+                  <span className="block">Venezuela</span>
                   <span className="block">Miami, US</span>
                 </div>
               </div>
@@ -154,16 +164,8 @@ export const Footer = () => {
         </div>
 
         {/* Barra Inferior (Bottom Bar) */}
-        <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
-          <p>© 2026 S26Digital. Todos los derechos reservados.</p>
-          <div className="flex items-center space-x-6">
-            <a href="/politica-de-privacidad.html" className="hover:text-cyan-400 transition-colors">
-              Política de Privacidad
-            </a>
-            <a href="/terminos-de-servicio.html" className="hover:text-cyan-400 transition-colors">
-              Términos de Servicio
-            </a>
-          </div>
+        <div className="border-t border-slate-800 mt-12 pt-8 flex justify-center items-center text-center text-xs text-slate-400">
+          <p>© 2026 S26Digital. All Rights Reserved.</p>
         </div>
 
       </div>
