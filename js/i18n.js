@@ -231,6 +231,11 @@
         opt_auto: 'Automatización',
         opt_ecom: 'Comercio Electrónico',
         submit_btn: 'Confirmar Reserva de Consultoría'
+      },
+      whatsapp: {
+        url: 'https://wa.me/584243649198?text=Hola%20S26Digital%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n',
+        tooltip: '¿Hablamos por WhatsApp?',
+        label: 'Chatear por WhatsApp'
       }
     },
     en: {
@@ -451,6 +456,11 @@
         opt_auto: 'Workflow Automation',
         opt_ecom: 'E-commerce & Payments',
         submit_btn: 'Confirm Consultation Booking'
+      },
+      whatsapp: {
+        url: 'https://wa.me/584243649198?text=Hello%20S26Digital%2C%20I%20would%20like%20more%20information',
+        tooltip: 'Chat with us on WhatsApp!',
+        label: 'Chat on WhatsApp'
       }
     }
   };
